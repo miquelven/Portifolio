@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
 
 export default function MenuIcon({ color, isOpen }) {
@@ -12,7 +11,7 @@ export default function MenuIcon({ color, isOpen }) {
       <motion.button
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        className="relative h-14 w-14 rounded-full transition-scale duration-300 hover:scale-110"
+        className="relative h-14 w-14 rounded-full transition-scale duration-300 hover:scale-110  "
         style={{ backgroundColor: color }}
       >
         <motion.span

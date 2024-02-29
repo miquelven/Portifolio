@@ -17,7 +17,6 @@ export default function Menu() {
   };
 
   const handleClick = () => {
-    console.log("chamou");
     setIsOpen(!isOpen);
     color == colors[1] ? setColor(colors[0]) : setColor(colors[1]);
   };
@@ -47,8 +46,6 @@ export default function Menu() {
         className="h-12 flex justify-end items-center fixed z-50 right-10"
         onClick={handleClick}
       >
-        {/* <div className="flex items-center gap-10 fixed z-50 left-10">
-        </div> */}
         <MenuIcon color={color} isOpen={isOpen} />
       </div>
 
