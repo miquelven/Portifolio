@@ -83,8 +83,12 @@ const Card = ({ card }) => {
             <h3 className="font-bold text-3xl text-zinc-100">{card.title}</h3>
           </div>
           <div className="absolute z-20 -bottom-10 right-2 w-32 h-10 flex justify-end items-center gap-4">
-            <FaShareFromSquare className="w-6 h-7 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276] " />
-            <FaGithub className="w-6 h-6 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276]" />
+            <a href={card.projectLink} target="_blank">
+              <FaShareFromSquare className="w-6 h-7 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276] " />
+            </a>
+            <a href={card.githubLink} target="_blank">
+              <FaGithub className="w-6 h-6 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276]" />
+            </a>
           </div>
         </div>
         <div className="h-[270px] absolute bottom-0 right-0 left-0 z-10 p-4">
@@ -114,6 +118,8 @@ const cards = [
       " Com uma variedade de recursos intuitivos, o miCoin permite que você acompanhe informações detalhadas sobre várias moedas digitais. Favoritos personalizados permitem que você mantenha suas escolhas em destaque, enquanto o monitoramento de preços por e-mail o mantém informado sobre as mudanças do mercado. Com recursos de filtragem por categorias e opções de paginação, você tem controle total sobre sua experiência de navegação. Explore, analise e acompanhe as criptomoedas de forma conveniente e eficaz com o miCoin.",
     stacks: [<FaReact />, <SiTailwindcss />, <IoLogoJavascript />],
     id: 1,
+    projectLink: "https://mi-coin.vercel.app/",
+    githubLink: "https://github.com/miquelven/MiCoin",
   },
   {
     url: miDrinks,
@@ -122,6 +128,8 @@ const cards = [
       "miDrinks é sua plataforma completa para explorar o vasto universo das bebidas. Com uma extensa biblioteca de informações. Com recursos de pesquisa avançada, você pode facilmente encontrar o que procura, seja um coquetel específico ou uma bebida com ingredientes específicos. Além disso, os filtros por categoria permitem que você refine sua busca, seja por tipo de bebida alcoólica, não alcoólica ou sazonal.",
     stacks: [<SiNuxtdotjs />, <FaSass />, <IoLogoJavascript />],
     id: 2,
+    projectLink: "https://mi-drinks.vercel.app/",
+    githubLink: "https://github.com/miquelven/miDrinks",
   },
   {
     url: miPizza,
@@ -130,6 +138,8 @@ const cards = [
       "miPizza é uma landing page projetada para uma pizzaria fictícia, concebida para proporcionar aos clientes uma experiência online atraente e funcional. A página apresenta uma lista abrangente de pizzas, cada uma detalhada com seus ingredientes e sabores exclusivos, cuidadosamente elaborados para satisfazer diversos paladares. Além disso, implementamos uma funcionalidade de contato via WhatsApp, permitindo que os clientes se conectem instantaneamente com a loja para fazer seus pedidos de forma rápida e conveniente.",
     stacks: [<FaReact />, <SiTailwindcss />, <IoLogoJavascript />],
     id: 3,
+    projectLink: "https://mi-pizza.vercel.app/",
+    githubLink: "https://github.com/miquelven/miPizza",
   },
   {
     url: game,
@@ -144,6 +154,8 @@ const cards = [
       <FaNode />,
     ],
     id: 4,
+    projectLink: "https://gametest.com.br/",
+    githubLink: "https://github.com/miquelven/games_in_a_game",
   },
   {
     url: pokeList,
@@ -152,5 +164,7 @@ const cards = [
       "Pokelist é um site que oferece uma lista organizada de diversos Pokémon, divididos por categoria para facilitar a navegação. Uma das funcionalidades principais do Pokelist é a capacidade de pesquisar por nome, permitindo que os usuários encontrem facilmente informações sobre um Pokémon específico. Além disso, os usuários podem favoritar seus Pokémon favoritos, mantendo uma lista personalizada.",
     stacks: [<FaVuejs />, <FaSass />, <SiTypescript />],
     id: 5,
+    projectLink: "https://poke-favorite.vercel.app/",
+    githubLink: "https://github.com/miquelven/PokeList",
   },
 ];
