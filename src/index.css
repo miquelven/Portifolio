@@ -14,8 +14,6 @@ body {
   background-color: #d9e8f3;
   overflow-x: hidden;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" style="border-radius: 50%;" width="20" height="20" viewBox="0 0 20 20"><rect x="0" y="0" width="20" fill="lightBlue" height="20" /></svg>'),
-    auto;
 }
 
 div[data-card]::-webkit-scrollbar {
