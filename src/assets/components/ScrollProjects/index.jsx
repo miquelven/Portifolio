@@ -22,6 +22,9 @@ import game from "../../game.png";
 import pokeList from "../../pokeList.png";
 import miPizza from "../../miPizza.png";
 
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 export default function ScrollProjects() {
   return (
     <section id="project" className="bg-[#245276] my-20 py-10">
@@ -66,7 +69,7 @@ const Card = ({ card }) => {
     <>
       <div
         key={card.id}
-        className="group relative h-[650px] w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#3c88c4] rounded-2xl hover:cursor-pointer"
+        className="group relative h-[600px] w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#3c88c4] rounded-2xl hover:cursor-pointer"
       >
         <div className="absolute h-1/2 w-full top-0 flex justify-center transition-transform duration-300">
           <div className="absolute z-10 inset-0 ">
@@ -75,9 +78,11 @@ const Card = ({ card }) => {
               alt="Imagem do Projeto"
               className="absolute h-full z-20 w-full bg-cover "
             />
-            <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100">
-              <FaExpandArrowsAlt className="absolut h-10 w-10 fill-zinc-300" />
-            </div>
+            <Link to={"/" + card.url.split("assets/")[1].split(".png")[0]}>
+              <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100">
+                <FaExpandArrowsAlt className="absolut h-10 w-10 fill-zinc-300" />
+              </div>
+            </Link>
           </div>
           <div className="absolute z-20 -bottom-12 left-4">
             <h3 className="font-bold text-3xl text-zinc-100">{card.title}</h3>
@@ -91,15 +96,15 @@ const Card = ({ card }) => {
             </a>
           </div>
         </div>
-        <div className="h-[270px] absolute bottom-0 right-0 left-0 z-10 p-4">
+        <div className="h-[250px] absolute bottom-0 right-0 left-0 z-10 p-4 ">
           <div className=" flex gap-3 items-center text-zinc-100">
             {card.stacks.map((stack) => (
-              <span className="text-2xl mb-4 text-zinc-200 hover:scale-105 ">
+              <span className="text-2xl mb-3 text-zinc-200 hover:scale-105 ">
                 {stack}
               </span>
             ))}
           </div>
-          <div data-card className=" max-h-44  overflow-y-auto mt-5 pr-6">
+          <div data-card className=" max-h-40  overflow-y-auto mt-5 pr-6">
             <p className="font-light text-justify text-zinc-300">
               {card.description}
             </p>
