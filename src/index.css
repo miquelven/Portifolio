@@ -57,8 +57,3 @@ html::-webkit-scrollbar-thumb:hover {
 html::-webkit-scrollbar-thumb:active {
   cursor: grabbing;
 }
-
-div[data-changeCursor]:hover {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" style="border-radius: 50%;" width="120" height="120" viewBox="0 0 120 120"><rect x="0" y="0" width="120" fill="black" height="120" /></svg>'),
-    auto;
-}

@@ -4,6 +4,7 @@ import Header from "../assets/components/Header";
 import Skills from "../assets/components/Skills";
 
 import { Outlet } from "react-router-dom";
+import Contact from "../assets/components/Contact";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <div>
           <ScrollProjects />
         </div>
+
+        <Contact />
       </main>
       <Outlet />
     </>

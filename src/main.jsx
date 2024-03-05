@@ -8,6 +8,9 @@ import "./App.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +26,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <ToastContainer
+      toastStyle={{ background: "#3c88c4", color: "white" }}
+      icon={false}
+      hideProgressBar={true}
+    />
     <RouterProvider router={router} />
   </React.StrictMode>
 );
