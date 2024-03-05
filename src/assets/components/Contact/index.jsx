@@ -6,10 +6,13 @@ import { toast } from "react-toastify";
 
 export default function Contact() {
   const [showError, setShowError] = useState(false);
+  const [textAreaValue, setTextAreaValue] = useState("");
+
+  const validateTextArea = textAreaValue.trim().length > 4;
 
   const onSubmit = (data) => {
     setShowError(true);
-    if (data !== null) {
+    if (data !== null && validateTextArea) {
       toast.success("Email enviado!");
       reset();
       setShowError(false);
@@ -32,8 +35,6 @@ export default function Contact() {
   } = useForm({
     resolver: zodResolver(createUserFormSchema),
   });
-
-  const [textAreaValue, setTextAreaValue] = useState("");
 
   return (
     <div className="flex flex-col w-[1500px] mx-auto px-5 mb-32">
@@ -68,7 +69,7 @@ export default function Contact() {
             value={textAreaValue}
             className={`resize-none mb-1 rounded-md shadow-sm border-2 border-transparent w-full shadow-zinc-400 outline-none py-1 px-2 text-sm
             ${
-              textAreaValue.trim().length < 4 && showError
+              validateTextArea && showError
                 ? "border-red-700"
                 : "border-transparent"
             }
