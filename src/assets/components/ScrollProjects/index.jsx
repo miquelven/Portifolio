@@ -65,7 +65,7 @@ const HorizontalScrollCarousel = () => {
       data-aos-delay="500"
     >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-10">
+        <motion.div style={{ x }} className="flex gap-20">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
