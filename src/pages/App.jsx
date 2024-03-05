@@ -30,7 +30,7 @@ function App() {
 
         <section
           id="contact"
-          className="py-32"
+          className="pt-60 mb-44"
           data-aos="zoom-in"
           data-aos-delay="400"
         >
