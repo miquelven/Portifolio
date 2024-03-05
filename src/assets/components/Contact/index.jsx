@@ -7,15 +7,13 @@ import { toast } from "react-toastify";
 export default function Contact() {
   const [showError, setShowError] = useState(false);
 
-  const [emailInput, setEmailInput] = useState("");
-
   const onSubmit = (data) => {
     setShowError(true);
     if (data !== null) {
       toast.success("Email enviado!");
+      reset();
       setShowError(false);
       setTextAreaValue("");
-      setEmailInput("");
     }
   };
 
@@ -29,6 +27,7 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(createUserFormSchema),
@@ -37,7 +36,7 @@ export default function Contact() {
   const [textAreaValue, setTextAreaValue] = useState("");
 
   return (
-    <section className="flex flex-col w-[1500px] mx-auto px-5  mb-32">
+    <section className="flex flex-col w-[1500px] mx-auto px-5  my-40">
       <h3 className="text-center text-2xl font-semibold">Entre em Contato</h3>
 
       <form
@@ -48,8 +47,6 @@ export default function Contact() {
           <p className="mb-2">Email:</p>
           <input
             {...register("email")}
-            value={emailInput}
-            onChange={(e) => setEmailInput(e.target.value)}
             className={`w-full rounded-md  mb-1 shadow-sm border-2 border-transparent shadow-zinc-400 outline-none py-1 px-2 text-sm ${
               errors.email ? "border-red-600" : "border-transparent"
             }`}
