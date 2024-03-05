@@ -5,6 +5,7 @@ import Skills from "../assets/components/Skills";
 
 import { Outlet } from "react-router-dom";
 import Contact from "../assets/components/Contact";
+import Footer from "../assets/components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
 
         <Contact />
       </main>
+
+      <Footer />
       <Outlet />
     </>
   );
