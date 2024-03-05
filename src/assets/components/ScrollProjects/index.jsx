@@ -80,7 +80,7 @@ const Card = ({ card }) => {
     <>
       <div
         key={card.id}
-        className="group relative h-[600px] w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#3c88c4] rounded-2xl "
+        className="group relative h-[600px] w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#306d9d] rounded-2xl "
       >
         <div className="absolute h-1/2 w-full top-0 flex justify-center transition-transform duration-300">
           <div className="absolute z-10 inset-0 ">
