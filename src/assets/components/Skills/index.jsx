@@ -71,9 +71,9 @@ const generateSquares = () => {
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="flex items-center justify-center h-[70px] w-[170px] bg-[#d9e8f3] rounded-xl"
+      className="flex items-center justify-center h-[70px] w-[170px] shadow-md shadow-[#245276] rounded-xl"
     >
-      <img className="object-cover w-full " src={sq.src}></img>
+      <img className="object-cover w-36" src={sq.src}></img>
     </motion.div>
   ));
 };
