@@ -11,7 +11,7 @@ import react from "../../react.png";
 
 export default function Skills() {
   return (
-    <div className="h-96  p-7">
+    <div className="h-96  px-7 flex-1">
       <ShuffleGrid />;
     </div>
   );
@@ -71,7 +71,7 @@ const generateSquares = () => {
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="flex items-center justify-center h-[170px] w-[270px] bg-[#d9e8f3] rounded-xl"
+      className="flex items-center justify-center h-[70px] w-[170px] bg-[#d9e8f3] rounded-xl"
     >
       <img className="object-cover w-full " src={sq.src}></img>
     </motion.div>
@@ -95,7 +95,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[850px] gap-1">
+    <div className="grid   grid-cols-2 grid-rows-4 h-[7s50px] gap-3 ">
       {squares.map((sq) => sq)}
     </div>
   );
