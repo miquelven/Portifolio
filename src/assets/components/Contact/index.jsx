@@ -4,15 +4,20 @@ import { z } from "zod";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
+import card from "../../card.gif";
+
 export default function Contact() {
   const [showError, setShowError] = useState(false);
   const [textAreaValue, setTextAreaValue] = useState("");
 
-  const validateTextArea = textAreaValue.trim().length > 4;
+  const validateTextArea = textAreaValue.trim().length < 4;
 
   const onSubmit = (data) => {
     setShowError(true);
-    if (data !== null && validateTextArea) {
+    if (data !== null && !validateTextArea) {
       toast.success("Email enviado!");
       reset();
       setShowError(false);
@@ -37,67 +42,88 @@ export default function Contact() {
   });
 
   return (
-    <div className="flex flex-col w-[1500px] mx-auto px-5 mb-32">
-      <h3 className="text-center text-2xl font-semibold">Entre em Contato</h3>
+    <div className="w-full ">
+      <div className="relative flex justify-between max-w-[1500px] h-[600px] mx-auto mb-32 pl-32 shadow-md shadow-[#3c88c4] rounded-xl">
+        <img
+          src={card}
+          alt="Gif de uma carta"
+          className="absolute -left-[73px] top-52"
+        />
+        <div className="py-5">
+          <h3 className=" text-3xl font-semibold">Entre em Contato</h3>
 
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="mt-10 min-w-96 flex flex-col mx-auto gap-10"
-      >
-        <label htmlFor="email">
-          <p className="mb-2">Email:</p>
-          <input
-            {...register("email")}
-            className={`w-full rounded-md  mb-1 shadow-sm border-2 border-transparent shadow-zinc-400 outline-none py-1 px-2 text-sm ${
-              errors.email ? "border-red-700" : "border-transparent"
-            }`}
-          />
-          {errors.email && (
-            <span className=" text-red-400 dark:text-red-700 font-light max-[420px]:text-xs">
-              {errors.email.message}
-            </span>
-          )}
-        </label>
-        <label htmlFor="message">
-          <p className="mb-2">Mensagem:</p>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            onChange={(e) => setTextAreaValue(e.target.value)}
-            value={textAreaValue}
-            className={`resize-none mb-1 rounded-md shadow-sm border-2 border-transparent w-full shadow-zinc-400 outline-none py-1 px-2 text-sm
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="mt-10 max-w-96 flex flex-col  gap-10"
+          >
+            <label htmlFor="email" className="w-96">
+              <p className="mb-2">Email:</p>
+              <input
+                {...register("email")}
+                className={`w-full rounded-md  mb-1 shadow-sm border-2 shadow-zinc-400 outline-none py-1 px-2 text-sm ${
+                  errors.email ? "border-red-400" : "border-transparent"
+                }`}
+              />
+              {errors.email && (
+                <span className=" text-red-400 dark:text-red-700 font-light text-sm">
+                  {errors.email.message}
+                </span>
+              )}
+            </label>
+            <label htmlFor="message" className="w-96">
+              <p className="mb-2">Mensagem:</p>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                onChange={(e) => setTextAreaValue(e.target.value)}
+                value={textAreaValue}
+                className={`resize-none mb-1 rounded-md shadow-sm border-2 w-full shadow-zinc-400 outline-none py-1 px-2 text-sm
             ${
-              validateTextArea && showError
-                ? "border-red-700"
+              validateTextArea == true && showError
+                ? "border-red-400"
                 : "border-transparent"
             }
             `}
-          ></textarea>
-          {showError && (
-            <span className="text-red-400 dark:text-red-700 font-light max-[420px]:text-xs">
-              {textAreaValue.trim().length == 0 ? (
-                <p>O campo não pode ser vazio</p>
-              ) : (
-                <>
-                  {textAreaValue.trim().length < 4 &&
-                    textAreaValue.trim().length > 0 && (
-                      <p>O campo deve conter pelo menos 5 caracteres</p>
-                    )}
-                </>
+              ></textarea>
+              {showError && (
+                <span className="text-red-400 dark:text-red-700 font-light text-sm">
+                  {textAreaValue.trim().length == 0 ? (
+                    <p>O campo não pode ser vazio</p>
+                  ) : (
+                    <>
+                      {textAreaValue.trim().length < 4 &&
+                        textAreaValue.trim().length > 0 && (
+                          <p>O campo deve conter pelo menos 5 caracteres</p>
+                        )}
+                    </>
+                  )}
+                </span>
               )}
-            </span>
-          )}
-        </label>
-        <button
-          type="submit"
-          onClick={() => setShowError(true)}
-          className="bg-[#245276] capitalize py-1.5 text-white rounded-md shadow-sm shadow-zinc-400 hover:cursor-pointer hover:shadow-md"
-        >
-          enviar
-        </button>
-      </form>
+            </label>
+            <button
+              type="submit"
+              onClick={() => setShowError(true)}
+              className="bg-[#245276] capitalize py-1.5 text-white rounded-md shadow-sm shadow-zinc-400 hover:cursor-pointer hover:shadow-md"
+            >
+              enviar
+            </button>
+          </form>
+        </div>
+
+        <div className="bg-[#3c88c4] h-full w-1/3 flex justify-center items-center gap-10 rounded-tr-xl rounded-br-xl">
+          <a href="https://github.com/miquelven" target="_blank">
+            <FaGithub className="w-12 h-12 transition-scale duration-300  hover:scale-110 fill-white" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
+            target="_blank"
+          >
+            <FaLinkedin className="w-12 h-12 transition-scale duration-300 hover:scale-110 fill-white" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

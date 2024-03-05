@@ -2,8 +2,8 @@ import Skills from "../Skills";
 
 export default function About() {
   return (
-    <div id="about">
-      <div className="my-52 w-[1500px] h-96 mx-auto px-5 flex">
+    <div>
+      <div className="my-52 max-w-[1500px] h-96 mx-auto px-5 flex">
         <div
           className="flex-[2] flex flex-col gap-8 text-justify text-lg font-light "
           data-aos="fade-right"

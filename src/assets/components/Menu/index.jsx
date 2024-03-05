@@ -4,7 +4,6 @@ import MenuContent from "../MenuContent";
 import MenuIcon from "../MenuIcon";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { MdOutlineMail } from "react-icons/md";
 
 export default function Menu() {
   const colors = ["#306d9d", "transparent"];
