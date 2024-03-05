@@ -46,7 +46,7 @@ export default function Menu() {
         className="h-12 flex justify-end items-center fixed z-50 right-10"
         onClick={handleClick}
       >
-        <MenuIcon color={color} isOpen={isOpen} />
+        <MenuIcon isOpen={isOpen} />
       </div>
 
       <motion.div

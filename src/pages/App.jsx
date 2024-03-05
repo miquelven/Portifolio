@@ -13,13 +13,17 @@ function App() {
       <Header />
       <main className="relative z-10 w-full">
         <Hero />
-        <About />
+        <section id="about" className="py-10">
+          <About />
+        </section>
 
         <div>
           <ScrollProjects />
         </div>
 
-        <Contact />
+        <section id="contact" className="py-32">
+          <Contact />
+        </section>
       </main>
 
       <Footer />

@@ -36,7 +36,7 @@ export default function Contact() {
   const [textAreaValue, setTextAreaValue] = useState("");
 
   return (
-    <section className="flex flex-col w-[1500px] mx-auto px-5  my-40">
+    <div className="flex flex-col w-[1500px] mx-auto px-5 mb-32">
       <h3 className="text-center text-2xl font-semibold">Entre em Contato</h3>
 
       <form
@@ -97,6 +97,6 @@ export default function Contact() {
           enviar
         </button>
       </form>
-    </section>
+    </div>
   );
 }

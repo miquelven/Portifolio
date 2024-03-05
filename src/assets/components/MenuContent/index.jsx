@@ -2,6 +2,10 @@ import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
+import aboutImage from "../../aboutImage.png";
+import projectImage from "../../projectImage.png";
+import contactImage from "../../contactImage.png";
+
 export default function MenuContent({ onLinkClick }) {
   return (
     <div className="mx-auto max-w-5xl">
@@ -9,7 +13,7 @@ export default function MenuContent({ onLinkClick }) {
         <Link
           heading="Sobre"
           subheading="Um pouco sobre minha jornada como programador"
-          imgSrc="/imgs/random/11.jpg"
+          imgSrc={aboutImage}
           href="#about"
         />
       </div>
@@ -17,7 +21,7 @@ export default function MenuContent({ onLinkClick }) {
         <Link
           heading="Projetos"
           subheading="Exibindo meus projetos e minha paixão por desenvolvimento"
-          imgSrc="/imgs/random/6.jpg"
+          imgSrc={projectImage}
           href="#project"
         />
       </div>
@@ -25,7 +29,7 @@ export default function MenuContent({ onLinkClick }) {
         <Link
           heading="Contatos"
           subheading="Conecte-se comigo"
-          imgSrc="/imgs/random/4.jpg"
+          imgSrc={contactImage}
           href="#contact"
         />
       </div>

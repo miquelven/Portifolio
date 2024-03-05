@@ -2,7 +2,7 @@ import Skills from "../Skills";
 
 export default function About() {
   return (
-    <div>
+    <div id="about">
       <div className="my-52 w-[1500px] mx-auto px-5 flex gap-20">
         <div className="flex-[2] flex flex-col gap-8 text-justify">
           <p>

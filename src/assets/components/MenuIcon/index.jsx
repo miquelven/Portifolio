@@ -1,6 +1,6 @@
 import { MotionConfig, motion } from "framer-motion";
 
-export default function MenuIcon({ color, isOpen }) {
+export default function MenuIcon({ isOpen }) {
   return (
     <MotionConfig
       transition={{
@@ -12,7 +12,7 @@ export default function MenuIcon({ color, isOpen }) {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         className="relative h-14 w-14 rounded-full transition-scale duration-300 hover:scale-110  "
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: isOpen ? "transparent" : "#306d9d" }}
       >
         <motion.span
           variants={VARIANTS.top}
