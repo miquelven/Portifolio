@@ -7,7 +7,16 @@ import Contact from "../assets/components/Contact";
 import Footer from "../assets/components/Footer";
 import About from "../assets/components/About";
 
+import AOS from "aos";
+import { useEffect } from "react";
+
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: "500",
+    });
+  }, []);
+
   return (
     <>
       <Header />
@@ -17,11 +26,14 @@ function App() {
           <About />
         </section>
 
-        <div>
-          <ScrollProjects />
-        </div>
+        <ScrollProjects />
 
-        <section id="contact" className="py-32">
+        <section
+          id="contact"
+          className="py-32"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <Contact />
         </section>
       </main>

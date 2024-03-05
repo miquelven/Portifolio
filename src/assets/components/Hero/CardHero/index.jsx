@@ -61,7 +61,11 @@ const TiltCard = () => {
         }}
         className="absolute inset-4  rounded-xl flex  justify-center items-start drop-shadow-2xl shadow-lg bg-gradient-to-br from-[#306d9d] to-[#3c88c4] shadow-black/30"
       >
-        <div className="flex-1 flex flex-col justify-center p-10 ">
+        <div
+          className="flex-1 flex flex-col justify-center p-10 "
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
           <h3 className="text-xl  [text-shadow:_0_2px_0_rgb(0_0_0_/70%)] font-medium text-zinc-200 mb-20">
             Olá! Eu sou o
             <DecorationText />
@@ -82,6 +86,8 @@ const TiltCard = () => {
           className="
           flex-1 h-full flex justify-end items-center px-10
         "
+          data-aos="zoom-in"
+          data-aos-delay="800"
         >
           <FloatingPhone />
         </div>

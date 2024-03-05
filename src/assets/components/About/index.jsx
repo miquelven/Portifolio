@@ -4,7 +4,10 @@ export default function About() {
   return (
     <div id="about">
       <div className="my-52 w-[1500px] mx-auto px-5 flex gap-20">
-        <div className="flex-[2] flex flex-col gap-8 text-justify">
+        <div
+          className="flex-[2] flex flex-col gap-8 text-justify text-lg font-light"
+          data-aos="fade-right"
+        >
           <p>
             Aos meus 16 anos, fui apresentado ao desenvolvimento. Com uma paixão
             enraizada em jogos, decidi investigar a criação dos mesmos. Após

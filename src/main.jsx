@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import App from "./pages/App.jsx";
 import Modal from "./pages/Modal.jsx";
 
+import "aos/dist/aos.css";
+
 import "./index.css";
 import "./App.css";
 

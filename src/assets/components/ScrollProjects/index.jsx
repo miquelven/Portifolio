@@ -26,9 +26,16 @@ import { Link } from "react-router-dom";
 
 export default function ScrollProjects() {
   return (
-    <section id="project" className="bg-[#245276] my-20 py-10">
+    <section
+      id="project"
+      className="bg-[#245276] my-20 py-10"
+      data-aos="fade-up"
+    >
       <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
+        <span
+          className="font-semibold uppercase text-neutral-500"
+          data-aos="zoom-in"
+        >
           <PiMouseSimpleDuotone className="h-14 w-14 fill-[#d9e8f3]" />
         </span>
       </div>
@@ -68,6 +75,8 @@ const Card = ({ card }) => {
     <>
       <div
         key={card.id}
+        data-aos="fade-up"
+        data-aos-delay="500"
         className="group relative h-[600px] w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#3c88c4] rounded-2xl "
       >
         <div className="absolute h-1/2 w-full top-0 flex justify-center transition-transform duration-300">
