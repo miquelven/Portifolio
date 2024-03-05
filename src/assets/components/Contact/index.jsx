@@ -48,7 +48,7 @@ export default function Contact() {
           <input
             {...register("email")}
             className={`w-full rounded-md  mb-1 shadow-sm border-2 border-transparent shadow-zinc-400 outline-none py-1 px-2 text-sm ${
-              errors.email ? "border-red-600" : "border-transparent"
+              errors.email ? "border-red-700" : "border-transparent"
             }`}
           />
           {errors.email && (
@@ -69,7 +69,7 @@ export default function Contact() {
             className={`resize-none mb-1 rounded-md shadow-sm border-2 border-transparent w-full shadow-zinc-400 outline-none py-1 px-2 text-sm
             ${
               textAreaValue.trim().length < 4 && showError
-                ? "border-red-600"
+                ? "border-red-700"
                 : "border-transparent"
             }
             `}
