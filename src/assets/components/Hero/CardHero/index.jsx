@@ -52,7 +52,7 @@ const TiltCard = () => {
         rotateX,
         rotateY,
       }}
-      className="relative min-h-[calc(100vh-400px)] w-full rounded-xl bg-[#3c88c4] shadow-md mt-20 shadow-black"
+      className="relative h-[620px] w-full rounded-xl bg-[#3c88c4] shadow-md mt-20 shadow-black"
     >
       <div
         style={{
