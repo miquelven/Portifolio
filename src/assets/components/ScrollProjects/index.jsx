@@ -86,7 +86,12 @@ const Card = ({ card }) => {
               alt="Imagem do Projeto"
               className="absolute h-full z-20 w-full bg-cover "
             />
-            <Link to={"/" + card.url.split("assets/")[1].split(".png")[0]}>
+            <Link
+              to={
+                "/" +
+                card.url.split("assets/")[1].split(".png")[0].split("-")[0]
+              }
+            >
               <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100">
                 <FaExpandArrowsAlt className="absolut h-10 w-10 fill-zinc-300" />
               </div>
