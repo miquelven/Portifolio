@@ -23,20 +23,14 @@ export default function Menu() {
   return (
     <>
       <div className="flex fixed z-50 top-7 gap-5">
-        <a href="#">
+        <a href="https://github.com/miquelven">
           <FaGithub
             className="w-7 h-7 transition-scale duration-300  hover:scale-110"
             style={{ fill: isOpen ? "#ffffff" : "#306d9d" }}
           />
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/miquelven-silva-80731a23b/">
           <FaLinkedin
-            className="w-7 h-7 transition-scale duration-300 hover:scale-110"
-            style={{ fill: isOpen ? "#ffffff" : "#306d9d" }}
-          />
-        </a>
-        <a href="#">
-          <MdOutlineMail
             className="w-7 h-7 transition-scale duration-300 hover:scale-110"
             style={{ fill: isOpen ? "#ffffff" : "#306d9d" }}
           />
