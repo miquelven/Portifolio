@@ -55,6 +55,8 @@ export default function Contact() {
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="mt-10 max-w-96 flex flex-col  gap-10"
+            data-aos="fade-right"
+            data-aos-delay="600"
           >
             <label htmlFor="email" className="w-96">
               <p className="mb-2">Email:</p>
@@ -93,10 +95,9 @@ export default function Contact() {
                     <p>O campo não pode ser vazio</p>
                   ) : (
                     <>
-                      {textAreaValue.trim().length < 4 &&
-                        textAreaValue.trim().length > 0 && (
-                          <p>O campo deve conter pelo menos 5 caracteres</p>
-                        )}
+                      {validateTextArea && textAreaValue.trim().length > 0 && (
+                        <p>O campo deve conter pelo menos 5 caracteres</p>
+                      )}
                     </>
                   )}
                 </span>
@@ -113,12 +114,19 @@ export default function Contact() {
         </div>
 
         <div className="bg-[#3c88c4] h-full w-1/3 flex justify-center items-center gap-10 rounded-tr-xl rounded-br-xl">
-          <a href="https://github.com/miquelven" target="_blank">
+          <a
+            href="https://github.com/miquelven"
+            target="_blank"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <FaGithub className="w-12 h-12 transition-scale duration-300  hover:scale-110 fill-white" />
           </a>
           <a
             href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
             target="_blank"
+            data-aos="fade-up"
+            data-aos-delay="800"
           >
             <FaLinkedin className="w-12 h-12 transition-scale duration-300 hover:scale-110 fill-white" />
           </a>
