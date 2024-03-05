@@ -11,7 +11,7 @@ import react from "../../react.png";
 
 export default function Skills() {
   return (
-    <div className="h-96  px-7 flex-1" data-aos="zoom-in" data-aos-delay="500">
+    <div className="h-96 pr-7 flex-1" data-aos="zoom-in" data-aos-delay="500">
       <ShuffleGrid />;
     </div>
   );

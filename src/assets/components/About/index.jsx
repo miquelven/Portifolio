@@ -3,9 +3,9 @@ import Skills from "../Skills";
 export default function About() {
   return (
     <div id="about">
-      <div className="my-52 w-[1500px] mx-auto px-5 flex gap-20">
+      <div className="my-52 w-[1500px] h-96 mx-auto px-5 flex">
         <div
-          className="flex-[2] flex flex-col gap-8 text-justify text-lg font-light"
+          className="flex-[2] flex flex-col gap-8 text-justify text-lg font-light "
           data-aos="fade-right"
         >
           <p>
@@ -35,6 +35,9 @@ export default function About() {
             </span>
           </p>
         </div>
+
+        {/* SPACER */}
+        <div className="h-full mx-12 w-1 bg-gradient-to-t to-[#306d9d]/90 from-[#d9e8f3] rounded-sm"></div>
 
         <Skills />
       </div>
