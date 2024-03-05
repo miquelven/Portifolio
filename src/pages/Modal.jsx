@@ -20,11 +20,8 @@ export default function Modal() {
         onClick={() => window.history.back()}
       >
         <div className="fixed w-3/4 h-3/4 flex justify-center items-center rounded-xl shadow-sm shadow-zinc-900 overflow-hidden ">
-          <span className="text-white">
-            {JSON.stringify(images[idImage].img)}
-          </span>
           <img
-            src="../assets/aboutImage.png"
+            src={images[idImage].img}
             alt="imagem do projeto"
             className="h-full w-full transition-all duration-500   hover:scale-[1.02]"
           />
