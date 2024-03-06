@@ -38,6 +38,7 @@ export default function Menu() {
           />
         </a>
       </div>
+
       <div
         className="h-12 flex justify-end items-center fixed z-50 right-10"
         onClick={handleClick}
@@ -46,7 +47,7 @@ export default function Menu() {
       </div>
 
       <motion.div
-        className="bg-[#245276]  p-32 md:p-20 fixed z-40 inset-0"
+        className="bg-[#245276]  p-32 md:p-20 fixed z-40 inset-0 max-sm:px-4"
         style={{ height: isOpen ? "100vh" : "0px" }}
         variants={{
           open: { opacity: 1 },

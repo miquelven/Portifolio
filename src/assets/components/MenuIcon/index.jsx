@@ -11,27 +11,26 @@ export default function MenuIcon({ isOpen }) {
       <motion.button
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        className="relative h-14 w-14 rounded-full transition-scale duration-300 hover:scale-110  "
+        className="relative h-14 w-14 rounded-full transition-scale duration-300 hover:scale-110  max-sm:h-10 max-sm:w-10"
         style={{ backgroundColor: isOpen ? "transparent" : "#306d9d" }}
       >
         <motion.span
           variants={VARIANTS.top}
-          className="absolute h-1 w-10 bg-white"
+          className="absolute h-1 w-10 bg-white max-sm:w-7"
           style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
         />
         <motion.span
           variants={VARIANTS.middle}
-          className="absolute h-1 w-10 bg-white"
+          className="absolute h-1 w-10 bg-white max-sm:w-7"
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={VARIANTS.bottom}
-          className="absolute h-1 w-5 bg-white"
+          className="absolute bottom-[35%]  h-1 w-5 bg-white max-sm:w-4"
           style={{
             x: "-50%",
             y: "50%",
-            bottom: "35%",
-            left: "calc(50% + 10px)",
+            left: "calc(50% + 7px)",
           }}
         />
       </motion.button>
@@ -67,7 +66,7 @@ const VARIANTS = {
     closed: {
       rotate: ["45deg", "0deg", "0deg"],
       bottom: ["50%", "50%", "35%"],
-      left: "calc(50% + 10px)",
+      // left: "calc(50% + 10px)",
     },
   },
 };
