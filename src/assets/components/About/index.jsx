@@ -2,8 +2,8 @@ import Skills from "../Skills";
 
 export default function About() {
   return (
-    <div>
-      <div className="my-52 max-w-[1500px] h-96 mx-auto px-5 flex">
+    <>
+      <div className="my-52 max-w-[1500px] h-96 mx-auto px-5 flex max-xl:flex-col max-xl:gap-16 max-xl:mt-14 max-xl:mb-96">
         <div
           className="flex-[2] flex flex-col gap-8 text-justify text-lg font-light "
           data-aos="fade-right"
@@ -37,10 +37,10 @@ export default function About() {
         </div>
 
         {/* SPACER */}
-        <div className="h-full mx-12 w-1 bg-gradient-to-t to-[#306d9d]/90 from-[#d9e8f3] rounded-sm"></div>
+        <div className="h-full mx-12 w-1 bg-gradient-to-t to-[#306d9d]/90 from-[#d9e8f3] rounded-sm max-xl:hidden"></div>
 
         <Skills />
       </div>
-    </div>
+    </>
   );
 }

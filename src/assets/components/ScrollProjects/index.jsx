@@ -28,7 +28,7 @@ export default function ScrollProjects() {
   return (
     <section
       id="project"
-      className="bg-[#245276] my-20 py-10"
+      className="bg-[#245276] my-20 py-10 max-xl:mt-96 max-[530px]:mt-[950px]"
       data-aos="fade-up"
     >
       <div className="flex h-48  items-center justify-center">
