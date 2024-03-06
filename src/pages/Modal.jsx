@@ -19,12 +19,15 @@ export default function Modal() {
         className="bg-zinc-900/80 fixed inset-0  flex justify-center items-center z-40"
         onClick={() => window.history.back()}
       >
-        <div className="fixed w-3/4 h-3/4 flex justify-center items-center rounded-xl shadow-sm shadow-zinc-900 overflow-hidden ">
-          <img
-            src={images[idImage].img}
-            alt="imagem do projeto"
-            className="h-full w-full transition-all duration-500   hover:scale-[1.02]"
-          />
+        <div className="fixed w-3/4 h-3/4 flex justify-center items-center rounded-xl shadow-sm shadow-zinc-900 overflow-hidden max-sm:w-11/12 max-sm:h-[200px]">
+          <div
+            className="h-full w-full transition-all duration-500 hover:scale-[1.02]"
+            style={{
+              background: `url(${images[idImage].img})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
         </div>
       </motion.div>
     </AnimatePresence>

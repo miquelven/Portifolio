@@ -78,17 +78,16 @@ const HorizontalScrollCarousel = () => {
 const Card = ({ card }) => {
   return (
     <>
-      <div
-        key={card.id}
-        className="group relative h-[600px]  w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#306d9d] rounded-2xl "
-      >
+      <div className="group relative h-[600px]  w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#306d9d] rounded-2xl max-sm:w-[450px] max-[480px]:w-80">
         <div className="absolute h-1/2 w-full top-0 flex justify-center transition-transform duration-300">
           <div className="absolute z-10 inset-0 ">
-            <img
-              src={card.url}
-              alt="Imagem do Projeto"
-              className="absolute h-full z-20 w-full bg-cover "
-            />
+            <div
+              className="w-full h-full bg-top  max-sm:bg-left"
+              style={{
+                background: `url(${card.url})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
             <Link
               to={
                 "/" +
@@ -96,31 +95,36 @@ const Card = ({ card }) => {
               }
             >
               <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100">
-                <FaExpandArrowsAlt className="absolut h-10 w-10 fill-zinc-300" />
+                <FaExpandArrowsAlt className="absolut h-10 w-10 fill-zinc-300 max-sm:w-6 max-sm:h-6" />
               </div>
             </Link>
           </div>
           <div className="absolute z-20 -bottom-12 left-4">
-            <h3 className="font-bold text-3xl text-zinc-100">{card.title}</h3>
+            <h3 className="font-bold text-3xl text-zinc-100 max-sm:text-2xl ">
+              {card.title}
+            </h3>
           </div>
-          <div className="absolute z-20 -bottom-10 right-2 w-32 h-10 flex justify-end items-center gap-4">
+          <div className="absolute z-20 -bottom-10 right-2 w-32 h-10 flex justify-end items-center gap-4 max-[480px]:mt-3">
             <a href={card.projectLink} target="_blank">
-              <FaShareFromSquare className="w-6 h-7 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276] " />
+              <FaShareFromSquare className="w-6 h-7 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276] max-[480px]:w-5 max-[480px]:h-6" />
             </a>
             <a href={card.githubLink} target="_blank">
-              <FaGithub className="w-6 h-6 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276]" />
+              <FaGithub className="w-6 h-6 fill-zinc-300 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276] max-[480px]:w-5 max-[480px]:h-6" />
             </a>
           </div>
         </div>
         <div className="h-[250px] absolute bottom-0 right-0 left-0 z-10 p-4 ">
           <div className=" flex gap-3 items-center text-zinc-100">
             {card.stacks.map((stack) => (
-              <span className="text-2xl mb-3 text-zinc-200 hover:scale-105 ">
+              <span className="text-2xl mb-3 text-zinc-200 hover:scale-105 max-[480px]:text-xl">
                 {stack}
               </span>
             ))}
           </div>
-          <div data-card className=" max-h-40  overflow-y-auto mt-5 pr-6">
+          <div
+            data-card
+            className=" max-h-40  overflow-y-auto mt-5 pr-6 max-[480px]:pr-3"
+          >
             <p className="font-light text-justify text-zinc-300">
               {card.description}
             </p>
