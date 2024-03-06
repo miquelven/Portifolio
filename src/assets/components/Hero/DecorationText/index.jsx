@@ -59,9 +59,9 @@ const EncryptButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="group relative overflow-hidden rounded-lg  px-4 py-2 font-mono font-medium uppercase text-[#245276] transition-colors hover:text-[#d9e8f3] "
+      className="group relative overflow-hidden rounded-lg  px-4 py-2 [text-shadow:_0_2px_0_rgb(0_0_0_/70%)]  font-medium uppercase text-zinc-200 transition-colors hover:text-zinc-300 "
     >
-      <span className="font-bold text-3xl flex gap-2 relative">
+      <span className="font-semibold text-3xl flex gap-2 relative">
         {text}
         <HiMiniCursorArrowRays className="self-end" />
       </span>
