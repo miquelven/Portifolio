@@ -61,9 +61,9 @@ const EncryptButton = () => {
       onMouseLeave={stopScramble}
       className="group relative overflow-hidden rounded-lg  px-4 py-2 [text-shadow:_0_2px_0_rgb(0_0_0_/70%)]  font-medium uppercase text-zinc-200 transition-colors hover:text-zinc-300 "
     >
-      <span className="font-semibold text-3xl flex gap-2 relative">
+      <span className="font-semibold text-3xl flex gap-2 relative max-sm:text-2xl max-[490px]:text-xl max-[420px]:text-lg">
         {text}
-        <HiMiniCursorArrowRays className="self-end" />
+        <HiMiniCursorArrowRays className="self-end max-[490px]:hidden" />
       </span>
     </motion.button>
   );
