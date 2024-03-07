@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import MenuContent from "../MenuContent";
-import MenuIcon from "../MenuIcon";
+import MenuContent from "./MenuContent";
+import MenuIcon from "./MenuIcon";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 

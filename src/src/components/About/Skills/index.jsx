@@ -1,10 +1,10 @@
-import javascript from "../../javascript.png";
-import typescript from "../../typescript.png";
-import nuxt from "../../nuxt.png";
-import tailwindcss from "../../tailwindcss.png";
-import Sass from "../../Sass.png";
-import vue from "../../vue.png";
-import react from "../../react.png";
+import javascript from "../../../../assets/images/stacks/javascript.png";
+import typescript from "../../../../assets/images/stacks/typescript.png";
+import nuxt from "../../../../assets/images/stacks/nuxt.png";
+import tailwindcss from "../../../../assets/images/stacks/tailwindcss.png";
+import Sass from "../../../../assets/images/stacks/Sass.png";
+import vue from "../../../../assets/images/stacks/vue.png";
+import react from "../../../../assets/images/stacks/react.png";
 
 export default function Skills() {
   const timer = 200;

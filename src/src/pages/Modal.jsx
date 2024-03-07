@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-import miCoin from "../assets/miCoin.png";
-import miDrinks from "../assets/miDrinks.png";
-import game from "../assets/game.png";
-import pokeList from "../assets/pokeList.png";
-import miPizza from "../assets/miPizza.png";
+import miCoin from "../../assets/images/projects/miCoin.png";
+import miDrinks from "../../assets/images/projects/miDrinks.png";
+import game from "../../assets/images/projects/game.png";
+import pokeList from "../../assets/images/projects/pokeList.png";
+import miPizza from "../../assets/images/projects/miPizza.png";
 
 export default function Modal() {
   const { idImage } = useParams();

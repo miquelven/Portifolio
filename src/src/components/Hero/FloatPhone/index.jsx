@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
-import imgHero from "../../../../assets/imgHero.webp";
+import imgHero from "../../../../assets/images/hero/imgHero.webp";
 
 export default function FloatingPhone() {
   return (

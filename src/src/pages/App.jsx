@@ -1,11 +1,11 @@
-import ScrollProjects from "../assets/components/ScrollProjects";
-import Hero from "../assets/components/Hero";
-import Header from "../assets/components/Header";
+import ScrollProjects from "../components/ScrollProjects";
+import Hero from "../components/Hero";
+import Header from "../components/Header";
 
 import { Outlet } from "react-router-dom";
-import Contact from "../assets/components/Contact";
-import Footer from "../assets/components/Footer";
-import About from "../assets/components/About";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import About from "../components/About";
 
 import AOS from "aos";
 import { useEffect } from "react";

@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
-import card from "../../card.gif";
+import card from "../../../assets/images/gifs/card.gif";
 
 export default function Contact() {
   const [showError, setShowError] = useState(false);

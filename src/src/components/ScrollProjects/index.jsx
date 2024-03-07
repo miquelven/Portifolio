@@ -16,11 +16,11 @@ import { TbBrandMysql } from "react-icons/tb";
 import { FaNode } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 
-import miCoin from "../../miCoin.png";
-import miDrinks from "../../miDrinks.png";
-import game from "../../game.png";
-import pokeList from "../../pokeList.png";
-import miPizza from "../../miPizza.png";
+import miCoin from "../../../assets/images/projects/miCoin.png";
+import miDrinks from "../../../assets/images/projects/miDrinks.png";
+import game from "../../../assets/images/projects/game.png";
+import pokeList from "../../../assets/images/projects/pokeList.png";
+import miPizza from "../../../assets/images/projects/miPizza.png";
 
 import { Link } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import Skills from "../Skills";
+import Skills from "./Skills";
 
 export default function About() {
   return (
