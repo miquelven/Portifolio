@@ -7,6 +7,8 @@ import { toast } from "react-toastify";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
+import emailjs from "@emailjs/browser";
+
 import card from "../../../assets/images/gifs/card.gif";
 
 export default function Contact() {
@@ -15,9 +17,24 @@ export default function Contact() {
 
   const validateTextArea = textAreaValue.trim().length < 4;
 
+  const sendEmail = (data) => {
+    const templateParams = {
+      message: textAreaValue,
+      email: data.email,
+    };
+
+    emailjs.send(
+      "service_j9fygzm",
+      "template_el44meo",
+      templateParams,
+      "W7PLvOdvqRzXPUDr1"
+    );
+  };
+
   const onSubmit = (data) => {
     setShowError(true);
     if (data !== null && !validateTextArea) {
+      sendEmail(data);
       toast.success("Email enviado!");
       reset();
       setShowError(false);
