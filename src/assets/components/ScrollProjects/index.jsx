@@ -65,7 +65,7 @@ const HorizontalScrollCarousel = () => {
       data-aos-delay="500"
     >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-20">
+        <motion.div style={{ x }} className="flex gap-20 max-sm:gap-32">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -78,23 +78,25 @@ const HorizontalScrollCarousel = () => {
 const Card = ({ card }) => {
   return (
     <>
-      <div className="group relative h-[600px]  w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#306d9d] rounded-2xl max-sm:w-[450px] max-[480px]:w-80">
+      <div className="group relative h-[600px]  w-[550px] overflow-hidden bg-[#3c88c4] shadow-sm shadow-[#306d9d] rounded-2xl max-sm:w-[450px] max-[480px]:w-80 max-[480px]:h-[560px]">
         <div className="absolute h-1/2 w-full top-0 flex justify-center transition-transform duration-300">
           <div className="absolute z-10 inset-0 ">
             <div
-              className="w-full h-full bg-top  max-sm:bg-left"
+              className="w-full h-full "
               style={{
                 background: `url(${card.url})`,
                 backgroundSize: "cover",
+                backgroundPosition: "top center",
               }}
             ></div>
             <Link
+              className="max-sm:hidden"
               to={
                 "/" +
                 card.url.split("assets/")[1].split(".png")[0].split("-")[0]
               }
             >
-              <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100">
+              <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100 ">
                 <FaExpandArrowsAlt className="absolut h-10 w-10 fill-zinc-300 max-sm:w-6 max-sm:h-6" />
               </div>
             </Link>
@@ -113,7 +115,7 @@ const Card = ({ card }) => {
             </a>
           </div>
         </div>
-        <div className="h-[250px] absolute bottom-0 right-0 left-0 z-10 p-4 ">
+        <div className="h-[250px] absolute bottom-0 right-0 left-0 z-10 p-4 max-[480px]:h-[235px]">
           <div className=" flex gap-3 items-center text-zinc-100">
             {card.stacks.map((stack) => (
               <span className="text-2xl mb-3 text-zinc-200 hover:scale-105 max-[480px]:text-xl">
@@ -123,7 +125,7 @@ const Card = ({ card }) => {
           </div>
           <div
             data-card
-            className=" max-h-40  overflow-y-auto mt-5 pr-6 max-[480px]:pr-3"
+            className=" max-h-40  overflow-y-auto mt-5 pr-6 max-[480px]:pr-0"
           >
             <p className="font-light text-justify text-zinc-300">
               {card.description}
