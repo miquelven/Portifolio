@@ -34,7 +34,7 @@ function App() {
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          {/* <Contact /> */}
+          <Contact />
         </section>
       </main>
 
