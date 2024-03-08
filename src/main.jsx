@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./src/pages/App.jsx";
-import Modal from "./src/pages/Modal.jsx";
+
+import App from "./pages/App.jsx";
+import Modal from "./pages/Modal.jsx";
 
 import "aos/dist/aos.css";
 
