@@ -30,7 +30,7 @@ const cards = [
     title: "MiDrinks",
     description:
       "miDrinks é sua plataforma completa para explorar o vasto universo das bebidas. Com uma extensa biblioteca de informações. Com recursos de pesquisa avançada, você pode facilmente encontrar o que procura, seja um coquetel específico ou uma bebida com ingredientes específicos. Além disso, os filtros por categoria permitem que você refine sua busca, seja por tipo de bebida alcoólica, não alcoólica ou sazonal.",
-    stacks: [<SiNuxtdotjs />, <FaSass />, <IoLogoJavascript />],
+    stacks: [<SiNuxtdotjs />, <FaSass />, <SiTypescript />],
     id: 2,
     projectLink: "https://mi-drinks.vercel.app/",
     githubLink: "https://github.com/miquelven/miDrinks",

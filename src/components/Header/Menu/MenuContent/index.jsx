@@ -2,9 +2,9 @@ import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
-import aboutImage from "../../../../../assets/images/menu/aboutImage.png";
-import projectImage from "../../../../../assets/images/menu/projectImage.png";
-import contactImage from "../../../../../assets/images/menu/contactImage.png";
+import aboutImage from "../../../../../assets/images/menu/aboutImage.webp";
+import projectImage from "../../../../../assets/images/menu/projectImage.webp";
+import contactImage from "../../../../../assets/images/menu/contactImage.webp";
 
 export default function MenuContent({ onLinkClick }) {
   return (
