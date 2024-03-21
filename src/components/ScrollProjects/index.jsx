@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { FaExpandArrowsAlt } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
@@ -87,7 +87,11 @@ const Card = ({ card }) => {
               className="max-sm:hidden"
               to={
                 "/" +
-                card.url.split("assets/")[1].split(".png")[0].split("-")[0]
+                card.url
+                  .split("assets/")[1]
+                  .split(".png")[0]
+                  .split("-")[0]
+                  .split("projects/")[1]
               }
             >
               <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100 ">
