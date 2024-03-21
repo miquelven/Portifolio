@@ -1,6 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import { PiMouseSimpleDuotone } from "react-icons/pi";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { FaExpandArrowsAlt } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
@@ -18,17 +17,26 @@ export default function ScrollProjects() {
       data-aos="fade-up"
     >
       <div className="flex h-48  items-center justify-center">
-        <span
-          className="font-semibold uppercase text-neutral-500"
-          data-aos="zoom-in"
+        <a
+          href="#contact"
+          className="flex flex-col items-center justify-center animate-pulse "
         >
-          <PiMouseSimpleDuotone className="h-14 w-14 fill-[#d9e8f3]" />
-        </span>
+          <span className="text-[#d9e8f3] text-sm -translate-y-3">
+            ( Clique para rolar para baixo )
+          </span>
+          <MdKeyboardDoubleArrowUp className="h-14 w-14 fill-[#d9e8f3] rotate-180" />
+        </a>
       </div>
       <HorizontalScrollCarousel />
       <div className="flex h-48 items-center justify-center">
-        <a href="#project">
+        <a
+          href="#project"
+          className="flex flex-col items-center justify-center animate-pulse"
+        >
           <MdKeyboardDoubleArrowUp className="h-14 w-14 fill-[#d9e8f3]" />
+          <span className="text-[#d9e8f3] text-sm translate-y-3">
+            ( Clique para rolar para cima )
+          </span>
         </a>
       </div>
     </section>
