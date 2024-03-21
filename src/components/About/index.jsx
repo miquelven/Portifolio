@@ -7,6 +7,7 @@ export default function About() {
         <div
           className="flex-[2] flex flex-col gap-8 text-justify text-lg font-light "
           data-aos="fade-right"
+          data-aos-delay="300"
         >
           <p>
             Aos meus 16 anos, fui apresentado ao desenvolvimento. Com uma paixão
@@ -37,7 +38,11 @@ export default function About() {
         </div>
 
         {/* SPACER */}
-        <div className="h-full mx-12 w-1 bg-gradient-to-t to-[#306d9d]/90 from-[#d9e8f3] rounded-sm max-xl:hidden"></div>
+        <div
+          className="h-full mx-12 w-1 bg-gradient-to-t to-[#306d9d]/90 from-[#d9e8f3] rounded-sm max-xl:hidden"
+          data-aos="fade-up"
+          data-aos-delay="700"
+        ></div>
 
         <Skills />
       </div>

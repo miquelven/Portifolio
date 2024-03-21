@@ -29,22 +29,13 @@ const cards = [
     url: miDrinks,
     title: "MiDrinks",
     description:
-      "miDrinks é sua plataforma completa para explorar o vasto universo das bebidas. Com uma extensa biblioteca de informações. Com recursos de pesquisa avançada, você pode facilmente encontrar o que procura, seja um coquetel específico ou uma bebida com ingredientes específicos. Além disso, os filtros por categoria permitem que você refine sua busca, seja por tipo de bebida alcoólica, não alcoólica ou sazonal.",
+      "MiDrinks é sua plataforma completa para explorar o vasto universo das bebidas. Com uma extensa biblioteca de informações. Com recursos de pesquisa avançada, você pode facilmente encontrar o que procura, seja um coquetel específico ou uma bebida com ingredientes específicos. Além disso, os filtros por categoria permitem que você refine sua busca, seja por tipo de bebida alcoólica, não alcoólica ou sazonal.",
     stacks: [<SiNuxtdotjs />, <FaSass />, <SiTypescript />],
     id: 2,
     projectLink: "https://mi-drinks.vercel.app/",
     githubLink: "https://github.com/miquelven/miDrinks",
   },
-  {
-    url: miPizza,
-    title: "MiPizza",
-    description:
-      "miPizza é uma landing page projetada para uma pizzaria fictícia, concebida para proporcionar aos clientes uma experiência online atraente e funcional. A página apresenta uma lista abrangente de pizzas, cada uma detalhada com seus ingredientes e sabores exclusivos, cuidadosamente elaborados para satisfazer diversos paladares. Além disso, implementamos uma funcionalidade de contato via WhatsApp, permitindo que os clientes se conectem instantaneamente com a loja para fazer seus pedidos de forma rápida e conveniente.",
-    stacks: [<FaReact />, <SiTailwindcss />, <IoLogoJavascript />],
-    id: 3,
-    projectLink: "https://mi-pizza.vercel.app/",
-    githubLink: "https://github.com/miquelven/miPizza",
-  },
+
   {
     url: game,
     title: "miGame",
@@ -57,7 +48,7 @@ const cards = [
       <TbBrandMysql />,
       <FaNode />,
     ],
-    id: 4,
+    id: 3,
     projectLink: "https://gametest.com.br/",
     githubLink: "https://github.com/miquelven/games_in_a_game",
   },
@@ -67,9 +58,19 @@ const cards = [
     description:
       "Pokelist é um site que oferece uma lista organizada de diversos Pokémon, divididos por categoria para facilitar a navegação. Uma das funcionalidades principais do Pokelist é a capacidade de pesquisar por nome, permitindo que os usuários encontrem facilmente informações sobre um Pokémon específico. Além disso, os usuários podem favoritar seus Pokémon favoritos, mantendo uma lista personalizada.",
     stacks: [<FaVuejs />, <FaSass />, <SiTypescript />],
-    id: 5,
+    id: 4,
     projectLink: "https://poke-favorite.vercel.app/",
     githubLink: "https://github.com/miquelven/PokeList",
+  },
+  {
+    url: miPizza,
+    title: "MiPizza",
+    description:
+      "MiPizza é uma landing page projetada para uma pizzaria fictícia, concebida para proporcionar aos clientes uma experiência online atraente e funcional. A página apresenta uma lista abrangente de pizzas, cada uma detalhada com seus ingredientes e sabores exclusivos, cuidadosamente elaborados para satisfazer diversos paladares. Além disso, implementamos uma funcionalidade de contato via WhatsApp, permitindo que os clientes se conectem instantaneamente com a loja para fazer seus pedidos de forma rápida e conveniente.",
+    stacks: [<FaReact />, <SiTailwindcss />, <IoLogoJavascript />],
+    id: 5,
+    projectLink: "https://mi-pizza.vercel.app/",
+    githubLink: "https://github.com/miquelven/miPizza",
   },
 ];
 

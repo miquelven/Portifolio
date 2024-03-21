@@ -4,7 +4,7 @@ export default function Skills() {
   const timer = 200;
 
   return (
-    <div className="h-96 pr-7 flex-1" data-aos="zoom-in" data-aos-delay="500">
+    <div className="h-96 pr-7 flex-1" data-aos="fade-left" data-aos-delay="600">
       <div className="grid grid-cols-2 grid-rows-4 gap-8 max-xl:grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2 max-[530px]:grid-cols-1">
         {skills.map((skill) => (
           <div

@@ -17,11 +17,11 @@ body {
 }
 
 div[data-card]::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 div[data-card]::-webkit-scrollbar-track {
-  background-color: #306d9d;
+  background-color: #d9e8f3;
 }
 
 div[data-card]::-webkit-scrollbar-thumb {

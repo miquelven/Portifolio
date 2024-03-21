@@ -32,7 +32,7 @@ function App() {
           id="contact"
           className="pt-32 mb-44 max-sm:pt-80"
           data-aos="zoom-in"
-          data-aos-delay="400"
+          data-aos-delay="200"
         >
           <Contact />
         </section>
