@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { FaExpandArrowsAlt } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
@@ -34,9 +34,6 @@ export default function ScrollProjects() {
           className="flex flex-col items-center justify-center animate-pulse"
         >
           <MdKeyboardDoubleArrowUp className="h-14 w-14 fill-[#d9e8f3]" />
-          <span className="text-[#d9e8f3] text-sm translate-y-3">
-            ( Clique para rolar para cima )
-          </span>
         </a>
       </div>
     </section>
@@ -95,29 +92,33 @@ const Card = ({ card }) => {
               }
             >
               <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100 ">
-                <FaExpandArrowsAlt className="absolut h-10 w-10 fill-[#245276] max-sm:w-6 max-sm:h-6" />
+                <FaExpandArrowsAlt className="absolute h-10 w-10 fill-[#245276] max-sm:w-6 max-sm:h-6" />
               </div>
             </Link>
           </div>
-          <div className="bg-[#245276] w-full h-2 absolute z-20 -bottom-0 "></div>
+          <div className="bg-[#245276] w-full h-[3px] absolute z-20 -bottom-[.5px] "></div>
           <div className="absolute z-20  -bottom-12 left-4">
-            <h3 className="font-bold text-3xl text-[#245276] max-sm:text-2xl ">
+            <h3 className="font-bold text-3xl text-[#080808] max-sm:text-2xl ">
               {card.title}
             </h3>
           </div>
-          <div className=" absolute z-20 -bottom-10 right-2 w-32 h-10 flex justify-end items-center gap-4 max-[480px]:mt-3">
+          <div className=" absolute z-20 -bottom-[3.2rem] right-2 w-32 h-10 flex justify-end items-center gap-4 max-[480px]:mt-3">
             <a href={card.projectLink} target="_blank">
-              <FaShareFromSquare className="w-6 h-7 fill-[#245276] transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276] max-[480px]:w-5 max-[480px]:h-6" />
+              <FaShareFromSquare className="w-6 h-7 fill-[#080808] opacity-90 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
             </a>
             <a href={card.githubLink} target="_blank">
-              <FaGithub className="w-6 h-6 fill-[#245276] transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:fill-[#245276] max-[480px]:w-5 max-[480px]:h-6" />
+              <FaGithub className="w-6 h-6 fill-[#080808] opacity-90 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
             </a>
           </div>
         </div>
         <div className="h-[250px] absolute bottom-0 right-0 left-0 z-10 py-4 pl-4 pr-2 max-[480px]:h-[200px]">
-          <div className=" flex gap-3 items-center text-zinc-100">
-            {card.stacks.map((stack) => (
-              <span className="text-2xl mb-3 text-[#245276] hover:scale-105 max-[480px]:text-xl">
+          <div className=" flex gap-3 items-center">
+            {card.stacks.map((stack, stackIndex) => (
+              <span
+                className={`text-2xl mb-3 hover:scale-105 max-[480px]:text-xl`}
+                style={{ color: card.stackColors[stackIndex] }}
+                key={stackIndex}
+              >
                 {stack}
               </span>
             ))}
@@ -126,7 +127,7 @@ const Card = ({ card }) => {
             data-card
             className=" max-h-40  overflow-y-auto mt-5 pr-6 max-[480px]:pr-0"
           >
-            <p className="font-medium leading-7 text-justify text-[#245276] max-[480px]:text-s max-[480px]:mr-4">
+            <p className="font-medium leading-7 text-justify text-[#717171] max-[480px]:text-s max-[480px]:mr-4">
               {card.description}
             </p>
           </div>

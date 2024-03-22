@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
 import imgHero from "../../../../assets/images/hero/imgHero.webp";
+import DownloadButton from "../../DownloadButton";
 
 export default function FloatingPhone() {
   return (
@@ -50,9 +51,7 @@ const Screen = () => {
     <div className="relative z-0 h-full w-full flex justify-center items-center overflow-hidden rounded-[20px] bg-white">
       <img src={imgHero} alt="gifHero" className="w-1/6 " />
 
-      <button className="absolute w-1/2 m-auto shadow-sm transition-all duration-300 border-2 border-[#245276]  bottom-4 left-4 right-4 z-10 rounded-lg  bg-white py-2 text-[#245276] backdrop-blur font-bold hover:shadow-[#3c88c4] hover:-translate-x-[1px] hover:-translate-y-[5px] max-[490px]:py-1 ">
-        Currículo
-      </button>
+      <DownloadButton />
 
       <div className="absolute -bottom-72 left-[50%] h-96 w-96 -translate-x-[50%] rounded-full bg-[#3c88c4]" />
     </div>
