@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import miCoin from "../../assets/images/projects/MiCoin.webp";
 import miDrinks from "../../assets/images/projects/MiDrinks.webp";
 import game from "../../assets/images/projects/MiGame.webp";
-import pokeList from "../../assets/images/projects/MiEstilo.webp";
-import miPizza from "../../assets/images/projects/MiRestaurante.webp";
+import MiEstilo from "../../assets/images/projects/MiEstilo.webp";
+import MiRestaurante from "../../assets/images/projects/MiRestaurante.webp";
 
 export default function Modal() {
   const { idImage } = useParams();
@@ -44,10 +44,10 @@ const images = {
   MiGame: {
     img: game,
   },
-  PokeList: {
-    img: pokeList,
+  MiEstilo: {
+    img: MiEstilo,
   },
-  MiPizza: {
-    img: miPizza,
+  MiRestaurante: {
+    img: MiRestaurante,
   },
 };

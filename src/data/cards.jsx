@@ -11,8 +11,8 @@ import { SiTypescript } from "react-icons/si";
 import miCoin from "../../assets/images/projects/MiCoin.webp";
 import miDrinks from "../../assets/images/projects/MiDrinks.webp";
 import game from "../../assets/images/projects/MiGame.webp";
-import pokeList from "../../assets/images/projects/MiEstilo.webp";
-import miPizza from "../../assets/images/projects/MiRestaurante.webp";
+import MiEstilo from "../../assets/images/projects/MiEstilo.webp";
+import MiRestaurante from "../../assets/images/projects/MiRestaurante.webp";
 
 const cards = [
   {
@@ -56,26 +56,26 @@ const cards = [
     githubLink: "https://github.com/miquelven/games_in_a_game",
   },
   {
-    url: pokeList,
-    title: "PokeList",
+    url: MiEstilo,
+    title: "MiEstilo",
     description:
-      "Pokelist é um site que oferece uma lista organizada de diversos Pokémon, divididos por categoria para facilitar a navegação. Uma das funcionalidades principais do Pokelist é a capacidade de pesquisar por nome, permitindo que os usuários encontrem facilmente informações sobre um Pokémon específico. Além disso, os usuários podem favoritar seus Pokémon favoritos, mantendo uma lista personalizada.",
-    stacks: [<FaVuejs />, <FaSass />, <SiTypescript />],
-    stackColors: ["#6cb485", "#ce6b9c", "#087ecf"],
+      "MiEstilo é uma Landing Page que oferece uma ampla seleção de produtos, coleções exclusivas e descontos irresistíveis. Nossa abordagem é direta e objetiva, com o objetivo de cativar novos clientes e proporcionar uma experiência visualmente agradável. ",
+    stacks: [<FaVuejs />, <SiTailwindcss />, <IoLogoJavascript />],
+    stackColors: ["#6cb485", "#1dc0cd", "#d6ba32"],
     id: 4,
-    projectLink: "https://poke-favorite.vercel.app/",
-    githubLink: "https://github.com/miquelven/PokeList",
+    projectLink: "https://mi-estilo.vercel.app/",
+    githubLink: "https://github.com/miquelven/miEstilo",
   },
   {
-    url: miPizza,
-    title: "MiPizza",
+    url: MiRestaurante,
+    title: "MiRestaurante",
     description:
-      "MiPizza é uma landing page projetada para uma pizzaria fictícia, concebida para proporcionar aos clientes uma experiência online atraente e funcional. A página apresenta uma lista abrangente de pizzas, cada uma detalhada com seus ingredientes e sabores exclusivos, cuidadosamente elaborados para satisfazer diversos paladares. Além disso, implementamos uma funcionalidade de contato via WhatsApp, permitindo que os clientes se conectem instantaneamente com a loja para fazer seus pedidos de forma rápida e conveniente.",
+      "MiRestaurante foi meticulosamente projetado para apresentar um espaço gastronômico fictício, onde cada detalhe foi pensado para proporcionar uma experiência única aos nossos visitantes. Com um design simples e objetivo buscando cativar novos clientes. Ressaltando alguns pratos, avaliações de clientes, endereço e tambem o seu ambiente acolhedor.",
     stacks: [<FaReact />, <SiTailwindcss />, <IoLogoJavascript />],
     stackColors: ["#087ea4", "#1dc0cd", "#d6ba32"],
     id: 5,
-    projectLink: "https://mi-pizza.vercel.app/",
-    githubLink: "https://github.com/miquelven/miPizza",
+    projectLink: "https://mi-restaurant.vercel.app/",
+    githubLink: "https://github.com/miquelven/Mi-Restaurant",
   },
 ];
 
