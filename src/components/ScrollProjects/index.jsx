@@ -92,7 +92,7 @@ const Card = ({ card }) => {
               }
             >
               <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100 ">
-                <FaExpandArrowsAlt className="absolute h-10 w-10 fill-[#245276] max-sm:w-6 max-sm:h-6" />
+                <FaExpandArrowsAlt className="absolute h-10 w-10 fill-[#fff] max-sm:w-6 max-sm:h-6" />
               </div>
             </Link>
           </div>
