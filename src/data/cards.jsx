@@ -8,11 +8,11 @@ import { TbBrandMysql } from "react-icons/tb";
 import { FaNode } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 
-import miCoin from "../../assets/images/projects/miCoin.png";
-import miDrinks from "../../assets/images/projects/miDrinks.png";
-import game from "../../assets/images/projects/game.png";
-import pokeList from "../../assets/images/projects/pokeList.png";
-import miPizza from "../../assets/images/projects/miPizza.png";
+import miCoin from "../../assets/images/projects/MiCoin.png";
+import miDrinks from "../../assets/images/projects/MiDrinks.png";
+import game from "../../assets/images/projects/MiGame.png";
+import pokeList from "../../assets/images/projects/PokeList.png";
+import miPizza from "../../assets/images/projects/MiPizza.png";
 
 const cards = [
   {
@@ -40,7 +40,7 @@ const cards = [
 
   {
     url: game,
-    title: "miGame",
+    title: "MiGame",
     description:
       "O miGame possui um sistema de classificação competitivo, onde as pontuações mais altas dos jogadores são registradas e classificadas entre as melhores de todas. Ao desenvolver o miGame, concentrei-me em criar uma interface amigável e intuitiva que proporcionasse uma experiência de usuário fluida e agradável. Além disso, implementei medidas de segurança robustas para garantir a proteção dos dados dos usuários, especialmente no que diz respeito ao processo de login e registro.",
     stacks: [

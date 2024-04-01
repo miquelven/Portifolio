@@ -80,17 +80,7 @@ const Card = ({ card }) => {
                 backgroundPosition: "top center",
               }}
             ></div>
-            <Link
-              className="max-sm:hidden"
-              to={
-                "/" +
-                card.url
-                  .split("assets/")[1]
-                  .split(".png")[0]
-                  .split("-")[0]
-                  .split("projects/")[1]
-              }
-            >
+            <Link className="max-sm:hidden" to={"/" + card.title}>
               <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100 ">
                 <FaExpandArrowsAlt className="absolute h-10 w-10 fill-[#fff] max-sm:w-6 max-sm:h-6" />
               </div>
