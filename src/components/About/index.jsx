@@ -1,4 +1,5 @@
 import Skills from "./Skills";
+import monthsStudy from "../../helpers/monthsStudy";
 
 export default function About() {
   return (
@@ -25,8 +26,9 @@ export default function About() {
             escola e do trabalho, minha dedicação aos estudos foi limitada.
             Determinado a avançar, economizei o suficiente para adquirir um
             notebook, deixando meu emprego para me dedicar integralmente ao
-            aprendizado. Atualmente, há três meses, estou totalmente empenhado
-            em aprimorar minhas habilidades e conhecimentos diariamente.
+            aprendizado. Atualmente, há {monthsStudy} meses, estou totalmente
+            empenhado em aprimorar minhas habilidades e conhecimentos
+            diariamente.
           </p>
           <p>
             Minhas principais áreas de conhecimento abrangem{" "}
