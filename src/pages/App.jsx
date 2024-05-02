@@ -9,6 +9,7 @@ import About from "../components/About";
 
 import AOS from "aos";
 import { useEffect } from "react";
+import ToTopButton from "../components/ToTopButton";
 
 function App() {
   useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
         >
           <Contact />
         </section>
+        <ToTopButton />
       </main>
 
       <Footer />
