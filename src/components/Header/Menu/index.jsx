@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import MenuContent from "./MenuContent";
 import MenuIcon from "./MenuIcon";
@@ -19,6 +19,15 @@ export default function Menu() {
     setIsOpen(!isOpen);
     color == colors[1] ? setColor(colors[0]) : setColor(colors[1]);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.querySelector("body").style.overflow = "hidden";
+    } else {
+      document.querySelector("body").style.overflow = "auto";
+    }
+  }, [isOpen]);
+
   return (
     <>
       <div className="flex fixed z-50 top-7 gap-5">
