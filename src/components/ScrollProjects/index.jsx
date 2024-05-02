@@ -21,21 +21,10 @@ export default function ScrollProjects() {
           href="#contact"
           className="flex flex-col items-center justify-center animate-pulse "
         >
-          <span className="text-[#d9e8f3] text-sm -translate-y-3">
-            ( Clique para rolar para baixo )
-          </span>
           <MdKeyboardDoubleArrowUp className="h-14 w-14 fill-[#d9e8f3] rotate-180" />
         </a>
       </div>
       <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
-        <a
-          href="#project"
-          className="flex flex-col items-center justify-center animate-pulse"
-        >
-          <MdKeyboardDoubleArrowUp className="h-14 w-14 fill-[#d9e8f3]" />
-        </a>
-      </div>
     </section>
   );
 }
