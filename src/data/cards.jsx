@@ -1,15 +1,15 @@
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaVuejs } from "react-icons/fa";
-// import { SiNuxtdotjs } from "react-icons/si";
-// import { FaSass } from "react-icons/fa";
+import { SiNuxtdotjs } from "react-icons/si";
+import { FaSass } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TbBrandMysql } from "react-icons/tb";
 import { FaNode } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 
 import miCoin from "../../assets/images/projects/MiCoin.webp";
-// import miDrinks from "../../assets/images/projects/MiDrinks.webp";
+import miDrinks from "../../assets/images/projects/MiDrinks.webp";
 import miMovie from "../../assets/images/projects/MiMovie.webp";
 import game from "../../assets/images/projects/MiGame.webp";
 import MiEstilo from "../../assets/images/projects/MiEstilo.webp";
@@ -27,17 +27,17 @@ const cards = [
     projectLink: "https://mi-coin.vercel.app/",
     githubLink: "https://github.com/miquelven/MiCoin",
   },
-  // {
-  //   url: miDrinks,
-  //   title: "MiDrinks",
-  //   description:
-  //     "MiDrinks é sua plataforma completa para explorar o vasto universo das bebidas. Com uma extensa biblioteca de informações. Com recursos de pesquisa avançada, você pode facilmente encontrar o que procura, seja um coquetel específico ou uma bebida com ingredientes específicos. Além disso, os filtros por categoria permitem que você refine sua busca, seja por tipo de bebida alcoólica, não alcoólica ou sazonal.",
-  //   stacks: [<SiNuxtdotjs />, <FaSass />, <SiTypescript />],
-  //   stackColors: ["#0ade87", "#ce6b9c", "#087ecf"],
-  //   id: 2,
-  //   projectLink: "https://mi-drinks.vercel.app/",
-  //   githubLink: "https://github.com/miquelven/miDrinks",
-  // },
+  {
+    url: miDrinks,
+    title: "MiDrinks",
+    description:
+      "MiDrinks é sua plataforma completa para explorar o vasto universo das bebidas. Com uma extensa biblioteca de informações. Com recursos de pesquisa avançada, você pode facilmente encontrar o que procura, seja um coquetel específico ou uma bebida com ingredientes específicos. Além disso, os filtros por categoria permitem que você refine sua busca, seja por tipo de bebida alcoólica, não alcoólica ou sazonal.",
+    stacks: [<SiNuxtdotjs />, <FaSass />, <SiTypescript />],
+    stackColors: ["#0ade87", "#ce6b9c", "#087ecf"],
+    id: 2,
+    projectLink: "https://mi-drinks.vercel.app/",
+    githubLink: "https://github.com/miquelven/miDrinks",
+  },
   {
     url: miMovie,
     title: "MiMovie",

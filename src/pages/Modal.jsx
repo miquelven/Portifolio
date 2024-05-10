@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 import miCoin from "../../assets/images/projects/MiCoin.webp";
-// import miDrinks from "../../assets/images/projects/MiDrinks.webp";
+import miDrinks from "../../assets/images/projects/MiDrinks.webp";
 import miMovie from "../../assets/images/projects/MiMovie.webp";
 import game from "../../assets/images/projects/MiGame.webp";
 import MiEstilo from "../../assets/images/projects/MiEstilo.webp";
@@ -39,9 +39,9 @@ const images = {
   MiCoin: {
     img: miCoin,
   },
-  // MiDrinks: {
-  //   img: miDrinks,
-  // },
+  MiDrinks: {
+    img: miDrinks,
+  },
   MiMovie: {
     img: miMovie,
   },
