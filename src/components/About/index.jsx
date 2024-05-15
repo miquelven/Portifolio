@@ -33,8 +33,7 @@ export default function About() {
           <p>
             Minhas principais áreas de conhecimento abrangem{" "}
             <span className="font-medium">
-              React, Tailwind, Vue, Nuxt, Git, GitHub, TypeScript, JavaScript e
-              SCSS.{" "}
+              Nuxt, Vue, React, Typescript, Javascript, Tailwind, Sass
             </span>
           </p>
         </div>

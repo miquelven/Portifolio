@@ -21,11 +21,11 @@ const skills = [
   },
   {
     id: 4,
-    src: javascript,
+    src: typescript,
   },
   {
     id: 5,
-    src: typescript,
+    src: javascript,
   },
   {
     id: 6,
