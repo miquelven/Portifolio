@@ -26,6 +26,7 @@ export default function ToTopButton() {
 
   return (
     <button
+      data-testid="button"
       onClick={scrollTop}
       className="transition-all duration-300 fixed bottom-12 right-10 w-10 h-10 rounded-full bg-blue-300  flex justify-center items-center shadow-md shadow-black hover:scale-110"
       style={{
