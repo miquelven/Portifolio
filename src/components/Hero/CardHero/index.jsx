@@ -42,6 +42,7 @@ const TiltCard = () => {
 
   return (
     <motion.div
+      data-testid="cardHero"
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

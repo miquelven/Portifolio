@@ -6,6 +6,7 @@ import DownloadButton from "../../DownloadButton";
 export default function FloatingPhone() {
   return (
     <div
+      data-testid="floatingPhone"
       style={{
         transformStyle: "preserve-3d",
         transform: "rotateY(-30deg) rotateX(15deg)",
@@ -13,6 +14,7 @@ export default function FloatingPhone() {
       className="rounded-[24px] bg-[#245276] w-[402px]"
     >
       <motion.div
+        data-testid="floatingPhoneAnimated"
         initial={{
           transform: "translateZ(8px) translateY(-2px)",
         }}
