@@ -23,13 +23,14 @@ function App() {
       <Header />
       <main className="relative z-10 w-full">
         <Hero />
-        <section id="about" className="py-10">
+        <section data-scroll-wrapper id="about" className="py-10">
           <About />
         </section>
 
         <ScrollProjects />
 
         <section
+          data-scroll-wrapper
           id="contact"
           className="pt-32 mb-44 max-sm:pt-80"
           data-aos="zoom-in"

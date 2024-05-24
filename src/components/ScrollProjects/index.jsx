@@ -9,6 +9,7 @@ import Card from "./ScrollProjectsCard";
 export default function ScrollProjects() {
   return (
     <section
+      data-scroll-wrapper
       data-testid="project"
       id="project"
       className="bg-[#245276] my-20 py-10 max-xl:mt-96 max-[530px]:mt-[950px]"
@@ -43,7 +44,7 @@ const HorizontalScrollCarousel = () => {
       data-aos-delay="500"
     >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-20 max-sm:gap-32">
+        <motion.div style={{ x }} className=" flex gap-20 max-sm:gap-32">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}

@@ -7,7 +7,7 @@ export default function Card({ card }) {
   return (
     <div
       data-testid="scrollProjectsCard"
-      className="group  relative h-[600px]  w-[550px] overflow-hidden bg-[#d9e8f3] shadow-sm shadow-[#306d9d]  rounded-2xl max-sm:w-[450px] max-[480px]:w-80 max-[480px]:h-[490px]"
+      className="group relative h-[600px]  w-[550px] overflow-hidden bg-[#d9e8f3] shadow-sm shadow-[#306d9d]  rounded-2xl max-sm:w-[450px] max-[480px]:w-80 max-[480px]:h-[490px]"
     >
       <div className="absolute h-1/2 w-full top-0  flex justify-center transition-transform duration-300">
         <div className="absolute z-10 inset-0  ">

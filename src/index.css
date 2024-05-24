@@ -8,12 +8,18 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
   background-color: #d9e8f3;
   overflow-x: hidden;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+[data-scroll-wrapper] {
+  scroll-snap-align: start;
 }
 
 div[data-card]::-webkit-scrollbar {
