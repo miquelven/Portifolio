@@ -1,38 +1,39 @@
 import { motion } from "framer-motion";
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
-import imgHero from "../../../../assets/images/hero/perfil.webp";
 import DownloadButton from "../../DownloadButton";
 
 export default function FloatingPhone() {
   return (
-    <div
-      data-testid="floatingPhone"
-      style={{
-        transformStyle: "preserve-3d",
-        transform: "rotateY(-30deg) rotateX(15deg)",
-      }}
-      className="rounded-[24px] bg-[#245276] w-[402px]"
-    >
-      <motion.div
-        data-testid="floatingPhoneAnimated"
-        initial={{
-          transform: "translateZ(8px) translateY(-2px)",
+    <>
+      <div
+        data-testid="floatingPhone"
+        style={{
+          transformStyle: "preserve-3d",
+          transform: "rotateY(-30deg) rotateX(15deg)",
         }}
-        animate={{
-          transform: "translateZ(40px) translateY(-8px)",
-        }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "mirror",
-          duration: 2,
-          ease: "easeInOut",
-        }}
-        className="relative h-96 w-full rounded-[24px] border-2 border-b-4 border-r-4 border-white border-l-neutral-200 border-t-neutral-200 bg-neutral-900 p-1 pl-[3px] pt-[3px]"
+        className="rounded-[24px] bg-[#245276] w-[402px] "
       >
-        <HeaderBar />
-        <Screen />
-      </motion.div>
-    </div>
+        <motion.div
+          data-testid="floatingPhoneAnimated"
+          initial={{
+            transform: "translateZ(8px) translateY(-2px)",
+          }}
+          animate={{
+            transform: "translateZ(40px) translateY(-8px)",
+          }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "mirror",
+            duration: 2,
+            ease: "easeInOut",
+          }}
+          className="relative h-96 w-full rounded-[24px] border-2 border-b-4 border-r-4 border-white border-l-neutral-200 border-t-neutral-200 bg-neutral-900 p-1 pl-[3px] pt-[3px] max-lg:h-[340px]"
+        >
+          <HeaderBar />
+          <Screen />
+        </motion.div>
+      </div>
+    </>
   );
 }
 
@@ -50,20 +51,15 @@ const HeaderBar = () => {
 
 const Screen = () => {
   return (
-    <div className="relative z-0 h-full w-full flex justify-center items-center overflow-hidden rounded-[20px] bg-white">
-      <div className="w-1/2 h-1/2 rounded-full bg-[#3c88c4] flex justify-center items-center mb-10 ">
-        <div className="w-[calc(100%-8px)] h-[calc(100%-12px)] rounded-full bg-white flex justify-center items-center max-sm:flex-col max-sm:justify-end max-[380px]:justify-center">
-          <img
-            src={imgHero}
-            alt="gifHero"
-            className="w-full mb-16 rounded-full max-sm:mb-0"
-          />
+    <div
+      data-scroll-wrapper
+      className="relative z-0 h-full w-full flex justify-center items-center overflow-hidden rounded-[20px] bg-white"
+    >
+      <div className="transition-all duration-500 h-32 w-60 rounded-full bg-[#3c88c4] hover:bg-[#3579ae] max-lg:h-24 max-lg:w-52">
+        <div className="w-full h-full flex justify-center items-center">
+          <DownloadButton />
         </div>
       </div>
-
-      <DownloadButton />
-
-      <div className="absolute -bottom-72 left-[50%] h-96 w-96 -translate-x-[50%] rounded-full bg-[#3c88c4]" />
     </div>
   );
 };

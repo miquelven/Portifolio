@@ -41,14 +41,14 @@ export default function DownloadButton() {
   };
 
   return (
-    <div className="flex justify-center absolute w-1/2 m-auto shadow-sm transition-all duration-300 border-2 border-[#245276]  bottom-4 left-4 right-4 z-10 rounded-lg  bg-white  text-[#245276] backdrop-blur font-bold hover:shadow-[#3c88c4] hover:-translate-x-[1px] hover:-translate-y-[5px]">
+    <div className="flex justify-center w-2/3 m-auto shadow-sm transition-all duration-300 border-2 border-[#245276] left-4 right-4 z-10 rounded-lg  bg-white  text-[#245276] backdrop-blur font-bold  hover:shadow-[#3c88c4] hover:-translate-x-[1px] hover:-translate-y-[5px]">
       <a
         role="link"
         href={downloadCV}
         download
         target="_blank"
         onClick={animationStart}
-        className="transform active:scale-95 bg-[#d9e8f3] text-[#245276] px-16 py-2 rounded-lg font-bold tracking-widest w-full"
+        className="transform active:scale-95 bg-[#d9e8f3] text-[#245276] px-16 py-2 rounded-lg font-bold tracking-widest w-full "
       >
         <div className="flex justify-center items-center relative">
           <div className="svg-container">
@@ -103,7 +103,7 @@ export default function DownloadButton() {
           </div>
           <div
             ref={downloadText}
-            className="pl-2 text-sm text-[#245276] leading-none uppercase font-semibold max-[420px]:text-xs"
+            className="pl-2 text-sm text-[#245276] leading-none uppercase font-semibold max-lg:text-xs"
           >
             Currículo
           </div>
