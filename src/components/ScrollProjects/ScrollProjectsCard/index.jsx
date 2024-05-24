@@ -20,11 +20,7 @@ export default function Card({ card }) {
               backgroundPosition: "top center",
             }}
           ></div>
-          <Link
-            data-testid="linkImg"
-            className="max-sm:hidden"
-            to={"/" + card.title}
-          >
+          <Link data-testid="linkImg" to={"/" + card.title}>
             <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100 ">
               <FaExpandArrowsAlt className="absolute h-10 w-10 fill-[#fff] max-sm:w-6 max-sm:h-6" />
             </div>
