@@ -43,6 +43,7 @@ const TiltCard = () => {
 
   return (
     <motion.div
+      data-scroll-wrapper
       data-testid="cardHero"
       ref={ref}
       onMouseMove={handleMouseMove}
