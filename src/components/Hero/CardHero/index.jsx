@@ -55,7 +55,7 @@ const TiltCard = () => {
         rotateY,
       }}
       data-aos="zoom-in"
-      className="relative h-[620px] w-full rounded-xl bg-[#3c88c4] shadow-md mt-20 shadow-black max-xl:h-[920px] max-xl:mt-4 max-sm:h-[calc(80vh)] max-[440px]:h-[calc(65vh)] max-[375px]:h-[calc(75vh)]"
+      className="relative h-[620px] w-full rounded-xl bg-[#3c88c4] shadow-md mt-20 shadow-black max-xl:h-[920px] max-xl:mt-4 max-sm:h-[calc(80vh)] max-[375px]:h-[calc(75vh)]"
     >
       <div
         style={{
