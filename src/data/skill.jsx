@@ -1,10 +1,11 @@
-import javascript from "../../assets/images/stacks/javascript.png";
-import typescript from "../../assets/images/stacks/typescript.png";
-import nuxt from "../../assets/images/stacks/nuxt.png";
-import tailwindcss from "../../assets/images/stacks/tailwindcss.png";
-import Sass from "../../assets/images/stacks/Sass.png";
-import vue from "../../assets/images/stacks/vue.png";
-import react from "../../assets/images/stacks/react.png";
+import javascript from "../../assets/images/stacks/javascript.webp";
+import typescript from "../../assets/images/stacks/typescript.webp";
+import nuxt from "../../assets/images/stacks/nuxt.webp";
+import tailwindcss from "../../assets/images/stacks/tailwindcss.webp";
+import Sass from "../../assets/images/stacks/Sass.webp";
+import vue from "../../assets/images/stacks/vue.webp";
+import react from "../../assets/images/stacks/react.webp";
+import jest from "../../assets/images/stacks/jest.webp";
 
 const skills = [
   {
@@ -34,6 +35,10 @@ const skills = [
   {
     id: 7,
     src: Sass,
+  },
+  {
+    id: 8,
+    src: jest,
   },
 ];
 
