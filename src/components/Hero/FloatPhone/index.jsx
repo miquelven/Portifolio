@@ -55,10 +55,8 @@ const Screen = () => {
       data-scroll-wrapper
       className="relative z-0 h-full w-full flex justify-center items-center overflow-hidden rounded-[20px] bg-white"
     >
-      <div className="transition-all duration-500 h-32 w-60 rounded-full bg-[#3c88c4] hover:bg-[#3579ae] max-lg:h-24 max-lg:w-52">
-        <div className="w-full h-full flex justify-center items-center">
-          <DownloadButton />
-        </div>
+      <div className="w-full h-full flex justify-center items-center">
+        <DownloadButton />
       </div>
     </div>
   );

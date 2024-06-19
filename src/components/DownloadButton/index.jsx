@@ -41,7 +41,7 @@ export default function DownloadButton() {
   };
 
   return (
-    <div className="flex justify-center w-2/3 m-auto shadow-sm transition-all duration-300 border-2 border-[#245276] left-4 right-4 z-10 rounded-lg  bg-white  text-[#245276] backdrop-blur font-bold  hover:shadow-[#3c88c4] hover:-translate-x-[1px] hover:-translate-y-[5px]">
+    <div className="flex justify-center w-2/3 m-auto shadow-sm transition-all duration-300 border-2 border-[#245276] left-4 right-4 z-10 rounded-lg  bg-white  text-[#245276] backdrop-blur font-bold  hover:shadow-[#000] hover:-translate-x-[1px] hover:-translate-y-[5px]">
       <a
         role="link"
         href={downloadCV}
