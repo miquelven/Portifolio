@@ -49,7 +49,7 @@ export default function Menu() {
       </div>
 
       <div
-        className="h-12 flex justify-end items-center fixed z-50 right-10"
+        className="h-12 flex justify-end items-center fixed z-50 right-10 max-sm:right-[5%]"
         onClick={handleClick}
       >
         <MenuIcon isOpen={isOpen} />
