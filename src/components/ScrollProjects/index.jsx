@@ -9,7 +9,6 @@ import Card from "./ScrollProjectsCard";
 export default function ScrollProjects() {
   return (
     <section
-      data-scroll-wrapper
       data-testid="project"
       id="project"
       className="bg-[#245276] my-20 py-10 max-xl:mt-96 max-[530px]:mt-[950px]"
