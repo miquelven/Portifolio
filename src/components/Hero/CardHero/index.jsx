@@ -85,11 +85,12 @@ const TiltCard = () => {
             data-aos="fade-right"
             data-aos-delay="500"
           >
-            Bem-vindo! Sou um apaixonado por código em busca de oportunidades
-            para aplicar minhas habilidades de programação. Este repositório é
-            uma amostra do meu conhecimento e minha dedicação contínua ao
-            desenvolvimento. Estou sempre comprometido em aprimorar minhas
-            habilidades e contribuir com projetos.
+            Dedico-me a aprimorar continuamente minhas habilidades, aprender
+            novas tecnologias e seguir as melhores práticas de desenvolvimento.
+            Minha trajetória inclui a criação de aplicações web responsivas,
+            otimização de desempenho e implementação de funcionalidades
+            dinâmicas. Sou proativo, atento aos detalhes e gosto de colaborar em
+            equipe para alcançar objetivos comuns.
           </p>
 
           <div className="relative hidden max-sm:block mt-20 ">
