@@ -57,3 +57,18 @@ html::-webkit-scrollbar-thumb:hover {
 html::-webkit-scrollbar-thumb:active {
   cursor: grabbing;
 }
+
+.swiper {
+  width: 80%;
+  height: 75vh;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}

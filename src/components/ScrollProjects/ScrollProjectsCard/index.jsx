@@ -7,10 +7,10 @@ export default function Card({ card }) {
   return (
     <div
       data-testid="scrollProjectsCard"
-      className="group relative h-[600px]  w-[550px] overflow-hidden bg-[#d9e8f3] shadow-sm shadow-[#306d9d]  rounded-2xl max-sm:w-[450px] max-[480px]:w-80 max-[480px]:h-[490px]"
+      className="group relative h-[600px]  w-[550px] overflow-hidden bg-[#d9e8f3] shadow-sm shadow-[#306d9d]  rounded-2xl max-sm:h-full"
     >
-      <div className="absolute h-1/2 w-full top-0  flex justify-center transition-transform duration-300">
-        <div className="absolute z-10 inset-0  ">
+      <div className="absolute  h-1/2 w-full top-0  flex justify-center transition-transform duration-300">
+        <div className=" absolute z-10 inset-0  ">
           <div
             role="img"
             className="w-full h-full "
@@ -41,11 +41,11 @@ export default function Card({ card }) {
           </a>
         </div>
       </div>
-      <div className="h-[250px] absolute bottom-0 right-0 left-0 z-10 py-4 pl-4 pr-2 max-[480px]:h-[200px]">
+      <div className=" h-[250px] absolute bottom-0 right-0 left-0 z-10 py-4 pl-4 pr-2 max-sm:h-[44%]">
         <div className=" flex gap-3 items-center" data-testid="stacks">
           {card.stacks.map((stack, stackIndex) => (
             <span
-              className={`text-2xl mb-3 hover:scale-105 max-[480px]:text-xl`}
+              className={`text-2xl mb-3 max-[480px]:text-xl`}
               style={{ color: card.stackColors[stackIndex] }}
               key={stackIndex}
             >
@@ -57,7 +57,7 @@ export default function Card({ card }) {
           data-card
           className=" max-h-40  overflow-y-auto mt-5 pr-6 max-[480px]:pr-0"
         >
-          <p className="font-medium leading-7 text-justify text-[#717171] max-[480px]:text-s max-[480px]:mr-4">
+          <p className="font-medium leading-7 text-justify text-[#717171] max-[480px]:text-sm max-[480px]:mr-4">
             {card.description}
           </p>
         </div>

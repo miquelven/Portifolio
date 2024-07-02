@@ -6,15 +6,21 @@ import cards from "../../data/cards";
 
 import Card from "./ScrollProjectsCard";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+import { EffectCards } from "swiper/modules";
+
 export default function ScrollProjects() {
   return (
     <section
       data-testid="project"
       id="project"
-      className="bg-[#245276] my-20 py-10 max-xl:mt-96 max-[530px]:mt-[950px]"
+      className="bg-[#245276] my-20 py-10 max-xl:mt-96 max-[530px]:mt-[950px] max-[530px]:py-20"
       data-aos="fade-up"
     >
-      <div className="flex h-48  items-center justify-center">
+      <div className="flex h-48  items-center justify-center max-sm:hidden">
         <a
           href="#contact"
           className="flex flex-col items-center justify-center animate-pulse "
@@ -22,7 +28,23 @@ export default function ScrollProjects() {
           <MdKeyboardDoubleArrowUp className="h-14 w-14 fill-[#d9e8f3] rotate-180" />
         </a>
       </div>
-      <HorizontalScrollCarousel />
+      <div className="block max-sm:hidden">
+        <HorizontalScrollCarousel />
+      </div>
+      <div className="hidden max-sm:block">
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwiper"
+        >
+          {cards.map((card) => (
+            <SwiperSlide className="shadow-md shadow-[#090909]">
+              <Card card={card} key={card.id} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }
