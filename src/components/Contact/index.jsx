@@ -152,6 +152,7 @@ export default function Contact() {
           <a
             href="https://github.com/miquelven"
             target="_blank"
+            rel="noopener noreferrer"
             data-aos="zoom-in"
             data-aos-delay="1400"
           >
@@ -160,6 +161,7 @@ export default function Contact() {
           <a
             href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
             target="_blank"
+            rel="noopener noreferrer"
             data-aos="zoom-in"
             data-aos-delay="1600"
           >

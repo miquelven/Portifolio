@@ -14,6 +14,7 @@ export default function MenuContent({ onLinkClick }) {
           heading="Sobre"
           subheading="Um pouco sobre minha jornada como programador"
           imgSrc={aboutImage}
+          alt="Imagem do link de sobre no menu"
           href="#about"
         />
       </div>
@@ -22,6 +23,7 @@ export default function MenuContent({ onLinkClick }) {
           heading="Projetos"
           subheading="Exibindo meus projetos e minha paixão por desenvolvimento"
           imgSrc={projectImage}
+          alt="Imagem do link de projetos no menu"
           href="#project"
         />
       </div>
@@ -30,6 +32,7 @@ export default function MenuContent({ onLinkClick }) {
           heading="Contatos"
           subheading="Conecte-se comigo"
           imgSrc={contactImage}
+          alt="Imagem do link de sobre no menu"
           href="#contact"
         />
       </div>

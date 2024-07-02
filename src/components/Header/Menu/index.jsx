@@ -31,7 +31,11 @@ export default function Menu() {
   return (
     <>
       <div className="flex fixed z-50 top-7 gap-5">
-        <a href="https://github.com/miquelven" target="_blank">
+        <a
+          href="https://github.com/miquelven"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithub
             className="w-7 h-7 transition-scale duration-300  hover:scale-110"
             style={{ fill: isOpen ? "#ffffff" : "#306d9d" }}
@@ -40,6 +44,7 @@ export default function Menu() {
         <a
           href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FaLinkedin
             className="w-7 h-7 transition-scale duration-300 hover:scale-110"
