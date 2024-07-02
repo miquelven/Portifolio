@@ -90,7 +90,7 @@ export default function Contact() {
               <p className="mb-2">Email:</p>
               <input
                 {...register("email")}
-                className={`w-full rounded-md  mb-1 shadow-sm border-2 shadow-zinc-400 outline-none py-1 px-2 text-sm ${
+                className={`transition-all duration-300 w-full rounded-md mb-1 shadow-sm border-2 shadow-zinc-400 outline-none py-1 px-2 text-sm hover:scale-105 ${
                   errors.email ? "border-red-400" : "border-transparent"
                 }`}
               />
@@ -112,7 +112,7 @@ export default function Contact() {
                 rows="10"
                 onChange={(e) => setTextAreaValue(e.target.value)}
                 value={textAreaValue}
-                className={`resize-none mb-1 rounded-md shadow-sm border-2 w-full shadow-zinc-400 outline-none py-1 px-2 text-sm
+                className={`transition-all duration-300 resize-none mb-1 rounded-md shadow-sm border-2 w-full shadow-zinc-400 outline-none py-1 px-2 text-sm hover:scale-105
             ${
               validateTextArea == true && showError
                 ? "border-red-400"
@@ -137,7 +137,7 @@ export default function Contact() {
             <button
               type="submit"
               onClick={() => setShowError(true)}
-              className="bg-[#245276] capitalize py-1.5 text-white rounded-md shadow-sm shadow-zinc-400 hover:cursor-pointer hover:shadow-md max-sm:mb-14"
+              className="transition-all duration-300 bg-[#245276] capitalize py-1.5 text-white rounded-md shadow-sm shadow-zinc-400 hover:cursor-pointer hover:shadow-md hover:scale-105 max-sm:mb-14"
             >
               enviar
             </button>
