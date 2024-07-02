@@ -12,7 +12,11 @@ const numberForWord = [
 ];
 
 export default function monthsStudy() {
-  const initialMonthStudy = 1;
-  const actualMonth = new Date().getMonth;
-  return numberForWord[initialMonthStudy - actualMonth];
+  const initialMonthStudy = new Date(2023, 11);
+  const currentMonth = new Date();
+  const differenceInMonths =
+    (currentMonth.getFullYear() - initialMonthStudy.getFullYear()) * 12 +
+    currentMonth.getMonth() -
+    initialMonthStudy.getMonth();
+  return numberForWord[differenceInMonths - 1];
 }
