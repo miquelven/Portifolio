@@ -5,18 +5,18 @@ export default function Skills() {
 
   return (
     <div className="h-96 pr-7 flex-1">
-      <div className="grid grid-cols-2 grid-rows-4 gap-8 max-xl:grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2 max-[530px]:grid-cols-1">
+      <div className="grid grid-cols-4  gap-14 max-xl:grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2 max-[530px]:grid-cols-1 max-[530px]:gap-8">
         {skills.map((skill) => (
           <div
             key={skill.id}
             data-aos="zoom-in"
             data-aos-delay={timer * skill.id}
-            className="flex justify-center items-center max-h-20 w-52 rounded-lg shadow-md shadow-[#306d9d] max-[530px]:w-full"
+            className="m-auto flex justify-center h-20 w-full items-center rounded-lg shadow-md shadow-[#306d9d] max-[530px]:w-full"
           >
             <img
               src={skill.src}
               alt="Imagem da tecnologia"
-              className="w-36 object-cover "
+              className="w-1/2 object-cover max-sm:w-5/12"
             />
           </div>
         ))}
