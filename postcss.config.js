@@ -3,7 +3,7 @@ import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 const purgecssPlugin = purgecss({
-  content: ["./public/**/*.html", "./src/**/*.vue"],
+  content: ["./public/**/*.html", "./src/**/*.react"],
   defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 });
 
