@@ -43,6 +43,7 @@ export default function DownloadButton() {
   return (
     <div className="flex justify-center w-2/3 m-auto shadow-md transition-all duration-300 border-2 border-[#fcfcfc] left-4 right-4 z-10 rounded-lg  bg-white  text-[#fcfcfc] backdrop-blur font-bold  hover:shadow-[#090909] hover:-translate-x-[1px] hover:-translate-y-[5px] max-sm:border-[#245276] max-sm:text-[#245276] max-sm:hover:shadow-black">
       <a
+        aria-label="download button"
         role="link"
         href={downloadCV}
         download
