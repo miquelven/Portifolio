@@ -32,6 +32,7 @@ export default function Menu() {
     <>
       <div className="flex fixed z-50 top-7 gap-5">
         <a
+          aria-label="icone do github"
           href="https://github.com/miquelven"
           target="_blank"
           rel="noopener noreferrer"
@@ -42,6 +43,7 @@ export default function Menu() {
           />
         </a>
         <a
+          aria-label="icone do linkedin"
           href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
           target="_blank"
           rel="noopener noreferrer"

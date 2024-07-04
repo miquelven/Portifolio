@@ -150,6 +150,7 @@ export default function Contact() {
           data-aos-delay="1200"
         >
           <a
+            aria-label="icone do github"
             href="https://github.com/miquelven"
             target="_blank"
             rel="noopener noreferrer"
@@ -159,6 +160,7 @@ export default function Contact() {
             <FaGithub className="w-12 h-12 transition-scale duration-300  hover:scale-110 fill-white max-lg:w-8 max-lg:h-8" />
           </a>
           <a
+            aria-label="icone do linkedin"
             href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
             target="_blank"
             rel="noopener noreferrer"

@@ -20,7 +20,11 @@ export default function Card({ card }) {
               backgroundPosition: "top center",
             }}
           ></div>
-          <Link data-testid="linkImg" to={"/" + card.title}>
+          <Link
+            aria-label="icone para deixar a imagem em tela cheia"
+            data-testid="linkImg"
+            to={"/" + card.title}
+          >
             <div className="absolute opacity-0  inset-0 bg-black/70 z-20 flex justify-center items-center transition-all duration-300 hover:cursor-pointer hover:opacity-100 ">
               <FaExpandArrowsAlt className="absolute h-10 w-10 fill-[#fff] max-sm:w-6 max-sm:h-6" />
             </div>
@@ -28,15 +32,25 @@ export default function Card({ card }) {
         </div>
         <div className="bg-[#245276] w-full h-[3px] absolute z-20 -bottom-[.5px] "></div>
         <div className="absolute z-20  -bottom-12 left-4">
-          <h3 className="font-bold text-3xl text-[#080808] max-sm:text-2xl ">
+          <h2 className="font-bold text-3xl text-[#080808] max-sm:text-2xl ">
             {card.title}
-          </h3>
+          </h2>
         </div>
         <div className=" absolute z-20 -bottom-[3.2rem] right-2 w-32 h-10 flex justify-end items-center gap-4 max-[480px]:mt-3">
-          <a data-testid="project" href={card.projectLink} target="_blank">
+          <a
+            aria-label="icone para ir para o site do projeto"
+            data-testid="project"
+            href={card.projectLink}
+            target="_blank"
+          >
             <FaShareFromSquare className="w-6 h-7 fill-[#080808] opacity-90 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
           </a>
-          <a data-testid="github" href={card.githubLink} target="_blank">
+          <a
+            aria-label="icone do github"
+            data-testid="github"
+            href={card.githubLink}
+            target="_blank"
+          >
             <FaGithub className="w-6 h-6 fill-[#080808] opacity-90 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
           </a>
         </div>

@@ -10,6 +10,7 @@ export default function MenuIcon({ isOpen }) {
     >
       <motion.button
         name="menu"
+        aria-label="menu button"
         initial={false}
         animate={isOpen ? "open" : "closed"}
         className="relative h-14 w-14 rounded-full transition-scale duration-300 hover:scale-110  max-sm:h-10 max-sm:w-10"
