@@ -1,4 +1,5 @@
 import skills from "../../../data/skill";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Skills() {
   const timer = 200;
@@ -13,7 +14,7 @@ export default function Skills() {
             data-aos-delay={timer * skill.id}
             className="m-auto flex justify-center h-20 w-full items-center rounded-lg shadow-md shadow-[#306d9d] max-[530px]:w-full"
           >
-            <img
+            <LazyLoadImage
               src={skill.src}
               alt="Imagem da tecnologia"
               className="w-1/2 object-cover max-sm:w-5/12"
