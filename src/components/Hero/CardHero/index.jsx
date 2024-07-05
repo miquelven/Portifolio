@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import DecorationText from "../DecorationText";
-import FloatingPhone from "../FloatPhone";
 import DownloadButton from "../../DownloadButton";
 
 export default function CardHero() {
@@ -62,9 +61,9 @@ const TiltCard = () => {
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4  rounded-xl flex  justify-center items-start drop-shadow-2xl shadow-lg bg-gradient-to-br from-[#306d9d] to-[#3c88c4] shadow-black/30 max-xl:flex-col"
+        className="absolute inset-4  rounded-xl flex  items-start drop-shadow-2xl shadow-lg bg-gradient-to-br from-[#306d9d] to-[#3c88c4] shadow-black/30 max-xl:flex-col"
       >
-        <div className="flex-1 flex flex-col justify-center p-10 max-sm:py-4 max-sm:justify-start max-[490px]:px-5 ">
+        <div className="  w-full flex flex-col  justify-center p-10 max-sm:py-4 max-sm:justify-start max-[490px]:px-5 ">
           <h3
             className="text-xl  [text-shadow:_0_2px_0_rgb(0_0_0_/70%)] font-medium text-zinc-200 mb-20 max-sm:mb-10 max-[490px]:text-base max-[490px]:flex max-[490px]:items-center max-[420px]:text-sm  max-[420px]:mb-6 max-[375px]:mb-4 max-[375px]:text-xs"
             data-aos="fade-right"
@@ -81,29 +80,19 @@ const TiltCard = () => {
             Desenvolvedor Front End
           </h1>
           <p
-            className="text-zinc-100 text-xl leading-8 font-light w-[550px] [text-shadow:_0_2px_0_rgb(0_0_0_/30%)] max-xl:w-3/4 max-md:w-full max-sm:text-lg max-[490px]:text-base max-[375px]:text-sm"
+            className="text-zinc-100 text-xl mb-20 leading-8 font-light w-[850px] [text-shadow:_0_2px_0_rgb(0_0_0_/30%)] max-xl:w-3/4 max-md:w-full max-sm:text-lg max-[490px]:text-base max-[375px]:text-sm max-[375px]:mb-8"
             data-aos="fade-right"
             data-aos-delay="500"
           >
-            Dedico-me a aprimorar continuamente minhas habilidades, aprender
-            novas tecnologias e seguir as melhores práticas de desenvolvimento.
-            Minha trajetória inclui a criação de aplicações web responsivas,
+            Tenho experiência na criação de aplicações web responsivas,
             otimização de desempenho e implementação de funcionalidades
             dinâmicas. Sou proativo, atento aos detalhes e gosto de colaborar em
-            equipe para alcançar objetivos comuns.
+            equipe para alcançar objetivos comuns. Dedico-me a aprimorar
+            continuamente minhas habilidades, aprender novas tecnologias e
+            seguir as melhores práticas de desenvolvimento.
           </p>
-
-          <div className="relative hidden max-sm:block mt-20 ">
-            <DownloadButton />
-          </div>
-        </div>
-        <div
-          className="
-           hidden h-full  justify-end items-center px-10 max-xl:w-full max-xl:justify-center max-[490px]:pl-6 max-[490px]:pr-2 sm:flex-1 sm:flex"
-          data-aos="zoom-in"
-          data-aos-delay="700"
-        >
-          <FloatingPhone />
+          <DownloadButton />
+          <div className="relative hidden max-sm:block mt-20 "></div>
         </div>
       </div>
     </motion.div>
