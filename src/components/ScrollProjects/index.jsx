@@ -17,7 +17,7 @@ export default function ScrollProjects() {
     <section
       data-testid="project"
       id="project"
-      className="bg-[#245276] my-20 py-10 max-xl:mt-96 max-[530px]:mt-[950px] max-[530px]:py-20"
+      className="bg-[#245276]  my-20 py-10 max-xl:mt-96 max-sm:overflow-hidden   max-[530px]:mt-[950px] max-[530px]:py-20"
       data-aos="fade-up"
     >
       <div className="flex h-48  items-center justify-center max-sm:hidden">
@@ -39,7 +39,7 @@ export default function ScrollProjects() {
           className="mySwiper"
         >
           {cards.map((card) => (
-            <SwiperSlide className="shadow-md shadow-[#090909]">
+            <SwiperSlide className="">
               <Card card={card} key={card.id} />
             </SwiperSlide>
           ))}
