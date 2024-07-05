@@ -40,7 +40,7 @@ button.download-button {
   width: 16px;
   height: 16px;
   border: 2px solid transparent;
-  border-top-color: #245276;
+  border-top-color: #080808;
   border-radius: 50%;
   opacity: 0;
   animation: button-loading-spinner 1s ease;
