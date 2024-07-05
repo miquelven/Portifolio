@@ -72,3 +72,7 @@ html::-webkit-scrollbar-thumb:active {
   font-weight: bold;
   color: #fff;
 }
+
+.swiper-3d .swiper-slide-shadow {
+  background: transparent;
+}
