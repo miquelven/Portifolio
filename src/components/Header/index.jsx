@@ -1,4 +1,4 @@
-import { FaHome, FaUser, FaCode, FaBriefcase } from "react-icons/fa";
+import { FaHome, FaCode, FaBriefcase, FaCogs, FaQuestionCircle, FaEnvelope } from "react-icons/fa";
 import { useState } from "react";
 
 export default function Header() {
@@ -14,9 +14,11 @@ export default function Header() {
 
   const navItems = [
     { id: "home", icon: FaHome, label: "Home" },
-    { id: "about", icon: FaUser, label: "About" },
     { id: "projects", icon: FaCode, label: "Projects" },
     { id: "experience", icon: FaBriefcase, label: "Experience" },
+    { id: "tech", icon: FaCogs, label: "Stacks" },
+    { id: "faq", icon: FaQuestionCircle, label: "FAQ" },
+    { id: "contact", icon: FaEnvelope, label: "Contato" },
   ];
 
   return (
