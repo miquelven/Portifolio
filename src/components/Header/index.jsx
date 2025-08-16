@@ -16,7 +16,14 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerHeight = 100; // Altura aproximada do header + espaçamento desejado
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+      
       setActiveSection(sectionId);
     }
   };
