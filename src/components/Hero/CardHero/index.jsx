@@ -54,18 +54,18 @@ const TiltCard = () => {
         rotateY,
       }}
       data-aos="zoom-in"
-      className="relative h-[620px] w-full rounded-xl bg-[#3c88c4] shadow-md mt-20 shadow-black max-xl:h-[920px] max-xl:mt-4 max-sm:h-[calc(80vh)] max-[375px]:h-[calc(75vh)]"
+      className="relative h-[620px] w-full rounded-2xl bg-gradient-to-br from-red-600 via-red-500 to-red-700 shadow-2xl mt-20 max-xl:h-[920px] max-xl:mt-4 max-sm:h-[calc(80vh)] max-[375px]:h-[calc(75vh)] glass-effect border-glow hover-lift animate-pulse-glow"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4  rounded-xl flex  items-start drop-shadow-2xl shadow-lg bg-gradient-to-br from-[#306d9d] to-[#3c88c4] shadow-black/30 max-xl:flex-col"
+        className="absolute inset-4 rounded-2xl flex items-start drop-shadow-2xl shadow-lg bg-gradient-to-br from-red-600/80 via-red-500/80 to-red-700/80 backdrop-blur-md border border-white/20 max-xl:flex-col animate-gradient"
       >
         <div className="  w-full flex flex-col  justify-center p-10 max-sm:py-4 max-sm:justify-start max-[490px]:px-5 ">
           <h3
-            className="text-xl  [text-shadow:_0_2px_0_rgb(0_0_0_/70%)] font-medium text-zinc-200 mb-20 max-sm:mb-10 max-[490px]:text-base max-[490px]:flex max-[490px]:items-center max-[420px]:text-sm  max-[420px]:mb-6 max-[375px]:mb-4 max-[375px]:text-xs"
+            className="text-xl font-medium text-white/90 mb-20 max-sm:mb-10 max-[490px]:text-base max-[490px]:flex max-[490px]:items-center max-[420px]:text-sm max-[420px]:mb-6 max-[375px]:mb-4 max-[375px]:text-xs text-glow animate-float"
             data-aos="fade-right"
             data-aos-delay="300"
           >
@@ -73,14 +73,14 @@ const TiltCard = () => {
             <DecorationText />
           </h3>
           <h1
-            className="text-5xl font-bold text-zinc-100 mb-10 [text-shadow:_0_2px_0_rgb(0_0_0_/70%)] max-xl:text-4xl max-sm:text-3xl max-[490px]:text-2xl max-[375px]:text-xl max-[375px]:mb-8"
+            className="text-5xl font-bold text-white mb-10 max-xl:text-4xl max-sm:text-3xl max-[490px]:text-2xl max-[375px]:text-xl max-[375px]:mb-8 text-glow bg-gradient-to-r from-white via-red-100 to-red-200 bg-clip-text text-transparent animate-gradient"
             data-aos="fade-right"
             data-aos-delay="400"
           >
             Desenvolvedor Front End
           </h1>
           <p
-            className="text-zinc-100 text-xl mb-20 leading-8 font-light w-[850px] [text-shadow:_0_2px_0_rgb(0_0_0_/30%)] max-xl:w-3/4 max-md:w-full max-sm:text-lg max-[490px]:text-base max-[375px]:text-sm max-[375px]:mb-8"
+            className="text-white/90 text-xl mb-20 leading-8 font-light w-[850px] max-xl:w-3/4 max-md:w-full max-sm:text-lg max-[490px]:text-base max-[375px]:text-sm max-[375px]:mb-8 text-glow"
             data-aos="fade-right"
             data-aos-delay="500"
           >

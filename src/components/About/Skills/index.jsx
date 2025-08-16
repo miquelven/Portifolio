@@ -5,23 +5,21 @@ export default function Skills() {
   const timer = 200;
 
   return (
-    <div className="h-96 pr-7 flex-1">
-      <div className="grid grid-cols-4  gap-14 max-xl:grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2 max-[530px]:grid-cols-1 max-[530px]:gap-8">
-        {skills.map((skill) => (
-          <div
-            key={skill.id}
-            data-aos="zoom-in"
-            data-aos-delay={timer * skill.id}
-            className="m-auto flex justify-center h-20 w-full items-center rounded-lg shadow-md shadow-[#306d9d] max-[530px]:w-full"
-          >
-            <LazyLoadImage
-              src={skill.src}
-              alt="Imagem da tecnologia"
-              className="w-1/2 object-cover max-sm:w-5/12"
-            />
-          </div>
-        ))}
-      </div>
+    <div className="grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-2">
+      {skills.map((skill) => (
+        <div
+          key={skill.id}
+          data-aos="zoom-in"
+          data-aos-delay={timer * skill.id}
+          className="flex justify-center items-center h-16 w-full rounded-xl bg-gray-700/50 border border-gray-600 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 group cursor-pointer"
+        >
+          <LazyLoadImage
+            src={skill.src}
+            alt="Imagem da tecnologia"
+            className="w-8 h-8 object-cover transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
+          />
+        </div>
+      ))}
     </div>
   );
 }

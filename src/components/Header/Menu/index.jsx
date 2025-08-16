@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Menu() {
-  const colors = ["#306d9d", "transparent"];
+  const colors = ["#667eea", "transparent"];
 
   const [color, setColor] = useState(colors[0]);
   const [isOpen, setIsOpen] = useState(false);
@@ -38,8 +38,8 @@ export default function Menu() {
           rel="noopener noreferrer"
         >
           <FaGithub
-            className="w-7 h-7 transition-scale duration-300  hover:scale-110"
-            style={{ fill: isOpen ? "#ffffff" : "#306d9d" }}
+            className="w-7 h-7 transition-all duration-300 hover:scale-125 hover-lift animate-float"
+            style={{ fill: isOpen ? "#ffffff" : "#667eea", filter: "drop-shadow(0 0 10px rgba(102, 126, 234, 0.5))" }}
           />
         </a>
         <a
@@ -49,8 +49,8 @@ export default function Menu() {
           rel="noopener noreferrer"
         >
           <FaLinkedin
-            className="w-7 h-7 transition-scale duration-300 hover:scale-110"
-            style={{ fill: isOpen ? "#ffffff" : "#306d9d" }}
+            className="w-7 h-7 transition-all duration-300 hover:scale-125 hover-lift animate-float"
+            style={{ fill: isOpen ? "#ffffff" : "#667eea", filter: "drop-shadow(0 0 10px rgba(102, 126, 234, 0.5))" }}
           />
         </a>
       </div>
@@ -63,7 +63,7 @@ export default function Menu() {
       </div>
 
       <motion.div
-        className="bg-[#245276]  p-32 md:p-20 fixed z-40 inset-0 max-sm:px-4"
+        className="bg-gradient-to-br from-red-900/95 via-red-800/95 to-red-900/95 backdrop-blur-xl p-32 md:p-20 fixed z-40 inset-0 max-sm:px-4 border-glow"
         style={{ height: isOpen ? "100vh" : "0px" }}
         variants={{
           open: { opacity: 1 },
