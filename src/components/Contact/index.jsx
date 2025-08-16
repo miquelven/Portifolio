@@ -72,7 +72,7 @@ export default function Contact() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Informações de contato */}
         <div
-          className="glass-effect rounded-2xl p-8 border-glow hover-lift"
+          className="glass-effect rounded-2xl p-8"
           data-aos="fade-right"
           data-aos-delay="300"
         >
@@ -146,7 +146,7 @@ export default function Contact() {
 
         {/* Formulário de contato */}
         <div
-          className="glass-effect rounded-2xl p-8 border-glow hover-lift"
+          className="glass-effect rounded-2xl p-8"
           data-aos="fade-left"
           data-aos-delay="500"
         >
