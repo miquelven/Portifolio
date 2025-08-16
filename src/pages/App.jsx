@@ -96,30 +96,6 @@ function App() {
           </section>
         </div>
       </main>
-
-      {/* Botões flutuantes no canto direito */}
-      <div className="fixed right-8 bottom-8 transform -translate-y-1/2 flex flex-col gap-4 z-40">
-        <button
-          onClick={() =>
-            document
-              .getElementById("projects")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-          className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all duration-300 transform hover:scale-105"
-        >
-          See All Projects
-        </button>
-        <button
-          onClick={() =>
-            document
-              .getElementById("experience")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-          className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all duration-300 border border-gray-600"
-        >
-          My Experiences
-        </button>
-      </div>
     </div>
   );
 }
