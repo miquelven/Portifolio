@@ -6,10 +6,11 @@ import {
   FaQuestionCircle,
   FaEnvelope,
   FaBars,
+  FaTimes,
 } from "react-icons/fa";
 import { useState } from "react";
 
-export default function Header({ onMenuClick }) {
+export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (sectionId) => {
@@ -32,18 +33,22 @@ export default function Header({ onMenuClick }) {
   return (
     <header className="fixed !top-4 md:!top-6 !left-4 md:!left-1/2 lg:!left-1/2 xl:!left-1/2 md:!transform lg:!transform xl:!transform md:!-translate-x-1/2 lg:!-translate-x-1/2 xl:!-translate-x-1/2 !right-4 md:!right-auto lg:!right-auto xl:!right-auto z-50">
       <nav className="bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-full px-3 md:px-6 py-2 md:py-3 shadow-2xl">
-        <div className="flex items-center justify-between md:justify-center">
-          {/* Botão de menu mobile */}
+        <div className="flex items-center justify-between lg:justify-center">
+          {/* Botão de menu mobile e tablet */}
           <button
-            onClick={onMenuClick}
-            className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
-            aria-label="Abrir menu"
+            onClick={sidebarOpen ? onMenuClose : onMenuClick}
+            className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
+            aria-label={sidebarOpen ? "Fechar menu" : "Abrir menu"}
           >
-            <FaBars className="nav-icon" />
+            {sidebarOpen ? (
+              <FaTimes className="nav-icon" />
+            ) : (
+              <FaBars className="nav-icon" />
+            )}
           </button>
 
           {/* Navegação desktop */}
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-2">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               const isActive = activeSection === item.id;
@@ -68,7 +73,7 @@ export default function Header({ onMenuClick }) {
                       ${isActive ? "scale-110" : "group-hover:scale-110"}
                     `}
                   />
-
+                  
                   {/* Tooltip */}
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                     {item.label}
@@ -79,7 +84,7 @@ export default function Header({ onMenuClick }) {
           </div>
 
           {/* Navegação mobile simplificada */}
-          <div className="md:hidden flex items-center space-x-1">
+          <div className="lg:hidden flex items-center space-x-1">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               const isActive = activeSection === item.id;

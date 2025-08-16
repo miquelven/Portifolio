@@ -32,12 +32,16 @@ function App() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Header com botão de menu mobile */}
-      <Header onMenuClick={() => setSidebarOpen(true)} />
+      <Header 
+        onMenuClick={() => setSidebarOpen(true)} 
+        sidebarOpen={sidebarOpen}
+        onMenuClose={() => setSidebarOpen(false)}
+      />
 
-      {/* Overlay para mobile */}
+      {/* Overlay para mobile e tablet */}
       {sidebarOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}

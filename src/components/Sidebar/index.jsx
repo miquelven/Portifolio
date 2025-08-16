@@ -20,19 +20,12 @@ export default function Sidebar({ isOpen, onClose }) {
   };
 
   return (
-    <aside className={`fixed left-0 top-0 h-screen w-80 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 z-50 overflow-y-auto transition-transform duration-300 md:translate-x-0 ${
-      isOpen ? 'translate-x-0' : '-translate-x-full'
-    }`}>
+    <aside
+      className={`fixed left-0 top-0 h-screen w-80 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 z-50 overflow-y-auto transition-transform duration-300 lg:translate-x-0 ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
+    >
       <div className="p-6 md:p-8 flex flex-col h-full">
-        {/* Botão fechar (mobile) */}
-        <button
-          onClick={onClose}
-          className="md:hidden self-end mb-4 p-2 text-gray-400 hover:text-white transition-colors"
-          aria-label="Fechar menu"
-        >
-          <FaTimes className="nav-icon" />
-        </button>
-
         {/* Foto de Perfil */}
         <div className="text-center mb-4">
           <div className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 p-1 shadow-2xl">
