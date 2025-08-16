@@ -3,7 +3,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -65,7 +71,7 @@ export default function Contact() {
     <div className="my-52 max-w-[1500px] mx-auto px-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Informações de contato */}
-        <div 
+        <div
           className="glass-effect rounded-2xl p-8 border-glow hover-lift"
           data-aos="fade-right"
           data-aos-delay="300"
@@ -73,10 +79,11 @@ export default function Contact() {
           <h3 className="text-3xl font-bold text-white mb-8 text-glow">
             Vamos Conversar
           </h3>
-          
+
           <p className="text-white/90 text-lg mb-8 leading-relaxed">
-            Estou sempre aberto a novas oportunidades e projetos interessantes. 
-            Entre em contato comigo através dos canais abaixo ou envie uma mensagem diretamente.
+            Estou sempre aberto a novas oportunidades e projetos interessantes.
+            Entre em contato comigo através dos canais abaixo ou envie uma
+            mensagem diretamente.
           </p>
 
           <div className="space-y-6">
@@ -86,7 +93,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-white font-medium">Email</p>
-                <p className="text-gray-300">miquelven@exemplo.com</p>
+                <p className="text-gray-300">miquelven.silva@gmail.com</p>
               </div>
             </div>
 
@@ -96,7 +103,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-white font-medium">Telefone</p>
-                <p className="text-gray-300">+55 (11) 99999-9999</p>
+                <p className="text-gray-300">+55 (19) 98935-7148</p>
               </div>
             </div>
 
@@ -106,14 +113,16 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-white font-medium">Localização</p>
-                <p className="text-gray-300">São Paulo, Brasil</p>
+                <p className="text-gray-300">Santa Maria da Serra, Brasil</p>
               </div>
             </div>
           </div>
 
           {/* Redes sociais */}
           <div className="mt-8 pt-8 border-t border-white/20">
-            <p className="text-white font-medium mb-4">Me siga nas redes sociais</p>
+            <p className="text-white font-medium mb-4">
+              Me siga nas redes sociais
+            </p>
             <div className="flex gap-4">
               <a
                 href="https://github.com/miquelven"
@@ -136,7 +145,7 @@ export default function Contact() {
         </div>
 
         {/* Formulário de contato */}
-        <div 
+        <div
           className="glass-effect rounded-2xl p-8 border-glow hover-lift"
           data-aos="fade-left"
           data-aos-delay="500"
@@ -147,7 +156,10 @@ export default function Contact() {
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-white font-medium mb-2">
+              <label
+                htmlFor="email"
+                className="block text-white font-medium mb-2"
+              >
                 Email *
               </label>
               <input
@@ -166,7 +178,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-white font-medium mb-2">
+              <label
+                htmlFor="message"
+                className="block text-white font-medium mb-2"
+              >
                 Mensagem *
               </label>
               <textarea
@@ -176,19 +191,19 @@ export default function Contact() {
                 onChange={(e) => setTextAreaValue(e.target.value)}
                 value={textAreaValue}
                 className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 resize-none ${
-                  validateTextArea && showError ? "border-red-500" : "border-gray-600"
+                  validateTextArea && showError
+                    ? "border-red-500"
+                    : "border-gray-600"
                 }`}
                 placeholder="Conte-me sobre seu projeto ou ideia..."
               />
               {showError && (
                 <span className="text-red-400 text-sm mt-1 block">
-                  {textAreaValue.trim().length === 0 ? (
-                    "O campo não pode ser vazio"
-                  ) : (
-                    validateTextArea && textAreaValue.trim().length > 0 && (
-                      "O campo deve conter pelo menos 5 caracteres"
-                    )
-                  )}
+                  {textAreaValue.trim().length === 0
+                    ? "O campo não pode ser vazio"
+                    : validateTextArea &&
+                      textAreaValue.trim().length > 0 &&
+                      "O campo deve conter pelo menos 5 caracteres"}
                 </span>
               )}
             </div>

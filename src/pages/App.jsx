@@ -38,23 +38,23 @@ function App() {
           <section className="mb-20 pt-12">
             <div className="max-w-4xl">
               <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
-                Transforming Your <br />
-                Ideas into{" "}
+                Transformando suas <br />
+                Ideias em{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-                  Reality
+                  Realidade
                 </span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-2xl leading-relaxed">
-                Passionate about developing efficient and scalable solutions,
-                with a knack for blending functionality and design to deliver
-                impactful applications.
+                Apaixonado por desenvolver soluções eficientes e escaláveis, com
+                um talento especial para misturar funcionalidade e design para
+                entregar aplicações impactantes.
               </p>
               <div className="flex gap-4">
                 <button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get In Touch
+                  Entre em contato
                 </button>
                 <button className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 border border-gray-600">
-                  View My Work
+                  Veja meu trabalho
                 </button>
               </div>
             </div>

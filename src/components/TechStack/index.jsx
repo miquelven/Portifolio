@@ -13,10 +13,10 @@ export default function TechStack() {
   return (
     <div>
       <h2 className="text-5xl font-bold text-white mb-4">
-        Top-Tier Tech for <br />
-        Exceptional{" "}
+        Tecnologia de ponta para <br />
+        Resultados{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Results
+          excepcionais
         </span>
       </h2>
 

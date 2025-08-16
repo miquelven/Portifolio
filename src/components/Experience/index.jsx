@@ -6,7 +6,7 @@ export default function Experience() {
 
       description:
         "Atualmente, sou responsável pela criação do novo site da empresa, focando em Next.js, TypeScript, JavaScript e Tailwind para entregar interfaces modernas, responsivas e de alta performance. Minha atuação envolve desde a implementação das telas até a colaboração com o time de design no Figma, onde contribuo com sugestões de melhorias e ajustes. Além disso, permaneço em constante interação com outras equipes, pronto para dar manutenção em futuros projetos e assegurar a melhor experiência possível para os usuários.",
-      period: "Setembro 2024 - Now",
+      period: "Setembro 2024 - Agora",
       icon: "↗",
     },
   ];
@@ -14,10 +14,10 @@ export default function Experience() {
   return (
     <div>
       <h2 className="text-5xl font-bold text-white mb-4">
-        See of What I'm Capable, <br />
-        Check on my{" "}
+        Veja do que sou capaz, <br />
+        Confira minha{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Experience
+          Experiência
         </span>
       </h2>
 
