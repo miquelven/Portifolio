@@ -14,7 +14,7 @@ export default function Experience() {
 
   return (
     <div>
-      <h2 className="text-5xl font-bold text-white mb-4">
+      <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-4">
         Veja do que sou capaz, <br />
         Confira minha{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
@@ -29,7 +29,7 @@ export default function Experience() {
             className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 group"
           >
             <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+              <h3 className="text-2xl max-sm:text-xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
                 {exp.title}
                 {exp.company}
               </h3>
@@ -37,10 +37,12 @@ export default function Experience() {
                 {exp.icon}
               </div>
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <p className="text-gray-300 mb-4 leading-relaxed max-sm:text-sm">
               {exp.description}
             </p>
-            <span className="text-gray-400 text-sm">{exp.period}</span>
+            <span className="text-gray-400 text-sm max-sm:text-xs">
+              {exp.period}
+            </span>
           </div>
         ))}
       </div>

@@ -27,7 +27,7 @@ export default function FAQ() {
 
   return (
     <div>
-      <h2 className="text-5xl font-bold text-white mb-12">
+      <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12">
         Perguntas{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
           Frequentes

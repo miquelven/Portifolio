@@ -47,23 +47,23 @@ export default function DownloadButton() {
       download
       target="_blank"
       onClick={animationStart}
-      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-3 border border-red-400/20 backdrop-blur-sm"
+      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 md:gap-3 border border-red-400/20 backdrop-blur-sm"
     >
       <FaDownload 
         ref={downloadIcon}
-        className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" 
+        className="icon-responsive transition-transform duration-300 group-hover:translate-y-1" 
       />
       <FaSpinner 
         ref={downloadLoader}
-        className="w-4 h-4 animate-spin hidden" 
+        className="icon-responsive animate-spin hidden" 
       />
       <FaCheck 
         ref={downloadCheckMark}
-        className="w-4 h-4 hidden" 
+        className="icon-responsive hidden" 
       />
       <span
         ref={downloadText}
-        className="font-semibold tracking-wide"
+        className="font-semibold tracking-wide text-sm md:text-base"
       >
         Download CV
       </span>

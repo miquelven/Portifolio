@@ -1,12 +1,12 @@
-import { 
-  SiNextdotjs, 
-  SiReact, 
-  SiTypescript, 
-  SiJavascript, 
-  SiNuxtdotjs, 
-  SiVuedotjs, 
-  SiSass, 
-  SiTailwindcss 
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiNuxtdotjs,
+  SiVuedotjs,
+  SiSass,
+  SiTailwindcss,
 } from "react-icons/si";
 
 export default function TechStack() {
@@ -23,7 +23,7 @@ export default function TechStack() {
 
   return (
     <div>
-      <h2 className="text-5xl font-bold text-white mb-4">
+      <h2 className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-4">
         Tecnologia de ponta para <br />
         Resultados{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
@@ -31,19 +31,23 @@ export default function TechStack() {
         </span>
       </h2>
 
-      <div className="grid grid-cols-2 gap-4 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-12">
         {technologies.map((tech, index) => {
           const IconComponent = tech.icon;
           return (
             <div
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-4 group"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-3 md:gap-4 group"
             >
-              <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-gray-600">
-                <IconComponent className={`text-2xl ${tech.color} transition-all duration-300 group-hover:scale-110`} />
+              <div className="icon-container bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-gray-600">
+                <IconComponent
+                  className={`tech-icon ${tech.color} transition-all duration-300 group-hover:scale-110`}
+                />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">{tech.name}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-white">
+                  {tech.name}
+                </h3>
               </div>
             </div>
           );
