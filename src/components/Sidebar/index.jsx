@@ -18,7 +18,7 @@ export default function Sidebar() {
     <aside className="fixed left-0 top-0 h-screen w-80 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 z-50 overflow-y-auto">
       <div className="p-8 flex flex-col h-full">
         {/* Foto de Perfil */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <div className="w-40 h-40 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 p-1 shadow-2xl">
             <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-700 flex items-center justify-center">
               <span className="text-4xl">👨‍💻</span>
@@ -29,12 +29,12 @@ export default function Sidebar() {
             Miquelven Silva
           </h2>
           <p className="text-gray-300 text-sm font-medium mb-2">
-            Developer & Designer
+            Desenvolvedor Front End
           </p>
-          <div className="flex items-center justify-center text-gray-400 text-sm">
+          {/* <div className="flex items-center justify-center text-gray-400 text-sm">
             <FaMapMarkerAlt className="mr-1" />
             <span>From Brazil</span>
-          </div>
+          </div> */}
         </div>
 
         {/* Redes Sociais */}
@@ -67,16 +67,8 @@ export default function Sidebar() {
           </a>
         </div>
 
-        {/* Botão Let's Talk */}
-        <button
-          onClick={() => scrollToSection("contact")}
-          className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg mb-8"
-        >
-          Let's Talk
-        </button>
-
         {/* Botão de Download do CV */}
-        <div className="mt-8">
+        <div className="mt-2">
           <DownloadButton />
         </div>
 
