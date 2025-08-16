@@ -1,4 +1,12 @@
-import { FaHome, FaCode, FaBriefcase, FaCogs, FaQuestionCircle, FaEnvelope, FaBars } from "react-icons/fa";
+import {
+  FaHome,
+  FaCode,
+  FaBriefcase,
+  FaCogs,
+  FaQuestionCircle,
+  FaEnvelope,
+  FaBars,
+} from "react-icons/fa";
 import { useState } from "react";
 
 export default function Header({ onMenuClick }) {
@@ -22,7 +30,7 @@ export default function Header({ onMenuClick }) {
   ];
 
   return (
-    <header className="fixed top-4 md:top-6 left-4 md:left-1/2 md:transform md:-translate-x-1/2 right-4 md:right-auto z-50">
+    <header className="fixed !top-4 md:!top-6 !left-4 md:!left-1/2 lg:!left-1/2 xl:!left-1/2 md:!transform lg:!transform xl:!transform md:!-translate-x-1/2 lg:!-translate-x-1/2 xl:!-translate-x-1/2 !right-4 md:!right-auto lg:!right-auto xl:!right-auto z-50">
       <nav className="bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-full px-3 md:px-6 py-2 md:py-3 shadow-2xl">
         <div className="flex items-center justify-between md:justify-center">
           {/* Botão de menu mobile */}
@@ -60,7 +68,7 @@ export default function Header({ onMenuClick }) {
                       ${isActive ? "scale-110" : "group-hover:scale-110"}
                     `}
                   />
-                  
+
                   {/* Tooltip */}
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                     {item.label}
@@ -72,7 +80,7 @@ export default function Header({ onMenuClick }) {
 
           {/* Navegação mobile simplificada */}
           <div className="md:hidden flex items-center space-x-1">
-            {navItems.slice(0, 4).map((item) => {
+            {navItems.map((item) => {
               const IconComponent = item.icon;
               const isActive = activeSection === item.id;
 

@@ -46,7 +46,7 @@ function App() {
       <main className="flex-1 ml-0 md:ml-80 mt-10">
         <div className="min-h-screen p-4 md:p-8 lg:p-12">
           {/* Hero Section */}
-          <section className="mb-12 md:mb-20 pt-8 md:pt-12">
+          <section id="home" className="mb-12 md:mb-20 pt-8 md:pt-12">
             <div className="max-w-4xl">
               <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Transformando suas <br className="hidden md:block" />

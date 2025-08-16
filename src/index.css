@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 50%, #1a1a1a 100%);
   background-attachment: fixed;
   color: white;
@@ -143,11 +143,43 @@ body {
 }
 
 /* Main Content Responsive */
+@media (min-width: 768px) {
+  /* Header centralizado para tablets e desktop */
+  /* header {
+    position: fixed !important;
+    top: 1.5rem !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+  } */
+}
+
+@media (min-width: 1025px) {
+  /* Header para telas grandes */
+  header {
+    top: 1.5rem !important;
+  }
+
+  header nav {
+    padding: 0.75rem 1.5rem !important;
+  }
+
+  header nav .flex {
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  header nav button {
+    padding: 0.75rem !important;
+  }
+}
+
 @media (max-width: 1280px) {
   .sidebar {
     width: 280px;
   }
-  
+
   main {
     margin-left: 280px !important;
   }
@@ -157,27 +189,27 @@ body {
   .sidebar {
     width: 260px;
   }
-  
+
   main {
     margin-left: 260px !important;
     padding: 1rem !important;
   }
-  
+
   /* Ajustar header para tablets */
   header {
     top: 1rem !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
-  
+
   header nav {
     padding: 0.5rem 1rem !important;
   }
-  
+
   header nav .flex {
     gap: 0.5rem !important;
   }
-  
+
   header nav button {
     padding: 0.75rem !important;
   }
@@ -193,17 +225,17 @@ body {
     z-index: 9999;
     transition: left 0.3s ease;
   }
-  
+
   .sidebar.open {
     left: 0;
   }
-  
+
   main {
     margin-left: 0 !important;
     padding: 1rem !important;
     padding-top: 5rem !important;
   }
-  
+
   /* Header mobile */
   header {
     position: fixed !important;
@@ -213,77 +245,100 @@ body {
     transform: none !important;
     width: auto !important;
   }
-  
+
   header nav {
-    padding: 0.75rem !important;
+    padding: 0.5rem !important;
     border-radius: 1rem !important;
   }
-  
+
   header nav .flex {
     justify-content: space-between !important;
-    gap: 0.5rem !important;
+    gap: 0.25rem !important;
   }
-  
+
   header nav button {
-    padding: 0.75rem !important;
-    min-width: 2.75rem !important;
+    padding: 0.5rem !important;
+    min-width: 2.25rem !important;
   }
 }
 
 @media (max-width: 640px) {
-  /* Ajustes para telas muito pequenas */
-  main {
-    padding: 0.5rem !important;
-    padding-top: 4.5rem !important;
-  }
-  
-  header {
-    top: 0.5rem !important;
-    left: 0.5rem !important;
-    right: 0.5rem !important;
-  }
-  
   header nav {
-    padding: 0.5rem !important;
+    padding: 0.375rem !important;
   }
-  
+
+  header nav .flex {
+    gap: 0.125rem !important;
+  }
+
   header nav button {
-    padding: 0.625rem !important;
-    min-width: 2.5rem !important;
+    padding: 0.375rem !important;
+    min-width: 2rem !important;
   }
-  
-  /* Texto responsivo */
-  .hero-title {
-    font-size: 2.5rem !important;
-    line-height: 1.2 !important;
+}
+
+@media (max-width: 480px) {
+  header nav button {
+    padding: 0.25rem !important;
+    min-width: 1.75rem !important;
   }
-  
-  .hero-subtitle {
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
+
+  header nav .flex {
+    gap: 0.0625rem !important;
   }
+}
+/* Ajustes para telas muito pequenas */
+main {
+  padding: 0.5rem !important;
+  padding-top: 4.5rem !important;
+}
+
+header {
+  top: 0.5rem !important;
+  left: 0.5rem !important;
+  right: 0.5rem !important;
+}
+
+header nav {
+  padding: 0.5rem !important;
+}
+
+header nav button {
+  padding: 0.625rem !important;
+  min-width: 2.5rem !important;
+}
+
+/* Texto responsivo */
+.hero-title {
+  font-size: 2.5rem !important;
+  line-height: 1.2 !important;
+}
+
+.hero-subtitle {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
 }
 
 @media (max-width: 480px) {
   .hero-title {
     font-size: 2rem !important;
   }
-  
+
   .hero-subtitle {
     font-size: 0.875rem !important;
   }
-  
+
   /* Botões responsivos */
   .hero-buttons {
     flex-direction: column !important;
     gap: 0.75rem !important;
   }
-  
+
   .hero-buttons button {
     width: 100% !important;
     padding: 0.75rem 1rem !important;
   }
-  
+
   header nav button {
     padding: 0.5rem !important;
     min-width: 2.25rem !important;
@@ -337,7 +392,8 @@ body {
 
 /* Animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -346,7 +402,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
   }
   50% {
@@ -385,7 +442,11 @@ body {
 }
 
 .bg-gradient-red-subtle {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.1),
+    rgba(220, 38, 38, 0.1)
+  );
 }
 
 /* Utilities para responsividade */
