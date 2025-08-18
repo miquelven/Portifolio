@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { FaDownload, FaSpinner, FaCheck } from "react-icons/fa";
-import downloadCV from "../../../assets/cv/miquelven-CV.pdf";
+import downloadCV from "../../../assets/cv/Miquelven-CV-base.pdf";
 
 export default function DownloadButton() {
   const downloadIcon = useRef(null);
@@ -49,18 +49,15 @@ export default function DownloadButton() {
       onClick={animationStart}
       className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 md:gap-3 border border-red-400/20 backdrop-blur-sm"
     >
-      <FaDownload 
+      <FaDownload
         ref={downloadIcon}
-        className="icon-responsive transition-transform duration-300 group-hover:translate-y-1" 
+        className="icon-responsive transition-transform duration-300 group-hover:translate-y-1"
       />
-      <FaSpinner 
+      <FaSpinner
         ref={downloadLoader}
-        className="icon-responsive animate-spin hidden" 
+        className="icon-responsive animate-spin hidden"
       />
-      <FaCheck 
-        ref={downloadCheckMark}
-        className="icon-responsive hidden" 
-      />
+      <FaCheck ref={downloadCheckMark} className="icon-responsive hidden" />
       <span
         ref={downloadText}
         className="font-semibold tracking-wide text-sm md:text-base"
