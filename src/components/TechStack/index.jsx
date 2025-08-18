@@ -37,14 +37,20 @@ export default function TechStack() {
           return (
             <div
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-3 md:gap-4 group"
+              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-3 md:gap-4 overflow-hidden"
             >
-              <div className="icon-container bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-gray-600">
+              {/* Efeito de brilho animado */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              
+              {/* Efeito de borda brilhante */}
+              <div className="absolute inset-0 border-2 border-red-400/20 rounded-xl opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"></div>
+              
+              <div className="icon-container bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-gray-600 relative z-10">
                 <IconComponent
                   className={`tech-icon ${tech.color} transition-all duration-300 group-hover:scale-110`}
                 />
               </div>
-              <div>
+              <div className="relative z-10">
                 <h3 className="text-lg md:text-xl font-bold text-white">
                   {tech.name}
                 </h3>

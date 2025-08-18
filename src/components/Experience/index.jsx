@@ -26,9 +26,15 @@ export default function Experience() {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 group"
+            className="group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 overflow-hidden"
           >
-            <div className="flex justify-between items-start mb-4">
+            {/* Efeito de brilho animado */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            
+            {/* Efeito de borda brilhante */}
+            <div className="absolute inset-0 border-2 border-red-400/20 rounded-2xl opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"></div>
+            
+            <div className="flex justify-between items-start mb-4 relative z-10">
               <h3 className="text-2xl max-sm:text-xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
                 {exp.title}
                 {exp.company}
@@ -37,10 +43,10 @@ export default function Experience() {
                 {exp.icon}
               </div>
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed max-sm:text-sm">
+            <p className="text-gray-300 mb-4 leading-relaxed max-sm:text-sm relative z-10">
               {exp.description}
             </p>
-            <span className="text-gray-400 text-sm max-sm:text-xs">
+            <span className="text-gray-400 text-sm max-sm:text-xs relative z-10">
               {exp.period}
             </span>
           </div>
