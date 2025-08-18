@@ -62,7 +62,7 @@ function App() {
 
       {/* Conteúdo principal */}
       <main className="flex-1 ml-0 md:ml-80 mt-10">
-        <div className="min-h-screen p-4 md:p-8 lg:p-12">
+        <div className="p-4 md:p-8 lg:p-12">
           {/* Hero Section */}
           <section id="home" className="mb-12 md:mb-20 pt-8 md:pt-12">
             <div className="max-w-4xl">
@@ -138,7 +138,7 @@ function App() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="mb-12 md:mb-20">
+          <section id="contact">
             <Contact />
           </section>
         </div>

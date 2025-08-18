@@ -73,7 +73,7 @@ export default function Contact() {
   });
 
   return (
-    <div className="my-32 md:my-52 max-w-[1500px] mx-auto px-4 md:px-5">
+    <div className="mt-32 mb-16 md:mt-52 md:mb-32 max-w-[1500px] mx-auto px-4 md:px-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
         {/* Informações de contato */}
         <div className="glass-effect rounded-2xl p-6 md:p-8">
