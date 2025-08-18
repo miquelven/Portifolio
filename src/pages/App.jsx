@@ -142,6 +142,7 @@ function App() {
             <Contact />
           </section>
         </div>
+        <Footer />
       </main>
     </div>
   );
