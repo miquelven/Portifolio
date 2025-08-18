@@ -8,15 +8,46 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   const [activeSection, setActiveSection] = useState("home");
 
+  // Detectar seção ativa baseada no scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        { id: "home", selector: "section" }, // Primeira seção
+        { id: "projects", selector: "#projects" },
+        { id: "experience", selector: "#experience" },
+        { id: "tech", selector: "#tech" },
+        { id: "testimonials", selector: "#testimonials" },
+        { id: "faq", selector: "#faq" },
+        { id: "contact", selector: "#contact" }
+      ];
+
+      const scrollPosition = window.scrollY + 150;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const element = document.querySelector(section.selector);
+        if (element && element.offsetTop <= scrollPosition) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Verificar seção inicial
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 100; // Altura aproximada do header + espaçamento desejado
+      const headerHeight = 100;
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({
