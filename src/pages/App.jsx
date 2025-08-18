@@ -15,6 +15,16 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [stars, setStars] = useState(() => 
+    Array.from({ length: 30 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 2 + 0.5,
+      opacity: Math.random() * 0.4 + 0.1,
+    }))
+  );
 
   // Função para scroll suave para seções
   const scrollToSection = (sectionId) => {
@@ -38,10 +48,58 @@ function App() {
       mirror: true,
       offset: 100,
     });
+
+    // Listener para scroll parallax muito sutil
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+
+    // Sistema muito sutil de reposicionamento de estrelas
+    const starInterval = setInterval(() => {
+      setStars(prevStars => {
+        const newStars = [...prevStars];
+        // Reposiciona apenas 1 estrela aleatoriamente
+        const randomIndex = Math.floor(Math.random() * newStars.length);
+        newStars[randomIndex] = {
+          ...newStars[randomIndex],
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          opacity: Math.random() * 0.4 + 0.1,
+        };
+        
+        return newStars;
+      });
+    }, 15000); // Reposiciona a cada 15 segundos
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearInterval(starInterval);
+    };
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-gray-900">
+    <div className="flex min-h-screen bg-gray-900 relative overflow-hidden">
+      {/* Fundo com estrelas sutis */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        {/* Campo de estrelas muito sutis */}
+        <div className="absolute inset-0">
+          {stars.map((star) => (
+            <div
+              key={star.id}
+              className="absolute rounded-full bg-white transition-all duration-3000 ease-out"
+              style={{
+                left: `${star.x}%`,
+                top: `${star.y}%`,
+                width: `${star.size}px`,
+                height: `${star.size}px`,
+                opacity: star.opacity,
+                transform: `translateY(${scrollY * (star.size * 0.02)}px)`,
+                boxShadow: `0 0 ${star.size * 3}px rgba(255, 255, 255, ${star.opacity * 0.2})`
+              }}
+            ></div>
+          ))}
+        </div>
+      </div>
+
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
@@ -61,7 +119,7 @@ function App() {
       )}
 
       {/* Conteúdo principal */}
-      <main className="flex-1 ml-0 md:ml-80 mt-10">
+      <main className="flex-1 ml-0 md:ml-80 mt-10 relative z-10">
         <div className="p-4 md:p-8 lg:p-12">
           {/* Hero Section */}
           <section id="home" className="mb-12 md:mb-20 pt-8 md:pt-12">
