@@ -81,15 +81,37 @@ function App() {
               <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4">
                 <button 
                   onClick={() => scrollToSection("contact")}
-                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                  className="group relative bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 overflow-hidden"
                 >
-                  Entre em contato
+                  {/* Efeito de brilho animado */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  
+                  {/* Efeito de pulso */}
+                  <div className="absolute inset-0 border-2 border-red-300 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
+                  
+                  {/* Texto com animação */}
+                  <span className="relative z-10 group-hover:animate-pulse">
+                    Entre em contato
+                  </span>
                 </button>
+                
                 <button 
                   onClick={() => scrollToSection("projects")}
-                  className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 border border-gray-600"
+                  className="group relative bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 border border-gray-600 hover:border-gray-500 transform hover:scale-105 overflow-hidden"
                 >
-                  Veja meu trabalho
+                  {/* Efeito de brilho animado */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  
+                  {/* Efeito de sombra */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Efeito de borda animada */}
+                  <div className="absolute inset-0 border-2 border-gray-400 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
+                  
+                  {/* Texto com animação */}
+                  <span className="relative z-10 group-hover:text-gray-100 transition-colors duration-300">
+                    Veja meu trabalho
+                  </span>
                 </button>
               </div>
             </div>
