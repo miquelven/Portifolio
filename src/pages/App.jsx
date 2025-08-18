@@ -22,10 +22,10 @@ function App() {
     if (element) {
       const headerHeight = 100; // Altura aproximada do header + espaçamento desejado
       const elementPosition = element.offsetTop - headerHeight;
-      
+
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -46,15 +46,15 @@ function App() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Header com botão de menu mobile */}
-      <Header 
-        onMenuClick={() => setSidebarOpen(true)} 
+      <Header
+        onMenuClick={() => setSidebarOpen(true)}
         sidebarOpen={sidebarOpen}
         onMenuClose={() => setSidebarOpen(false)}
       />
 
       {/* Overlay para mobile e tablet */}
       {sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
@@ -74,40 +74,40 @@ function App() {
                 </span>
               </h1>
               <p className="hero-subtitle text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-2xl leading-relaxed">
-                Apaixonado por desenvolver soluções eficientes e escaláveis, com
-                um talento especial para misturar funcionalidade e design para
-                entregar aplicações impactantes.
+                Apaixonado por criar soluções eficientes e escaláveis,
+                combinando funcionalidade e design para entregar aplicações
+                modernas, intuitivas e de alto impacto.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4">
-                <button 
+                <button
                   onClick={() => scrollToSection("contact")}
                   className="group relative bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 overflow-hidden"
                 >
                   {/* Efeito de brilho animado */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  
+
                   {/* Efeito de pulso */}
                   <div className="absolute inset-0 border-2 border-red-300 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-                  
+
                   {/* Texto com animação */}
                   <span className="relative z-10 group-hover:animate-pulse">
                     Entre em contato
                   </span>
                 </button>
-                
-                <button 
+
+                <button
                   onClick={() => scrollToSection("projects")}
                   className="group relative bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 border border-gray-600 hover:border-gray-500 transform hover:scale-105 overflow-hidden"
                 >
                   {/* Efeito de brilho animado */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  
+
                   {/* Efeito de sombra */}
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
+
                   {/* Efeito de borda animada */}
                   <div className="absolute inset-0 border-2 border-gray-400 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-                  
+
                   {/* Texto com animação */}
                   <span className="relative z-10 group-hover:text-gray-100 transition-colors duration-300">
                     Veja meu trabalho
