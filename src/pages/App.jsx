@@ -16,6 +16,20 @@ import { useEffect, useState } from "react";
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  // Função para scroll suave para seções
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 100; // Altura aproximada do header + espaçamento desejado
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -65,10 +79,16 @@ function App() {
                 entregar aplicações impactantes.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4">
-                <button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button 
+                  onClick={() => scrollToSection("contact")}
+                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
                   Entre em contato
                 </button>
-                <button className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 border border-gray-600">
+                <button 
+                  onClick={() => scrollToSection("projects")}
+                  className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 border border-gray-600"
+                >
                   Veja meu trabalho
                 </button>
               </div>
