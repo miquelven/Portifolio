@@ -145,17 +145,16 @@ function App() {
           {/* Hero Section */}
           <section id="home" className="mb-12 md:mb-20 pt-8 md:pt-12">
             <div className="max-w-4xl">
-              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                Transformando suas <br className="hidden md:block" />
-                Ideias em{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-                  Realidade
+              <h1 className="hero-title font-bold text-white mb-4 md:mb-6 leading-tight">
+                <span className="block text-5xl md:text-6xl ">Olá</span>
+                <span className="block text-4xl md:text-5xl  text-transparent bg-clip-text pb-1 bg-gradient-to-r from-red-500 to-red-600">
+                  seja bem-vindo!
                 </span>
               </h1>
               <p className="hero-subtitle text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-2xl leading-relaxed">
-                Apaixonado por criar soluções eficientes e escaláveis,
-                combinando funcionalidade e design para entregar aplicações
-                modernas, intuitivas e de alto impacto.
+                Sou Desenvolvedor Front-End e aqui é o lugar aonde você pode
+                encontrar projetos que desenvolvi, experiências profissionais e
+                informações sobre minhas habilidades.
               </p>
               <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4">
                 <button
