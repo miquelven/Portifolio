@@ -6,6 +6,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import DownloadButton from "../DownloadButton";
+import profileImage from "../../../assets/images/profile.jpg";
 
 export default function Sidebar({ isOpen, onClose }) {
   const scrollToSection = (sectionId) => {
@@ -37,9 +38,14 @@ export default function Sidebar({ isOpen, onClose }) {
 
         {/* Foto de Perfil */}
         <div className="text-center mb-4">
-          <div className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 p-1 shadow-2xl">
+          <div className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-[#2c323c] to-[#111827] p-1 shadow-2xl">
             <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-700 flex items-center justify-center">
-              <span className="text-2xl md:text-4xl">👨‍💻</span>
+              <img
+                src={profileImage}
+                alt="Foto de perfil de Miquelven Silva"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -62,13 +68,13 @@ export default function Sidebar({ isOpen, onClose }) {
           >
             {/* Background gradient animado */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
+
             {/* Efeito de brilho */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            
+
             <FaGithub className="social-icon text-white relative z-10 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" />
           </a>
-          
+
           <a
             href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
             target="_blank"
@@ -78,20 +84,20 @@ export default function Sidebar({ isOpen, onClose }) {
           >
             {/* Background gradient animado */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
+
             {/* Efeito de brilho */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            
+
             {/* Partículas animadas */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <div className="absolute top-1 left-1 w-1 h-1 bg-white rounded-full animate-ping"></div>
               <div className="absolute top-2 right-2 w-0.5 h-0.5 bg-white rounded-full animate-pulse"></div>
               <div className="absolute bottom-1 left-2 w-0.5 h-0.5 bg-white rounded-full animate-bounce"></div>
             </div>
-            
+
             <FaLinkedin className="social-icon text-white relative z-10 transition-all duration-300 group-hover:scale-125 group-hover:-rotate-12" />
           </a>
-          
+
           <a
             href="#contact"
             onClick={() => scrollToSection("contact")}
@@ -100,13 +106,13 @@ export default function Sidebar({ isOpen, onClose }) {
           >
             {/* Background gradient animado */}
             <div className="absolute inset-0 bg-gradient-to-br from-red-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
+
             {/* Efeito de brilho */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            
+
             {/* Efeito de pulso */}
             <div className="absolute inset-0 border-2 border-red-400 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-            
+
             <FaEnvelope className="social-icon text-white relative z-10 transition-all duration-300 group-hover:scale-125 group-hover:rotate-6 group-hover:animate-pulse" />
           </a>
         </div>
