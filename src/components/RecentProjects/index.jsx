@@ -32,10 +32,10 @@ export default function RecentProjects() {
 
   return (
     <div>
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-12 text-center">
-        Projetos e{" "}
+      <h2 className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-12">
+        Projetos{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Conquistas Recentes
+          Pessoais
         </span>
       </h2>
 
@@ -53,7 +53,7 @@ export default function RecentProjects() {
                 </span>
               </div>
             </div>
-            
+
             <div className="p-4 md:p-6">
               <h3 className="text-lg md:text-xl font-bold text-white mb-2">
                 {project.title}

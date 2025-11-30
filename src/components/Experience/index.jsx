@@ -18,10 +18,9 @@ export default function Experience() {
   return (
     <div>
       <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-4">
-        Veja do que sou capaz, <br />
-        Confira minha{" "}
+        Experiência{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Experiência
+          Profissional
         </span>
       </h2>
 
