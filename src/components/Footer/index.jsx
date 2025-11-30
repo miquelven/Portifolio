@@ -86,7 +86,7 @@ export default function Footer() {
                 letterSpacing: "1px",
               }}
             >
-              Até mais obrigado
+              Até mais, obrigado
               <br /> pela visita!
             </span>
 

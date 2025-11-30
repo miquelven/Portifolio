@@ -63,57 +63,29 @@ export default function Sidebar({ isOpen, onClose }) {
             href="https://github.com/miquelven"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative w-10 h-10 md:w-12 md:h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110 hover:rotate-12 hover:shadow-2xl hover:shadow-purple-500/25 overflow-hidden"
+            className="relative w-10 h-10 md:w-12 md:h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-200 hover:bg-gray-600"
             aria-label="GitHub"
           >
-            {/* Background gradient animado */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-            {/* Efeito de brilho */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-
-            <FaGithub className="social-icon text-white relative z-10 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" />
+            <FaGithub className="social-icon text-white" />
           </a>
 
           <a
             href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative w-10 h-10 md:w-12 md:h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110 hover:-rotate-12 hover:shadow-2xl hover:shadow-blue-500/25 overflow-hidden"
+            className="relative w-10 h-10 md:w-12 md:h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-200 hover:bg-gray-600"
             aria-label="LinkedIn"
           >
-            {/* Background gradient animado */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-            {/* Efeito de brilho */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-
-            {/* Partículas animadas */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <div className="absolute top-1 left-1 w-1 h-1 bg-white rounded-full animate-ping"></div>
-              <div className="absolute top-2 right-2 w-0.5 h-0.5 bg-white rounded-full animate-pulse"></div>
-              <div className="absolute bottom-1 left-2 w-0.5 h-0.5 bg-white rounded-full animate-bounce"></div>
-            </div>
-
-            <FaLinkedin className="social-icon text-white relative z-10 transition-all duration-300 group-hover:scale-125 group-hover:-rotate-12" />
+            <FaLinkedin className="social-icon text-white" />
           </a>
 
           <a
             href="#contact"
             onClick={() => scrollToSection("contact")}
-            className="group relative w-10 h-10 md:w-12 md:h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-500 hover:scale-110 hover:rotate-6 hover:shadow-2xl hover:shadow-red-500/25 overflow-hidden"
+            className="relative w-10 h-10 md:w-12 md:h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-200 hover:bg-gray-600"
             aria-label="Contact"
           >
-            {/* Background gradient animado */}
-            <div className="absolute inset-0 bg-gradient-to-br from-red-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-            {/* Efeito de brilho */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-
-            {/* Efeito de pulso */}
-            <div className="absolute inset-0 border-2 border-red-400 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-
-            <FaEnvelope className="social-icon text-white relative z-10 transition-all duration-300 group-hover:scale-125 group-hover:rotate-6 group-hover:animate-pulse" />
+            <FaEnvelope className="social-icon text-white" />
           </a>
         </div>
 

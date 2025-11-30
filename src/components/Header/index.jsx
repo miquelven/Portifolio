@@ -23,7 +23,7 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
         { id: "tech", selector: "#tech" },
         { id: "testimonials", selector: "#testimonials" },
         { id: "faq", selector: "#faq" },
-        { id: "contact", selector: "#contact" }
+        { id: "contact", selector: "#contact" },
       ];
 
       const scrollPosition = window.scrollY + 150;
@@ -49,13 +49,11 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
     if (element) {
       const headerHeight = 100;
       const elementPosition = element.offsetTop - headerHeight;
-      
+
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
-      
-      setActiveSection(sectionId);
     }
   };
 
@@ -106,12 +104,9 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
                   aria-label={item.label}
                 >
                   <IconComponent
-                    className={`
-                      nav-icon transition-all duration-300
-                      ${isActive ? "scale-110" : "group-hover:scale-110"}
-                    `}
+                    className={`nav-icon transition-colors duration-200`}
                   />
-                  
+
                   {/* Tooltip */}
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                     {item.label}

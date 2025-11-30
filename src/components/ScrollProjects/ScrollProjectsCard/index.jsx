@@ -43,7 +43,7 @@ export default function Card({ card }) {
             href={card.projectLink}
             target="_blank"
           >
-            <FaShareFromSquare className="w-6 h-7 fill-[#080808] opacity-90 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
+            <FaShareFromSquare className="w-6 h-7 fill-[#080808] opacity-90 transition-opacity duration-200 hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
           </a>
           <a
             aria-label="icone do github"
@@ -51,7 +51,7 @@ export default function Card({ card }) {
             href={card.githubLink}
             target="_blank"
           >
-            <FaGithub className="w-6 h-6 fill-[#080808] opacity-90 transition-all duration-300  hover:scale-125 hover:cursor-pointer hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
+            <FaGithub className="w-6 h-6 fill-[#080808] opacity-90 transition-opacity duration-200 hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
           </a>
         </div>
       </div>

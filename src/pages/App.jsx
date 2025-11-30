@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [stars, setStars] = useState(() => 
+  const [stars, setStars] = useState(() =>
     Array.from({ length: 30 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
@@ -51,11 +51,11 @@ function App() {
 
     // Listener para scroll parallax muito sutil
     const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Sistema muito sutil de reposicionamento de estrelas
     const starInterval = setInterval(() => {
-      setStars(prevStars => {
+      setStars((prevStars) => {
         const newStars = [...prevStars];
         // Reposiciona apenas 1 estrela aleatoriamente
         const randomIndex = Math.floor(Math.random() * newStars.length);
@@ -65,13 +65,13 @@ function App() {
           y: Math.random() * 100,
           opacity: Math.random() * 0.4 + 0.1,
         };
-        
+
         return newStars;
       });
     }, 15000); // Reposiciona a cada 15 segundos
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       clearInterval(starInterval);
     };
   }, []);
@@ -93,7 +93,9 @@ function App() {
                 height: `${star.size}px`,
                 opacity: star.opacity,
                 transform: `translateY(${scrollY * (star.size * 0.02)}px)`,
-                boxShadow: `0 0 ${star.size * 3}px rgba(255, 255, 255, ${star.opacity * 0.2})`
+                boxShadow: `0 0 ${star.size * 3}px rgba(255, 255, 255, ${
+                  star.opacity * 0.2
+                })`,
               }}
             ></div>
           ))}
@@ -139,37 +141,16 @@ function App() {
               <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4">
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="group relative bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 overflow-hidden"
+                  className="relative bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-colors duration-200"
                 >
-                  {/* Efeito de brilho animado */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-
-                  {/* Efeito de pulso */}
-                  <div className="absolute inset-0 border-2 border-red-300 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-
-                  {/* Texto com animação */}
-                  <span className="relative z-10 group-hover:animate-pulse">
-                    Entre em contato
-                  </span>
+                  <span className="relative z-10">Entre em contato</span>
                 </button>
 
                 <button
                   onClick={() => scrollToSection("projects")}
-                  className="group relative bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-all duration-300 border border-gray-600 hover:border-gray-500 transform hover:scale-105 overflow-hidden"
+                  className="relative bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-colors duration-200 border border-gray-600 hover:border-gray-500"
                 >
-                  {/* Efeito de brilho animado */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-
-                  {/* Efeito de sombra */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  {/* Efeito de borda animada */}
-                  <div className="absolute inset-0 border-2 border-gray-400 rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-
-                  {/* Texto com animação */}
-                  <span className="relative z-10 group-hover:text-gray-100 transition-colors duration-300">
-                    Veja meu trabalho
-                  </span>
+                  <span className="relative z-10">Veja meu trabalho</span>
                 </button>
               </div>
             </div>

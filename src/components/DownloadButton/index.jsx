@@ -106,7 +106,7 @@ export default function DownloadButton() {
       default:
         return (
           <>
-            <FaDownload className="icon-responsive transition-all duration-300 group-hover:translate-y-1 group-hover:scale-110" />
+            <FaDownload className="icon-responsive" />
             <span className="font-semibold tracking-wide text-sm md:text-base">
               Download CV
             </span>
@@ -124,14 +124,14 @@ export default function DownloadButton() {
       target="_blank"
       onClick={handleDownload}
       className={`
-        group w-full font-semibold py-2 md:py-3 px-4 md:px-6 rounded-xl 
-        transition-all duration-500 transform shadow-lg flex items-center 
+        w-full font-semibold py-2 md:py-3 px-4 md:px-6 rounded-xl 
+        transition-colors duration-200 shadow-lg flex items-center 
         justify-center gap-2 md:gap-3 border backdrop-blur-sm
         ${downloadState === 'downloading' 
-          ? 'bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 border-yellow-400/20 scale-95' 
+          ? 'bg-gradient-to-r from-yellow-500 to-orange-500 border-yellow-400/20' 
           : downloadState === 'completed'
-          ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 border-green-400/20 scale-105'
-          : 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 border-red-400/20 hover:scale-105'
+          ? 'bg-gradient-to-r from-green-500 to-green-600 border-green-400/20'
+          : 'bg-gradient-to-r from-red-500 to-red-600 border-red-400/20'
         } text-white
       `}
     >
