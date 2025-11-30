@@ -11,11 +11,13 @@ import FAQ from "../components/FAQ";
 import Header from "../components/Header";
 
 import AOS from "aos";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const visitSentRef = useRef(false);
   const [stars, setStars] = useState(() =>
     Array.from({ length: 30 }, (_, i) => ({
       id: i,
@@ -37,6 +39,8 @@ function App() {
         top: elementPosition,
         behavior: "smooth",
       });
+
+      // sem rastreio de seções
     }
   };
 
@@ -52,6 +56,20 @@ function App() {
     // Listener para scroll parallax muito sutil
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
+
+    const timestamp = new Date().toLocaleString();
+    if (!visitSentRef.current) {
+      visitSentRef.current = true;
+      const message = `Nova visita ao portfólio em ${timestamp}.`;
+      emailjs
+        .send(
+          "service_j9fygzm",
+          "template_el44meo",
+          { message, email: "miquelven.silva@gmail.com" },
+          "W7PLvOdvqRzXPUDr1"
+        )
+        .catch(() => {});
+    }
 
     // Sistema muito sutil de reposicionamento de estrelas
     const starInterval = setInterval(() => {
@@ -73,6 +91,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearInterval(starInterval);
+      // limpeza padrão
     };
   }, []);
 
