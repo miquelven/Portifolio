@@ -174,6 +174,11 @@ function App() {
             </div>
           </section>
 
+          {/* Tech Stack Section */}
+          <section id="tech" className="mb-12 md:mb-20">
+            <TechStack />
+          </section>
+
           {/* Recent Projects Section */}
           <section id="projects" className="mb-12 md:mb-20">
             <RecentProjects />
@@ -182,11 +187,6 @@ function App() {
           {/* Experience Section */}
           <section id="experience" className="mb-12 md:mb-20">
             <Experience />
-          </section>
-
-          {/* Tech Stack Section */}
-          <section id="tech" className="mb-12 md:mb-20">
-            <TechStack />
           </section>
 
           {/* FAQ Section */}
