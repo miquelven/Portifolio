@@ -48,19 +48,25 @@ export default function FAQ() {
                 {faq.question}
               </span>
               <span
-                className="text-2xl text-gray-400 transform transition-transform duration-300 ${
-                openFAQ === index ? 'rotate-180' : ''
-              }"
+                className={`text-2xl text-gray-400 transform transition-transform duration-300 ${
+                  openFAQ === index ? "rotate-180" : ""
+                }`}
               >
                 ▼
               </span>
             </button>
 
-            {openFAQ === index && (
-              <div className="px-6 pb-6">
+            <div
+              className={`px-6 grid transition-all duration-300 ${
+                openFAQ === index
+                  ? "grid-rows-[1fr] opacity-100 pb-6"
+                  : "grid-rows-[0fr] opacity-0 pb-0"
+              }`}
+            >
+              <div className="overflow-hidden">
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>
