@@ -122,7 +122,7 @@ function App() {
 
       {/* Conteúdo principal */}
       <main className="flex-1 ml-0 md:ml-80 mt-10 relative z-10">
-        <div className="p-4 md:p-8 lg:p-12">
+        <div className="p-4 md:p-8 lg:p-12 max-w-[1200px] mx-auto">
           {/* Hero Section */}
           <section id="home" className="mb-12 md:mb-20 pt-8 md:pt-12">
             <div className="max-w-4xl">
