@@ -14,14 +14,15 @@ export default function FAQ() {
       ],
     },
     {
-      question: "Como você lida com os cronogramas dos projetos?",
+      question: "O aprendizado dele é rápido para novos desafios?",
       answer:
-        "Utilizo metodologias ágeis e ferramentas de gestão de projetos para garantir entregas pontuais. Acredito em comunicação clara e atualizações regulares com as partes interessadas.",
+        "Sim. Eu foco na solução e me dedico a aprender a tecnologia necessária (via documentação) no menor tempo possível. Entrego sempre código claro e organizado, priorizando a colaboração do time.",
     },
     {
-      question: "Quais são suas linguagens de programação preferidas?",
+      question:
+        "Os projetos dele funcionam bem em qualquer dispositivo e são rápidos?",
       answer:
-        "Minhas linguagens de programação preferidas são JavaScript e TypeScript, pois gosto de desenvolver interfaces e trabalhar com frontend.",
+        "Sim, é o padrão. Eu garanto que o site carregue muito rápido (otimização de código e imagens) e que funcione perfeitamente em qualquer dispositivo, priorizando a melhor experiência do usuário em todas as telas.",
     },
   ];
 
@@ -32,9 +33,9 @@ export default function FAQ() {
   return (
     <div>
       <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12">
-        Perguntas{" "}
+        Seus{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Frequentes
+          Questionamentos
         </span>
       </h2>
 
