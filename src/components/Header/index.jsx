@@ -27,7 +27,15 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
         { id: "contact", selector: "#contact" },
       ];
 
-      const scrollPosition = window.scrollY + 150;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollPosition = scrollTop + 150;
+
+      if (scrollTop + windowHeight >= documentHeight - 100) {
+        setActiveSection("contact");
+        return;
+      }
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -59,11 +67,11 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   };
 
   const navItems = [
-    { id: "home", icon: FaHome, label: "Home" },
-    { id: "tech", icon: FaCogs, label: "Stacks" },
-    { id: "projects", icon: FaCode, label: "Projects" },
-    { id: "experience", icon: FaBriefcase, label: "Experience" },
-    { id: "faq", icon: FaQuestionCircle, label: "FAQ" },
+    { id: "home", icon: FaHome, label: "Início" },
+    { id: "tech", icon: FaCogs, label: "Tecnologias" },
+    { id: "projects", icon: FaCode, label: "Projetos" },
+    { id: "experience", icon: FaBriefcase, label: "Experiência" },
+    { id: "faq", icon: FaQuestionCircle, label: "Perguntas" },
     { id: "contact", icon: FaEnvelope, label: "Contato" },
   ];
 
