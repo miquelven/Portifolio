@@ -6,8 +6,12 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Quais são suas soft skills?",
-      answer:
-        "Tenho fortes habilidades de comunicação, trabalho bem em equipe, sou proativo na resolução de problemas e tenho experiência com metodologias ágeis como Scrum e Kanban.",
+      answer: [
+        "Resolução de problemas",
+        "Comunicação",
+        "Flexibilidade e trabalho em equipe",
+        "Criatividade e proatividade",
+      ],
     },
     {
       question: "Como você lida com os cronogramas dos projetos?",
@@ -64,7 +68,15 @@ export default function FAQ() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                {Array.isArray(faq.answer) ? (
+                  <ul className="list-disc pl-5 text-gray-300 space-y-1">
+                    {faq.answer.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                )}
               </div>
             </div>
           </div>

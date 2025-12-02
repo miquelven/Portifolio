@@ -8,20 +8,21 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   const [activeSection, setActiveSection] = useState("home");
+  const manualActiveUntilRef = useRef(0);
 
   // Detectar seção ativa baseada no scroll
   useEffect(() => {
     const handleScroll = () => {
+      if (Date.now() < manualActiveUntilRef.current) return;
       const sections = [
-        { id: "home", selector: "section" }, // Primeira seção
+        { id: "home", selector: "#home" },
+        { id: "tech", selector: "#tech" },
         { id: "projects", selector: "#projects" },
         { id: "experience", selector: "#experience" },
-        { id: "tech", selector: "#tech" },
-        { id: "testimonials", selector: "#testimonials" },
         { id: "faq", selector: "#faq" },
         { id: "contact", selector: "#contact" },
       ];
@@ -39,7 +40,7 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Verificar seção inicial
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -59,9 +60,9 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
 
   const navItems = [
     { id: "home", icon: FaHome, label: "Home" },
+    { id: "tech", icon: FaCogs, label: "Stacks" },
     { id: "projects", icon: FaCode, label: "Projects" },
     { id: "experience", icon: FaBriefcase, label: "Experience" },
-    { id: "tech", icon: FaCogs, label: "Stacks" },
     { id: "faq", icon: FaQuestionCircle, label: "FAQ" },
     { id: "contact", icon: FaEnvelope, label: "Contato" },
   ];
@@ -92,7 +93,14 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
               return (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => {
+                    setActiveSection(item.id);
+                    manualActiveUntilRef.current = Date.now() + 800;
+                    scrollToSection(item.id);
+                    setTimeout(() => {
+                      manualActiveUntilRef.current = 0;
+                    }, 900);
+                  }}
                   className={`
                     relative p-3 rounded-full transition-all duration-300 group
                     ${
@@ -125,7 +133,14 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
               return (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => {
+                    setActiveSection(item.id);
+                    manualActiveUntilRef.current = Date.now() + 800;
+                    scrollToSection(item.id);
+                    setTimeout(() => {
+                      manualActiveUntilRef.current = 0;
+                    }, 900);
+                  }}
                   className={`
                     p-2 rounded-full transition-all duration-300
                     ${
