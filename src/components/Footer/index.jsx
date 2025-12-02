@@ -26,7 +26,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="w-full text-white overflow-hidden">
+    <footer id="contact" className="w-full text-white overflow-hidden">
       <Contact />
       <div className="w-full flex justify-center items-center text-white  overflow-hidden">
         {/* Animação de despedida com imagem */}
