@@ -62,21 +62,23 @@ export default function FAQ() {
             </button>
 
             <div
-              className={`px-6 grid transition-all duration-300 ${
+              className={`px-6 grid transition-all duration-300 bg-gray-900/60 ${
                 openFAQ === index
-                  ? "grid-rows-[1fr] opacity-100 pb-6"
+                  ? "grid-rows-[1fr] opacity-100 pb-3"
                   : "grid-rows-[0fr] opacity-0 pb-0"
               }`}
             >
               <div className="overflow-hidden">
                 {Array.isArray(faq.answer) ? (
-                  <ul className="list-disc pl-5 text-gray-300 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-300 space-y-1 mt-3">
                     {faq.answer.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-300 leading-relaxed mt-3">
+                    {faq.answer}
+                  </p>
                 )}
               </div>
             </div>
