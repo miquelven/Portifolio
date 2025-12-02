@@ -2,13 +2,13 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      title: "Desenvolvedor Front End - ",
+      title: "Desenvolvedor Front End",
       company: "Guichê Web",
       bulletPoints: [
-        "Iniciei no desenvolvimento do novo e-commerce da empresa, utilizando Next.js, TypeScript, JavaScript e Tailwind CSS para criar interfaces modernas, responsivas e de alta performance.",
-        "Atuei no desenvolvimento de um projeto interno, entregando uma nova versão com melhorias de usabilidade e desempenho.",
-        "Atualmente, responsável pela criação de um configurador de mapa de assentos para eventos, funcionalidade estratégica que será integrada ao e-commerce.",
-        "Colaboração direta com o time de design (Figma) e interação com diferentes áreas da empresa, garantindo alinhamento e manutenção contínua dos projetos.",
+        "Atuo no ciclo completo de desenvolvimento Front-end com React.js, Next.js, React Native, TypeScript, HTML, CSS e JavaScript (ES6+).",
+        "Responsável pela sustentação, manutenção e evolução contínua de aplicações web críticas.",
+        "Contribuo diretamente para UX/UI, definindo e implementando novas funcionalidades e páginas sem design predefinido.",
+        "Construção do front-end do app para Máquinas Smart (PDV) em React Native com MUI, focando performance e experiência do usuário em hardware embarcado.",
       ],
       period: "Setembro 2024 - Agora",
       icon: "↗",
@@ -28,47 +28,32 @@ export default function Experience() {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-red-500/20 transition-all duration-300 overflow-hidden"
+            className="group relative glass-effect bg-gray-900/70 backdrop-blur-xl rounded-2xl p-6 md:p-8 border border-gray-700/60 shadow-2xl transition-all duration-300 overflow-hidden hover:bg-black/5"
           >
-            {/* Efeito de brilho sutil */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-
-            <div className="flex justify-between items-start mb-6 relative z-10">
-              <div>
-                <h3 className="text-2xl max-sm:text-xl font-semibold text-white group-hover:text-red-400 transition-colors duration-300">
-                  {exp.title}
+            <div className="mb-6 relative z-10">
+              <div className="flex items-baseline gap-3">
+                <h3 className="text-2xl max-sm:text-xl font-semibold text-white">
+                  {exp.title} -
+                  <span className="text-red-400"> {exp.company}</span>
                 </h3>
-                <span className="text-xl max-sm:text-lg font-medium text-red-500 group-hover:text-red-400 transition-colors duration-300">
-                  {exp.company}
-                </span>
               </div>
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center text-white font-semibold text-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                {exp.icon}
-              </div>
+              <span className="opacity-50 text-sm md:text-base font-medium tracking-wide">
+                {exp.period}
+              </span>
             </div>
 
-            {/* Lista de bullet points clean */}
-            <div className="mb-6 relative z-10">
+            <div className="mb-0 relative z-10">
               <ul className="space-y-4">
                 {exp.bulletPoints.map((point, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-4 text-gray-300 leading-relaxed max-sm:text-sm group-hover:text-gray-200 transition-colors duration-300"
+                    className="flex items-start gap-4 text-gray-300 leading-relaxed max-sm:text-sm"
                   >
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2.5 flex-shrink-0 group-hover:bg-red-400 transition-colors duration-300"></div>
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span>{point}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Período com design clean */}
-            <div className="relative z-10 flex items-center gap-3 pt-4 border-t border-gray-700/30">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <span className="text-red-400 text-sm max-sm:text-xs font-medium tracking-wide">
-                {exp.period}
-              </span>
-              <div className="flex-1 h-px bg-gradient-to-r from-red-500/30 to-transparent"></div>
             </div>
           </div>
         ))}
