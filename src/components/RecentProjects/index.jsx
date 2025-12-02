@@ -32,14 +32,14 @@ export default function RecentProjects() {
 
   return (
     <div>
-      <h2 className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-12">
+      <h2 className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-12 max-sm:mb-4">
         Projetos{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
           Pessoais
         </span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-12 max-sm:mt-4">
         {projects.map((project) => (
           <div
             key={project.id}

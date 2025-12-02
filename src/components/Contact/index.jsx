@@ -75,7 +75,7 @@ export default function Contact() {
   return (
     <div className="relative mx-auto px-4 md:px-5 pb-20 ">
       <div className="p-4 md:p-8 lg:p-12 !pt-0 max-w-[1200px] mx-auto">
-        <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12">
+        <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12 max-sm:mb-4">
           Entre em{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
             Contato
@@ -164,7 +164,7 @@ export default function Contact() {
                       ? "border-red-500"
                       : "border-gray-600"
                   } ${emailSent ? "opacity-50" : ""}`}
-                  placeholder="Conte-me sobre seu projeto ou ideia..."
+                  placeholder="Sua mensagem..."
                 />
                 {showError && (
                   <span className="text-red-400 text-xs md:text-sm mt-1 block">

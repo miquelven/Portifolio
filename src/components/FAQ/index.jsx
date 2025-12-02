@@ -32,7 +32,7 @@ export default function FAQ() {
 
   return (
     <div>
-      <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12">
+      <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12 max-sm:mb-4">
         Seus{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
           Questionamentos
@@ -49,11 +49,11 @@ export default function FAQ() {
               onClick={() => toggleFAQ(index)}
               className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors duration-300"
             >
-              <span className="text-white font-semibold text-lg">
+              <span className="text-white font-semibold text-lg max-sm:text-sm max-sm:pr-3">
                 {faq.question}
               </span>
               <span
-                className={`text-2xl text-gray-400 transform transition-transform duration-300 ${
+                className={`text-2xl max-sm:text-base text-gray-400 transform transition-transform duration-300 ${
                   openFAQ === index ? "rotate-180" : ""
                 }`}
               >
@@ -68,7 +68,7 @@ export default function FAQ() {
                   : "grid-rows-[0fr] opacity-0 pb-0"
               }`}
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden max-sm:text-xs">
                 {Array.isArray(faq.answer) ? (
                   <ul className="list-disc pl-5 text-gray-300 space-y-1 mt-3">
                     {faq.answer.map((item, i) => (

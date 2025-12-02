@@ -24,7 +24,7 @@ export default function Experience() {
         </span>
       </h2>
 
-      <div className="space-y-6 mt-12">
+      <div className="space-y-6 mt-12  max-sm:mt-4">
         {experiences.map((exp) => (
           <div
             key={exp.id}
@@ -47,7 +47,7 @@ export default function Experience() {
                 {exp.bulletPoints.map((point, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-4 text-gray-300 leading-relaxed max-sm:text-sm"
+                    className="flex items-start gap-4 text-gray-300 leading-relaxed max-sm:text-xs"
                   >
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span>{point}</span>
