@@ -5,12 +5,12 @@ export default function Experience() {
       title: "Desenvolvedor Front End",
       company: "Guichê Web",
       bulletPoints: [
-        "Atuo no ciclo completo de desenvolvimento Front-end com React.js, Next.js, React Native, TypeScript, HTML, CSS e JavaScript (ES6+).",
-        "Responsável pela sustentação, manutenção e evolução contínua de aplicações web críticas.",
-        "Contribuo diretamente para UX/UI, definindo e implementando novas funcionalidades e páginas sem design predefinido.",
-        "Construção do front-end do app para Máquinas Smart (PDV) em React Native com MUI, focando performance e experiência do usuário em hardware embarcado.",
+        "Responsável pelo redesign completo do sistema interno, focando na melhoria da experiência do usuário (UX) e na otimização de performance.",
+        "Fui responsável pela sustentação, manutenção e evolução contínua de aplicações web críticas.",
+        "Atuação end-to-end em design, sendo responsável por definir fluxos de UX e interfaces (UI) para novas features, garantindo consistência e usabilidade em projetos iniciados do zero.",
+        "Construção do front-end do aplicativo para Máquinas Smart (PDV), utilizando React Native e a biblioteca MUI (Material-UI). Foco em otimização de performance e experiência do usuário (UX) para garantir um aplicativo rápido e responsivo em hardware embarcado.",
       ],
-      period: "Setembro 2024 - Agora",
+      period: "Setembro 2024 - Janeiro 2026",
       icon: "↗",
     },
   ];
