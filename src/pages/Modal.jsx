@@ -1,15 +1,18 @@
 import { useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-import miCoin from "../../assets/images/projects/MiCoin.webp";
-import miDrinks from "../../assets/images/projects/MiDrinks.webp";
-import miMovie from "../../assets/images/projects/MiMovie.webp";
-import game from "../../assets/images/projects/MiGame.webp";
-import MiEstilo from "../../assets/images/projects/MiEstilo.webp";
-import MiRestaurante from "../../assets/images/projects/MiRestaurante.webp";
+import project1 from "../../assets/images/projects/projeto_1.png";
+import project2 from "../../assets/images/projects/projeto_2.png";
+import project3 from "../../assets/images/projects/projeto_3.png";
 
 export default function Modal() {
   const { idImage } = useParams();
+
+  // Decodifica a URL caso venha com %20 (embora useParams geralmente já faça isso)
+  const decodedId = decodeURIComponent(idImage);
+  const imageData = images[decodedId] || images[idImage];
+
+  if (!imageData) return null;
 
   return (
     <AnimatePresence initial={true} mode="popLayout">
@@ -24,7 +27,7 @@ export default function Modal() {
           <div
             className="h-full w-full  transition-all duration-500 hover:scale-[1.02] max-sm:h-3/4"
             style={{
-              background: `url(${images[idImage].img})`,
+              background: `url(${imageData.img})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -36,22 +39,13 @@ export default function Modal() {
 }
 
 const images = {
-  MiCoin: {
-    img: miCoin,
+  MiMovies: {
+    img: project1,
   },
-  MiDrinks: {
-    img: miDrinks,
+  Kanbanity: {
+    img: project2,
   },
-  MiMovie: {
-    img: miMovie,
-  },
-  MiGame: {
-    img: game,
-  },
-  MiEstilo: {
-    img: MiEstilo,
-  },
-  MiRestaurante: {
-    img: MiRestaurante,
+  "Github Analytics": {
+    img: project3,
   },
 };
