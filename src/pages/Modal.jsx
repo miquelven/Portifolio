@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import project1 from "../../assets/images/projects/projeto_1.png";
 import project2 from "../../assets/images/projects/projeto_2.png";
 import project3 from "../../assets/images/projects/projeto_3.png";
+import project4 from "../../assets/images/projects/projeto_4.png";
 
 export default function Modal() {
   const { idImage } = useParams();
@@ -47,5 +48,8 @@ const images = {
   },
   "Github Analytics": {
     img: project3,
+  },
+  Chronorun: {
+    img: project4,
   },
 };

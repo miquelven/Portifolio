@@ -8,6 +8,7 @@ import { simpleFaker } from "@faker-js/faker";
 import project1 from "../../assets/images/projects/projeto_1.png";
 import project2 from "../../assets/images/projects/projeto_2.png";
 import project3 from "../../assets/images/projects/projeto_3.png";
+import project4 from "../../assets/images/projects/projeto_4.png";
 
 const cards = [
   {
@@ -42,6 +43,17 @@ const cards = [
     id: simpleFaker.string.uuid(),
     projectLink: "https://github-analytics-two.vercel.app/",
     githubLink: "https://github.com/miquelven/github-analytics",
+  },
+  {
+    url: project4,
+    title: "Chronorun",
+    description:
+      "Projeto de games com ranking global e pessoal.",
+    stacks: [<FaReact />, <SiTailwindcss />, <SiTypescript />],
+    stackColors: ["#087ea4", "#1dc0cd", "#087ecf"],
+    id: simpleFaker.string.uuid(),
+    projectLink: "https://chronorun.vercel.app/",
+    githubLink: "https://github.com/miquelven/Chronorun",
   },
 ];
 export default cards;

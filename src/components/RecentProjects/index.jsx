@@ -1,6 +1,7 @@
 import project1 from "../../../assets/images/projects/projeto_1.png";
 import project2 from "../../../assets/images/projects/projeto_2.png";
 import project3 from "../../../assets/images/projects/projeto_3.png";
+import project4 from "../../../assets/images/projects/projeto_4.png";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function RecentProjects() {
@@ -31,6 +32,15 @@ export default function RecentProjects() {
       category: "Analytics",
       previewLink: "https://github-analytics-two.vercel.app/",
       githubLink: "https://github.com/miquelven/github-analytics",
+    },
+    {
+      id: 4,
+      title: "Chronorun",
+      subtitle: "Projeto de games com ranking global e pessoal",
+      image: project4,
+      category: "Game",
+      previewLink: "https://chronorun.vercel.app/",
+      githubLink: "https://github.com/miquelven/Chronorun",
     },
   ];
 
