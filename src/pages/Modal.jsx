@@ -9,7 +9,6 @@ import project4 from "../../assets/images/projects/projeto_4.png";
 export default function Modal() {
   const { idImage } = useParams();
 
-  // Decodifica a URL caso venha com %20 (embora useParams geralmente já faça isso)
   const decodedId = decodeURIComponent(idImage);
   const imageData = images[decodedId] || images[idImage];
 
