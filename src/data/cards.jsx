@@ -47,13 +47,12 @@ const cards = [
   {
     url: project4,
     title: "Chronorun",
-    description:
-      "Projeto de games com ranking global e pessoal.",
+    description: "Projeto de games com ranking global e pessoal.",
     stacks: [<FaReact />, <SiTailwindcss />, <SiTypescript />],
     stackColors: ["#087ea4", "#1dc0cd", "#087ecf"],
     id: simpleFaker.string.uuid(),
-    projectLink: "https://chronorun.vercel.app/",
-    githubLink: "https://github.com/miquelven/Chronorun",
+    projectLink: "https://www.chronorun.com.br/",
+    githubLink: "https://github.com/miquelven/ChronoRun",
   },
 ];
 export default cards;

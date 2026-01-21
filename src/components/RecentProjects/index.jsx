@@ -39,8 +39,8 @@ export default function RecentProjects() {
       subtitle: "Projeto de games com ranking global e pessoal",
       image: project4,
       category: "Game",
-      previewLink: "https://chronorun.vercel.app/",
-      githubLink: "https://github.com/miquelven/Chronorun",
+      previewLink: "https://www.chronorun.com.br/",
+      githubLink: "https://github.com/miquelven/ChronoRun",
     },
   ];
 
