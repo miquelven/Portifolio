@@ -3,6 +3,7 @@ import project2 from "../../../assets/images/projects/projeto_2.png";
 import project3 from "../../../assets/images/projects/projeto_3.png";
 import project4 from "../../../assets/images/projects/projeto_4.png";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function RecentProjects() {
   const projects = [
@@ -44,18 +45,50 @@ export default function RecentProjects() {
     },
   ];
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 50, damping: 20 },
+    },
+  };
+
   return (
     <div>
-      <h2 className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-12 max-sm:mb-4">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-12 max-sm:mb-4"
+      >
         Projetos{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
           Pessoais
         </span>
-      </h2>
+      </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12 max-sm:mt-4">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12 max-sm:mt-4"
+      >
         {projects.map((project) => (
-          <div
+          <motion.div
+            variants={item}
             key={project.id}
             className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 group flex flex-col"
           >
@@ -100,9 +133,9 @@ export default function RecentProjects() {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
