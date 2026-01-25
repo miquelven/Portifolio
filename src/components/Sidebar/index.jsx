@@ -13,7 +13,6 @@ export default function Sidebar({ isOpen, onClose }) {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      // Fechar sidebar no mobile após navegar
       if (window.innerWidth <= 768) {
         onClose();
       }

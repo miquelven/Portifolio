@@ -12,13 +12,11 @@ export default function Footer() {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
-      // Verificar se o usuário está próximo do final da página (últimos 200px)
       const isNearBottom = scrollTop + windowHeight >= documentHeight - 200;
 
       setShowGoodbye(isNearBottom);
     };
 
-    // Verificar imediatamente ao carregar
     handleScroll();
 
     window.addEventListener("scroll", handleScroll, { passive: true });

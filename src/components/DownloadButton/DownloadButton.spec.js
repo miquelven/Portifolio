@@ -39,7 +39,6 @@ describe("DownloadButton component", () => {
 
     fireEvent.click(button);
 
-    // avança o tempo para concluir o download
     jest.advanceTimersByTime(1000);
 
     await waitFor(() => {
@@ -51,7 +50,6 @@ describe("DownloadButton component", () => {
       expect(downloadCheckMark).not.toHaveClass("hidden");
     });
 
-    // avança o tempo para retornar ao estado inicial
     jest.advanceTimersByTime(1000);
 
     await waitFor(() => {

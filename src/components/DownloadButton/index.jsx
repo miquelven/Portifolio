@@ -3,17 +3,15 @@ import { FaDownload, FaSpinner, FaCheck } from "react-icons/fa";
 import downloadCV from "../../../assets/cv/Miquelven-CV-base.pdf";
 
 export default function DownloadButton() {
-  const [downloadState, setDownloadState] = useState('idle'); // 'idle', 'downloading', 'completed'
+  const [downloadState, setDownloadState] = useState("idle");
   const downloadTimeoutRef = useRef(null);
   const downloadStartTime = useRef(null);
 
   useEffect(() => {
     const handleVisibilityChange = () => {
-      // Se a página ficou visível novamente e estamos baixando
-      if (!document.hidden && downloadState === 'downloading') {
+      if (!document.hidden && downloadState === "downloading") {
         const timeElapsed = Date.now() - downloadStartTime.current;
-        
-        // Se passou pelo menos 1 segundo, consideramos que o download começou
+
         if (timeElapsed > 1000) {
           completeDownload();
         }
@@ -21,25 +19,21 @@ export default function DownloadButton() {
     };
 
     const handleFocus = () => {
-      // Quando o usuário volta para a janela durante o download
-      if (downloadState === 'downloading') {
+      if (downloadState === "downloading") {
         const timeElapsed = Date.now() - downloadStartTime.current;
-        
-        // Se passou tempo suficiente, consideramos concluído
+
         if (timeElapsed > 800) {
           completeDownload();
         }
       }
     };
 
-    // Adiciona os listeners
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    window.addEventListener('focus', handleFocus);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("focus", handleFocus);
 
-    // Cleanup
     return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      window.removeEventListener('focus', handleFocus);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("focus", handleFocus);
       if (downloadTimeoutRef.current) {
         clearTimeout(downloadTimeoutRef.current);
       }
@@ -50,31 +44,24 @@ export default function DownloadButton() {
     if (downloadTimeoutRef.current) {
       clearTimeout(downloadTimeoutRef.current);
     }
-    
-    setDownloadState('completed');
-    
-    // Volta ao estado inicial após mostrar o sucesso
+
+    setDownloadState("completed");
+
     setTimeout(() => {
-      setDownloadState('idle');
+      setDownloadState("idle");
     }, 2000);
   };
 
   const handleDownload = (e) => {
-    // Não previne o comportamento padrão para permitir o download
-    setDownloadState('downloading');
+    setDownloadState("downloading");
     downloadStartTime.current = Date.now();
-    
-    // Fallback: se não detectarmos o download em 5 segundos, completa automaticamente
+
     downloadTimeoutRef.current = setTimeout(() => {
       completeDownload();
     }, 5000);
 
-    // Detecta quando o download realmente inicia
     setTimeout(() => {
-      // Verifica se o arquivo começou a ser baixado
-      // (o navegador geralmente muda o foco ou a visibilidade)
-      if (downloadState === 'downloading') {
-        // Se ainda estamos baixando após 2 segundos, provavelmente o download iniciou
+      if (downloadState === "downloading") {
         const timeElapsed = Date.now() - downloadStartTime.current;
         if (timeElapsed > 2000) {
           completeDownload();
@@ -85,7 +72,7 @@ export default function DownloadButton() {
 
   const getButtonContent = () => {
     switch (downloadState) {
-      case 'downloading':
+      case "downloading":
         return (
           <>
             <FaSpinner className="icon-responsive animate-spin" />
@@ -94,7 +81,7 @@ export default function DownloadButton() {
             </span>
           </>
         );
-      case 'completed':
+      case "completed":
         return (
           <>
             <FaCheck className="icon-responsive animate-bounce" />
@@ -127,11 +114,12 @@ export default function DownloadButton() {
         w-full font-semibold py-2 md:py-3 px-4 md:px-6 rounded-xl 
         transition-colors duration-200 shadow-lg flex items-center 
         justify-center gap-2 md:gap-3 border backdrop-blur-sm
-        ${downloadState === 'downloading' 
-          ? 'bg-gradient-to-r from-yellow-500 to-orange-500 border-yellow-400/20' 
-          : downloadState === 'completed'
-          ? 'bg-gradient-to-r from-green-500 to-green-600 border-green-400/20'
-          : 'bg-gradient-to-r from-red-500 to-red-600 border-red-400/20'
+        ${
+          downloadState === "downloading"
+            ? "bg-gradient-to-r from-yellow-500 to-orange-500 border-yellow-400/20"
+            : downloadState === "completed"
+              ? "bg-gradient-to-r from-green-500 to-green-600 border-green-400/20"
+              : "bg-gradient-to-r from-red-500 to-red-600 border-red-400/20"
         } text-white
       `}
     >

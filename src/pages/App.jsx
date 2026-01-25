@@ -5,7 +5,7 @@ import About from "../components/About";
 import Sidebar from "../components/Sidebar";
 import RecentProjects from "../components/RecentProjects";
 import Experience from "../components/Experience";
-import TechStack from "../components/TechStack"
+import TechStack from "../components/TechStack";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import Header from "../components/Header";
@@ -28,19 +28,16 @@ function App() {
     })),
   );
 
-  // Função para scroll suave para seções
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 100; // Altura aproximada do header + espaçamento desejado
+      const headerHeight = 100;
       const elementPosition = element.offsetTop - headerHeight;
 
       window.scrollTo({
         top: elementPosition,
         behavior: "smooth",
       });
-
-      // sem rastreio de seções
     }
   };
 
@@ -53,7 +50,6 @@ function App() {
       offset: 100,
     });
 
-    // Listener para scroll parallax muito sutil
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
 
@@ -71,11 +67,10 @@ function App() {
         .catch(() => {});
     }
 
-    // Sistema muito sutil de reposicionamento de estrelas
     const starInterval = setInterval(() => {
       setStars((prevStars) => {
         const newStars = [...prevStars];
-        // Reposiciona apenas 1 estrela aleatoriamente
+
         const randomIndex = Math.floor(Math.random() * newStars.length);
         newStars[randomIndex] = {
           ...newStars[randomIndex],
@@ -86,12 +81,11 @@ function App() {
 
         return newStars;
       });
-    }, 15000); // Reposiciona a cada 15 segundos
+    }, 15000);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearInterval(starInterval);
-      // limpeza padrão
     };
   }, []);
 

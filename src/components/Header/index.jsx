@@ -14,7 +14,6 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   const [activeSection, setActiveSection] = useState("home");
   const manualActiveUntilRef = useRef(0);
 
-  // Detectar seção ativa baseada no scroll
   useEffect(() => {
     const handleScroll = () => {
       if (Date.now() < manualActiveUntilRef.current) return;
