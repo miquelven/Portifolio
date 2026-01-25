@@ -2,6 +2,7 @@ import project1 from "../../../assets/images/projects/projeto_1.png";
 import project2 from "../../../assets/images/projects/projeto_2.png";
 import project3 from "../../../assets/images/projects/projeto_3.png";
 import project4 from "../../../assets/images/projects/projeto_4.png";
+import project5 from "../../../assets/images/projects/projeto_5.png";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function RecentProjects() {
@@ -41,6 +42,15 @@ export default function RecentProjects() {
       category: "Game",
       previewLink: "https://www.chronorun.com.br/",
       githubLink: "https://github.com/miquelven/ChronoRun",
+    },
+    {
+      id: 5,
+      title: "Vinil Store",
+      subtitle: "Interface de E-commerce (Conceitual)",
+      image: project5,
+      category: "Front-end",
+      previewLink: "https://lp-ecommerce-mu.vercel.app/",
+      githubLink: "https://github.com/miquelven/lp-ecommerce",
     },
   ];
 

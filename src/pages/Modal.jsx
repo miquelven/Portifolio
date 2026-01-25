@@ -5,6 +5,7 @@ import project1 from "../../assets/images/projects/projeto_1.png";
 import project2 from "../../assets/images/projects/projeto_2.png";
 import project3 from "../../assets/images/projects/projeto_3.png";
 import project4 from "../../assets/images/projects/projeto_4.png";
+import project5 from "../../assets/images/projects/projeto_5.png";
 
 export default function Modal() {
   const { idImage } = useParams();
@@ -50,5 +51,8 @@ const images = {
   },
   Chronorun: {
     img: project4,
+  },
+  "Vinil Store": {
+    img: project5,
   },
 };

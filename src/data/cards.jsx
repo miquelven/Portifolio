@@ -9,6 +9,7 @@ import project1 from "../../assets/images/projects/projeto_1.png";
 import project2 from "../../assets/images/projects/projeto_2.png";
 import project3 from "../../assets/images/projects/projeto_3.png";
 import project4 from "../../assets/images/projects/projeto_4.png";
+import project5 from "../../assets/images/projects/projeto_5.png";
 
 const cards = [
   {
@@ -53,6 +54,17 @@ const cards = [
     id: simpleFaker.string.uuid(),
     projectLink: "https://www.chronorun.com.br/",
     githubLink: "https://github.com/miquelven/ChronoRun",
+  },
+  {
+    url: project5,
+    title: "Vinil Store",
+    description:
+      "Interface de E-commerce para venda de discos de vinil. Projeto conceitual (não funcional) focado na estética minimalista e experiência de navegação.",
+    stacks: [<FaReact />, <SiTailwindcss />, <SiTypescript />],
+    stackColors: ["#087ea4", "#1dc0cd", "#087ecf"],
+    id: simpleFaker.string.uuid(),
+    projectLink: "https://lp-ecommerce-mu.vercel.app/",
+    githubLink: "https://github.com/miquelven/lp-ecommerce",
   },
 ];
 export default cards;
