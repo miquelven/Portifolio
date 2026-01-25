@@ -8,7 +8,6 @@ import {
   SiSass,
   SiTailwindcss,
 } from "react-icons/si";
-import { motion } from "framer-motion";
 
 export default function TechStack() {
   const technologies = [
@@ -22,55 +21,30 @@ export default function TechStack() {
     { name: "Tailwindcss", icon: SiTailwindcss, color: "text-cyan-400" },
   ];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
     <div>
-      <motion.h2
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+      <h2
         className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-4"
+        data-aos="fade-right"
       >
         Tecnologias e{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
           Ferramentas
         </span>
-      </motion.h2>
+      </h2>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-12 max-sm:mt-4 max-sm:grid-cols-2"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-12 max-sm:mt-4 max-sm:grid-cols-2">
         {technologies.map((tech, index) => {
           const IconComponent = tech.icon;
           return (
-            <motion.div
-              variants={item}
+            <div
               key={index}
               className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-3 md:gap-4 overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
-              {/* Efeito de brilho animado */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
 
-              {/* Efeito de borda brilhante */}
               <div className="absolute inset-0 border-2 border-red-400/20 rounded-xl opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"></div>
 
               <div className="icon-container bg-gray-700 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-gray-600 relative z-10">
@@ -83,10 +57,10 @@ export default function TechStack() {
                   {tech.name}
                 </h3>
               </div>
-            </motion.div>
+            </div>
           );
         })}
-      </motion.div>
+      </div>
     </div>
   );
 }
