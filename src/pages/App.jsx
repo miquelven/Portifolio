@@ -5,7 +5,7 @@ import About from "../components/About";
 import Sidebar from "../components/Sidebar";
 import RecentProjects from "../components/RecentProjects";
 import Experience from "../components/Experience";
-import TechStack from "../components/TechStack";
+import TechStack from "../components/TechStack"
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import Header from "../components/Header";
@@ -25,7 +25,7 @@ function App() {
       y: Math.random() * 100,
       size: Math.random() * 2 + 0.5,
       opacity: Math.random() * 0.4 + 0.1,
-    }))
+    })),
   );
 
   // Função para scroll suave para seções
@@ -66,7 +66,7 @@ function App() {
           "service_j9fygzm",
           "template_el44meo",
           { message, email: "miquelven.silva@gmail.com" },
-          "W7PLvOdvqRzXPUDr1"
+          "W7PLvOdvqRzXPUDr1",
         )
         .catch(() => {});
     }
@@ -145,18 +145,29 @@ function App() {
           {/* Hero Section */}
           <section id="home" className="mb-12 md:mb-20 pt-8 md:pt-12">
             <div className="max-w-4xl">
-              <h1 className="hero-title font-bold text-white mb-4 md:mb-6 leading-tight">
+              <h1
+                className="hero-title font-bold text-white mb-4 md:mb-6 leading-tight"
+                data-aos="fade-up"
+              >
                 <span className="block text-5xl md:text-6xl ">Olá</span>
                 <span className="block text-4xl md:text-5xl  text-transparent bg-clip-text pb-1 bg-gradient-to-r from-red-500 to-red-600">
                   seja bem-vindo!
                 </span>
               </h1>
-              <p className="hero-subtitle text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-2xl leading-relaxed">
+              <p
+                className="hero-subtitle text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-2xl leading-relaxed"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 Sou Desenvolvedor Front-End e aqui é o lugar aonde você pode
                 encontrar projetos que desenvolvi, experiências profissionais e
                 informações sobre minhas habilidades.
               </p>
-              <div className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4">
+              <div
+                className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="relative bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-colors duration-200"

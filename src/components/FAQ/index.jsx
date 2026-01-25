@@ -32,7 +32,10 @@ export default function FAQ() {
 
   return (
     <div>
-      <h2 className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12 max-sm:mb-4">
+      <h2
+        className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12 max-sm:mb-4"
+        data-aos="fade-right"
+      >
         Seus{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
           Questionamentos
@@ -44,6 +47,8 @@ export default function FAQ() {
           <div
             key={index}
             className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
           >
             <button
               onClick={() => toggleFAQ(index)}
