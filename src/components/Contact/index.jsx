@@ -39,7 +39,6 @@ export default function Contact() {
       );
       setEmailSent(true);
 
-      // Reset após 3 segundos
       setTimeout(() => {
         setEmailSent(false);
         reset();
@@ -76,29 +75,23 @@ export default function Contact() {
   return (
     <div className="relative mx-auto px-4 md:px-5 pb-20 ">
       <div className="p-4 md:p-8 lg:p-12 !pt-0 max-w-[1200px] mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <h2
           className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12 max-sm:mb-4"
+          data-aos="fade-right"
         >
           Entre em{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
             Contato
           </span>
-        </motion.h2>
+        </h2>
 
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800"></div>
         <div className="">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className={`glass-effect bg-gray-900/70 backdrop-blur-xl border border-gray-700/60 rounded-2xl shadow-2xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 ${
               emailSent ? "bg-green-500/10 border-green-500/30" : ""
             }`}
+            data-aos="fade-up"
           >
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-red-600 rounded-t-2xl"></div>
             {/* Animação de sucesso */}
@@ -221,7 +214,7 @@ export default function Contact() {
                 </span>
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
