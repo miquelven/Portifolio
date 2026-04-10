@@ -13,6 +13,7 @@ import Header from "../components/Header";
 import AOS from "aos";
 import { useEffect, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useI18n } from "../i18n";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -27,6 +28,8 @@ function App() {
       opacity: Math.random() * 0.4 + 0.1,
     })),
   );
+
+  const { t } = useI18n();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -56,7 +59,7 @@ function App() {
     const timestamp = new Date().toLocaleString();
     if (!visitSentRef.current) {
       visitSentRef.current = true;
-      const message = `Nova visita ao portfólio em ${timestamp}.`;
+      const message = t("app.visitMessage", { timestamp });
       emailjs
         .send(
           "service_j9fygzm",
@@ -143,9 +146,11 @@ function App() {
                 className="hero-title font-bold text-white mb-4 md:mb-6 leading-tight"
                 data-aos="fade-up"
               >
-                <span className="block text-5xl md:text-6xl ">Olá</span>
+                <span className="block text-5xl md:text-6xl ">
+                  {t("app.hero.greeting1")}
+                </span>
                 <span className="block text-4xl md:text-5xl  text-transparent bg-clip-text pb-1 bg-gradient-to-r from-red-500 to-red-600">
-                  seja bem-vindo!
+                  {t("app.hero.greeting2")}
                 </span>
               </h1>
               <p
@@ -153,9 +158,7 @@ function App() {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                Sou Desenvolvedor Front-End e aqui é o lugar aonde você pode
-                encontrar projetos que desenvolvi, experiências profissionais e
-                informações sobre minhas habilidades.
+                {t("app.hero.subtitle")}
               </p>
               <div
                 className="hero-buttons flex flex-col sm:flex-row gap-3 md:gap-4"
@@ -166,14 +169,18 @@ function App() {
                   onClick={() => scrollToSection("contact")}
                   className="relative bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-colors duration-200"
                 >
-                  <span className="relative z-10">Entre em contato</span>
+                  <span className="relative z-10">
+                    {t("app.hero.buttons.contact")}
+                  </span>
                 </button>
 
                 <button
                   onClick={() => scrollToSection("projects")}
                   className="relative bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 md:px-8 rounded-lg transition-colors duration-200 border border-gray-600 hover:border-gray-500"
                 >
-                  <span className="relative z-10">Veja meu trabalho</span>
+                  <span className="relative z-10">
+                    {t("app.hero.buttons.work")}
+                  </span>
                 </button>
               </div>
             </div>

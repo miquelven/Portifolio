@@ -1,6 +1,8 @@
 import { MotionConfig, motion } from "framer-motion";
+import { useI18n } from "../../../../i18n";
 
 export default function MenuIcon({ isOpen }) {
+  const { t } = useI18n();
   return (
     <MotionConfig
       transition={{
@@ -10,7 +12,7 @@ export default function MenuIcon({ isOpen }) {
     >
       <motion.button
         name="menu"
-        aria-label="menu button"
+        aria-label={t("menu.aria.menuButton")}
         initial={false}
         animate={isOpen ? "open" : "closed"}
         className="relative h-14 w-14 rounded-full transition-scale duration-300 hover:scale-110  max-sm:h-10 max-sm:w-10"

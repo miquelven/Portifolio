@@ -7,8 +7,10 @@ import {
 } from "react-icons/fa";
 import DownloadButton from "../DownloadButton";
 import profileImage from "../../../assets/images/profile.jpg";
+import { useI18n } from "../../i18n";
 
 export default function Sidebar({ isOpen, onClose }) {
+  const { t } = useI18n();
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -30,7 +32,7 @@ export default function Sidebar({ isOpen, onClose }) {
         <button
           onClick={onClose}
           className="lg:hidden self-end mb-4 p-2 text-gray-400 hover:text-white transition-colors"
-          aria-label="Fechar menu"
+          aria-label={t("sidebar.aria.closeMenu")}
         >
           <FaTimes className="nav-icon" />
         </button>
@@ -41,7 +43,7 @@ export default function Sidebar({ isOpen, onClose }) {
             <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-700 flex items-center justify-center">
               <img
                 src={profileImage}
-                alt="Foto de perfil de Miquelven Silva"
+                alt={t("sidebar.aria.profileAlt")}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -52,7 +54,7 @@ export default function Sidebar({ isOpen, onClose }) {
             Miquelven Silva
           </h2>
           <p className="text-gray-300 text-sm font-medium mb-2">
-            Desenvolvedor Front End
+            {t("sidebar.jobTitle")}
           </p>
         </div>
 
@@ -82,7 +84,7 @@ export default function Sidebar({ isOpen, onClose }) {
             href="#contact"
             onClick={() => scrollToSection("contact")}
             className="relative w-10 h-10 md:w-12 md:h-12 bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-200 hover:bg-gray-600"
-            aria-label="Contact"
+            aria-label={t("header.nav.contact")}
           >
             <FaEnvelope className="social-icon text-white" />
           </a>

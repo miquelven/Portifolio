@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Card from "./index";
 import { BrowserRouter } from "react-router-dom";
+import { I18nProvider } from "../../../i18n";
 
 const cardMock = {
   title: "Test",
@@ -13,10 +14,13 @@ const cardMock = {
 };
 
 const renderWithRouter = () => {
+  localStorage.setItem("lang", "pt");
   render(
-    <BrowserRouter>
-      <Card card={cardMock} />
-    </BrowserRouter>
+    <I18nProvider>
+      <BrowserRouter>
+        <Card card={cardMock} />
+      </BrowserRouter>
+    </I18nProvider>
   );
 };
 

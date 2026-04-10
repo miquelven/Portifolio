@@ -1,20 +1,22 @@
 import { useState } from "react";
+import { useI18n } from "../../i18n";
 
 export default function Testimonials() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const { t } = useI18n();
   
   const testimonials = [
     {
       id: 1,
       name: "Thayana Mamoré",
       avatar: "/api/placeholder/60/60",
-      text: "I acted as the project manager where Amanda worked as a backend developer with Spring Boot/Java, and I highly recommend her as a professional. She stands out for her proactivity and consistently exceeding expectations. Amanda possesses incredible technical knowledge and is always eager to expand it. During her participation in the project, she demonstrated remarkable growth and evolution, contributing creative solutions and excellent teamwork. Her commitment, combined with her willingness to learn, enhances the quality of deliverables and drives team development."
+      text: t("testimonials.items.thayana"),
     },
     {
       id: 2,
       name: "João Silva",
       avatar: "/api/placeholder/60/60",
-      text: "Excelente desenvolvedor! Trabalhou em nosso projeto React com muita dedicação e entregou resultados excepcionais. Sua capacidade de resolver problemas complexos é impressionante."
+      text: t("testimonials.items.joao"),
     }
   ];
 
@@ -22,8 +24,10 @@ export default function Testimonials() {
     <div>
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-5xl font-bold text-white">
-          What People Say <br />
-          About My <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">Work</span>
+          {t("testimonials.title.prefix")} <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
+            {t("testimonials.title.highlight")}
+          </span>
         </h2>
         
         <div className="flex gap-2">

@@ -5,34 +5,36 @@ import { FiArrowRight } from "react-icons/fi";
 import aboutImage from "../../../../../assets/images/menu/aboutImage.webp";
 import projectImage from "../../../../../assets/images/menu/projectImage.webp";
 import contactImage from "../../../../../assets/images/menu/contactImage.webp";
+import { useI18n } from "../../../../../i18n";
 
 export default function MenuContent({ onLinkClick }) {
+  const { t } = useI18n();
   return (
     <div className="mx-auto max-w-5xl">
       <div onClick={() => onLinkClick()}>
         <Link
-          heading="Sobre"
-          subheading="Um pouco sobre minha jornada como programador"
+          heading={t("menu.content.about.heading")}
+          subheading={t("menu.content.about.subheading")}
           imgSrc={aboutImage}
-          alt="Imagem do link de sobre no menu"
+          alt={t("menu.content.about.alt")}
           href="#about"
         />
       </div>
       <div onClick={() => onLinkClick()}>
         <Link
-          heading="Projetos"
-          subheading="Exibindo meus projetos e minha paixão por desenvolvimento"
+          heading={t("menu.content.projects.heading")}
+          subheading={t("menu.content.projects.subheading")}
           imgSrc={projectImage}
-          alt="Imagem do link de projetos no menu"
+          alt={t("menu.content.projects.alt")}
           href="#project"
         />
       </div>
       <div onClick={() => onLinkClick()}>
         <Link
-          heading="Contatos"
-          subheading="Conecte-se comigo"
+          heading={t("menu.content.contacts.heading")}
+          subheading={t("menu.content.contacts.subheading")}
           imgSrc={contactImage}
-          alt="Imagem do link de sobre no menu"
+          alt={t("menu.content.contacts.alt")}
           href="#contact"
         />
       </div>
@@ -40,7 +42,7 @@ export default function MenuContent({ onLinkClick }) {
   );
 }
 
-const Link = ({ heading, imgSrc, subheading, href }) => {
+const Link = ({ heading, imgSrc, subheading, href, alt }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -123,7 +125,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
         transition={{ type: "spring" }}
         src={imgSrc}
         className="absolute z-0 h-24 w-32 rounded-lg object-cover md:h-48 md:w-64"
-        alt={`Image representing a link for ${heading}`}
+        alt={alt}
       />
 
       <motion.div

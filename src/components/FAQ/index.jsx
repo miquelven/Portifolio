@@ -1,29 +1,14 @@
 import { useState } from "react";
+import { useI18n } from "../../i18n";
 
 export default function FAQ() {
   const [openFAQ, setOpenFAQ] = useState(null);
+  const { t } = useI18n();
 
   const faqs = [
-    {
-      question: "Quais são suas soft skills?",
-      answer: [
-        "Resolução de problemas",
-        "Comunicação",
-        "Flexibilidade e trabalho em equipe",
-        "Criatividade e proatividade",
-      ],
-    },
-    {
-      question: "O aprendizado dele é rápido para novos desafios?",
-      answer:
-        "Sim. Eu foco na solução e me dedico a aprender a tecnologia necessária (via documentação) no menor tempo possível. Entrego sempre código claro e organizado, priorizando a colaboração do time.",
-    },
-    {
-      question:
-        "Os projetos dele funcionam bem em qualquer dispositivo e são rápidos?",
-      answer:
-        "Sim, é o padrão. Eu garanto que o site carregue muito rápido (otimização de código e imagens) e que funcione perfeitamente em qualquer dispositivo, priorizando a melhor experiência do usuário em todas as telas.",
-    },
+    t("faq.items.softSkills"),
+    t("faq.items.fastLearning"),
+    t("faq.items.responsiveFast"),
   ];
 
   const toggleFAQ = (index) => {
@@ -36,9 +21,9 @@ export default function FAQ() {
         className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12 max-sm:mb-4"
         data-aos="fade-right"
       >
-        Seus{" "}
+        {t("faq.title.prefix")}{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Questionamentos
+          {t("faq.title.highlight")}
         </span>
       </h2>
 

@@ -2,9 +2,11 @@ import Skills from "./Skills";
 import monthsStudy from "../../helpers/monthsStudy";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useI18n } from "../../i18n";
 
 export default function About() {
   const [months, setMonths] = useState(1);
+  const { t } = useI18n();
 
   useEffect(() => {
     setMonths(monthsStudy());
@@ -14,8 +16,10 @@ export default function About() {
     <div className="space-y-12">
       {/* Título da seção */}
       <h2 className="text-4xl font-bold text-white mb-12 text-center">
-        About Me
-        and <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">My Journey</span>
+        {t("about.title.prefix")}{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
+          {t("about.title.highlight")}
+        </span>
       </h2>
       
       {/* Conteúdo principal */}
@@ -27,26 +31,23 @@ export default function About() {
           data-aos-delay="300"
         >
           <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-red-400 transition-colors duration-300">
-            My Story
+            {t("about.story.title")}
           </h3>
           
           <div className="space-y-4 text-gray-300 leading-relaxed">
-            <p>
-              Comecei a me interessar por desenvolvimento aos 16 anos,
-              inicialmente explorando C# para criação de jogos. Após uma pausa
-              devido a limitações técnicas, retornei ao desenvolvimento com foco
-              em front-end.
-            </p>
+            <p>{t("about.story.p1")}</p>
             
             <p>
-              Balanceando escola e trabalho, economizei para comprar
-              um notebook e me dedicar integralmente aos estudos. Há <span className="text-red-400 font-semibold">{months} meses</span>, venho aprimorando minhas habilidades e conhecimentos
-              diariamente.
+              {t("about.story.p2Before")}
+              <span className="text-red-400 font-semibold">
+                {months} {t("about.story.monthsLabel", { count: months })}
+              </span>
+              {t("about.story.p2After")}
             </p>
             
             <div className="mt-6 p-4 bg-gradient-to-r from-red-500/10 to-red-600/10 rounded-lg border border-red-500/20">
               <p className="font-medium text-white">
-                Minhas principais áreas de conhecimento abrangem:
+                {t("about.story.highlightBox")}
               </p>
             </div>
           </div>
@@ -59,7 +60,7 @@ export default function About() {
           data-aos-delay="500"
         >
           <h3 className="text-2xl font-bold text-white mb-6">
-            Technical Skills
+            {t("about.skills.title")}
           </h3>
           <Skills />
         </div>
@@ -75,8 +76,10 @@ export default function About() {
           <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
             📚
           </div>
-          <h4 className="text-xl font-bold text-white mb-2">Continuous Learning</h4>
-          <p className="text-gray-400">Always studying new technologies and best practices</p>
+          <h4 className="text-xl font-bold text-white mb-2">
+            {t("about.stats.learning.title")}
+          </h4>
+          <p className="text-gray-400">{t("about.stats.learning.description")}</p>
         </div>
         
         <div 
@@ -87,8 +90,12 @@ export default function About() {
           <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
             💡
           </div>
-          <h4 className="text-xl font-bold text-white mb-2">Problem Solving</h4>
-          <p className="text-gray-400">Passionate about finding creative solutions</p>
+          <h4 className="text-xl font-bold text-white mb-2">
+            {t("about.stats.problemSolving.title")}
+          </h4>
+          <p className="text-gray-400">
+            {t("about.stats.problemSolving.description")}
+          </p>
         </div>
         
         <div 
@@ -99,8 +106,10 @@ export default function About() {
           <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
             🚀
           </div>
-          <h4 className="text-xl font-bold text-white mb-2">Innovation</h4>
-          <p className="text-gray-400">Building modern and efficient applications</p>
+          <h4 className="text-xl font-bold text-white mb-2">
+            {t("about.stats.innovation.title")}
+          </h4>
+          <p className="text-gray-400">{t("about.stats.innovation.description")}</p>
         </div>
       </div>
     </div>

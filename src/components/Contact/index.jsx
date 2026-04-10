@@ -14,12 +14,14 @@ import {
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { useI18n } from "../../i18n";
 
 export default function Contact() {
   const [showError, setShowError] = useState(false);
   const [textAreaValue, setTextAreaValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
+  const { t } = useI18n();
 
   const validateTextArea = textAreaValue.trim().length < 4;
 
@@ -46,7 +48,7 @@ export default function Contact() {
         setTextAreaValue("");
       }, 3000);
     } catch (error) {
-      toast.error("Erro ao enviar email. Tente novamente.");
+      toast.error(t("contact.toasts.sendError"));
     } finally {
       setIsLoading(false);
     }
@@ -60,7 +62,7 @@ export default function Contact() {
   };
 
   const schema = z.object({
-    email: z.string().email("Email inválido"),
+    email: z.string().email(t("contact.validation.emailInvalid")),
   });
 
   const {
@@ -79,9 +81,9 @@ export default function Contact() {
           className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-12 max-sm:mb-4"
           data-aos="fade-right"
         >
-          Entre em{" "}
+          {t("contact.sectionTitle.prefix")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-            Contato
+            {t("contact.sectionTitle.highlight")}
           </span>
         </h2>
 
@@ -107,9 +109,9 @@ export default function Contact() {
                     <FaCheck className="text-white text-2xl" />
                   </div>
                   <h4 className="text-white text-xl font-bold mb-2">
-                    Email Enviado!
+                    {t("contact.status.sent")}
                   </h4>
-                  <p className="text-green-300">Obrigado pelo contato</p>
+                  <p className="text-green-300">{t("contact.status.thanks")}</p>
 
                   {/* Partículas de celebração */}
                   <div className="absolute inset-0 pointer-events-none">
@@ -124,7 +126,7 @@ export default function Contact() {
             )}
 
             <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
-              Envie uma Mensagem
+              {t("contact.sendMessage")}
             </h3>
 
             <form
@@ -136,7 +138,7 @@ export default function Contact() {
                   htmlFor="email"
                   className="block text-white font-medium mb-2 text-sm md:text-base"
                 >
-                  Email *
+                  {t("contact.labels.email")}
                 </label>
                 <input
                   {...register("email")}
@@ -145,7 +147,7 @@ export default function Contact() {
                   className={`w-full px-3 md:px-4 py-2 md:py-3 bg-gray-800/60 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 text-sm md:text-base ${
                     errors.email ? "border-red-500" : "border-gray-600"
                   } ${emailSent ? "opacity-50" : ""}`}
-                  placeholder="seu@email.com"
+                  placeholder={t("contact.placeholders.email")}
                 />
                 {errors.email && (
                   <span className="text-red-400 text-xs md:text-sm mt-1 block">
@@ -159,7 +161,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-white font-medium mb-2 text-sm md:text-base"
                 >
-                  Mensagem *
+                  {t("contact.labels.message")}
                 </label>
                 <textarea
                   name="message"
@@ -173,15 +175,15 @@ export default function Contact() {
                       ? "border-red-500"
                       : "border-gray-600"
                   } ${emailSent ? "opacity-50" : ""}`}
-                  placeholder="Sua mensagem..."
+                  placeholder={t("contact.placeholders.message")}
                 />
                 {showError && (
                   <span className="text-red-400 text-xs md:text-sm mt-1 block">
                     {textAreaValue.trim().length === 0
-                      ? "O campo não pode ser vazio"
+                      ? t("contact.validation.fieldEmpty")
                       : validateTextArea &&
                         textAreaValue.trim().length > 0 &&
-                        "O campo deve conter pelo menos 5 caracteres"}
+                        t("contact.validation.min5")}
                   </span>
                 )}
               </div>
@@ -198,17 +200,17 @@ export default function Contact() {
                   {isLoading ? (
                     <>
                       <FaPaperPlane className="animate-bounce" />
-                      Enviando...
+                      {t("contact.status.sending")}
                     </>
                   ) : emailSent ? (
                     <>
                       <FaCheck className="animate-pulse" />
-                      Email Enviado!
+                      {t("contact.status.sent")}
                     </>
                   ) : (
                     <>
                       <FaPaperPlane />
-                      Enviar Mensagem
+                      {t("contact.status.send")}
                     </>
                   )}
                 </span>

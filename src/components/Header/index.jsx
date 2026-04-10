@@ -9,10 +9,13 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
+import { useI18n } from "../../i18n";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   const [activeSection, setActiveSection] = useState("home");
   const manualActiveUntilRef = useRef(0);
+  const { t } = useI18n();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,12 +69,12 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   };
 
   const navItems = [
-    { id: "home", icon: FaHome, label: "Início" },
-    { id: "tech", icon: FaCogs, label: "Tecnologias" },
-    { id: "projects", icon: FaCode, label: "Projetos" },
-    { id: "experience", icon: FaBriefcase, label: "Experiência" },
-    { id: "faq", icon: FaQuestionCircle, label: "Perguntas" },
-    { id: "contact", icon: FaEnvelope, label: "Contato" },
+    { id: "home", icon: FaHome, label: t("header.nav.home") },
+    { id: "tech", icon: FaCogs, label: t("header.nav.tech") },
+    { id: "projects", icon: FaCode, label: t("header.nav.projects") },
+    { id: "experience", icon: FaBriefcase, label: t("header.nav.experience") },
+    { id: "faq", icon: FaQuestionCircle, label: t("header.nav.faq") },
+    { id: "contact", icon: FaEnvelope, label: t("header.nav.contact") },
   ];
 
   return (
@@ -82,7 +85,7 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
           <button
             onClick={sidebarOpen ? onMenuClose : onMenuClick}
             className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
-            aria-label={sidebarOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={sidebarOpen ? t("header.aria.closeMenu") : t("header.aria.openMenu")}
           >
             {sidebarOpen ? (
               <FaTimes className="nav-icon" />
@@ -129,6 +132,9 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
                 </button>
               );
             })}
+            <div className="ml-2 pl-2 border-l border-gray-700">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Navegação mobile simplificada */}
@@ -162,6 +168,9 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
                 </button>
               );
             })}
+            <div className="ml-1">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </nav>

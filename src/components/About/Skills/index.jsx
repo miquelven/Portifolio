@@ -1,8 +1,10 @@
 import skills from "../../../data/skill";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useI18n } from "../../../i18n";
 
 export default function Skills() {
   const timer = 200;
+  const { t } = useI18n();
 
   return (
     <div className="grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-2">
@@ -15,7 +17,7 @@ export default function Skills() {
         >
           <LazyLoadImage
             src={skill.src}
-            alt="Imagem da tecnologia"
+            alt={t("skills.techAlt")}
             className="w-8 h-8 object-cover transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg"
           />
         </div>

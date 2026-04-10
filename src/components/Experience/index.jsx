@@ -1,17 +1,11 @@
+import { useI18n } from "../../i18n";
+
 export default function Experience() {
+  const { t } = useI18n();
   const experiences = [
     {
       id: 1,
-      title: "Desenvolvedor Front End",
-      company: "Guichê Web",
-      bulletPoints: [
-        "Responsável pelo redesign completo do sistema interno, focando na melhoria da experiência do usuário (UX) e na otimização de performance.",
-        "Fui responsável pela sustentação, manutenção e evolução contínua de aplicações web críticas.",
-        "Atuação end-to-end em design, sendo responsável por definir fluxos de UX e interfaces (UI) para novas features, garantindo consistência e usabilidade em projetos iniciados do zero.",
-        "Construção do front-end do aplicativo para Máquinas Smart (PDV), utilizando React Native e a biblioteca MUI (Material-UI). Foco em otimização de performance e experiência do usuário (UX) para garantir um aplicativo rápido e responsivo em hardware embarcado.",
-      ],
-      period: "Setembro 2024 - Janeiro 2026",
-      icon: "↗",
+      ...t("experience.items.guicheWeb"),
     },
   ];
 
@@ -21,9 +15,9 @@ export default function Experience() {
         className="text-5xl max-sm:text-2xl max-sm:text-center font-bold text-white mb-4"
         data-aos="fade-right"
       >
-        Experiência{" "}
+        {t("experience.title.prefix")}{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Profissional
+          {t("experience.title.highlight")}
         </span>
       </h2>
 
@@ -48,7 +42,7 @@ export default function Experience() {
 
             <div className="mb-0 relative z-10">
               <ul className="space-y-4">
-                {exp.bulletPoints.map((point, index) => (
+                {exp.bullets.map((point, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-4 text-gray-300 leading-relaxed max-sm:text-xs"

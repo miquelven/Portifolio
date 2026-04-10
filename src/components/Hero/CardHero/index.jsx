@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import DecorationText from "../DecorationText";
 import DownloadButton from "../../DownloadButton";
+import { useI18n } from "../../../i18n";
 
 export default function CardHero() {
   return <TiltCard />;
@@ -12,6 +13,7 @@ const HALF_ROTATION_RANGE = 18.5 / 2;
 
 const TiltCard = () => {
   const ref = useRef(null);
+  const { t } = useI18n();
 
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
@@ -105,25 +107,20 @@ const TiltCard = () => {
             className="text-xl font-medium text-white/90 mb-20 max-sm:mb-10 max-[490px]:text-base max-[490px]:flex max-[490px]:items-center max-[420px]:text-sm max-[420px]:mb-6 max-[375px]:mb-4 max-[375px]:text-xs text-glow animate-float"
             variants={itemVariants}
           >
-            Olá! Eu sou o
+            {t("heroCard.greeting")}
             <DecorationText />
           </motion.h3>
           <motion.h1
             className="text-5xl font-bold text-white mb-10 max-xl:text-4xl max-sm:text-3xl max-[490px]:text-2xl max-[375px]:text-xl max-[375px]:mb-8 text-glow bg-gradient-to-r from-white via-red-100 to-red-200 bg-clip-text text-transparent animate-gradient"
             variants={itemVariants}
           >
-            Desenvolvedor Front End
+            {t("heroCard.title")}
           </motion.h1>
           <motion.p
             className="text-white/90 text-xl mb-20 leading-8 font-light w-[850px] max-xl:w-3/4 max-md:w-full max-sm:text-lg max-[490px]:text-base max-[375px]:text-sm max-[375px]:mb-8 text-glow"
             variants={itemVariants}
           >
-            Tenho experiência na criação de aplicações web responsivas,
-            otimização de desempenho e implementação de funcionalidades
-            dinâmicas. Sou proativo, atento aos detalhes e gosto de colaborar em
-            equipe para alcançar objetivos comuns. Dedico-me a aprimorar
-            continuamente minhas habilidades, aprender novas tecnologias e
-            seguir as melhores práticas de desenvolvimento.
+            {t("heroCard.description")}
           </motion.p>
           <motion.div variants={itemVariants}>
             <DownloadButton />

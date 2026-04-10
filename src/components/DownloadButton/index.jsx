@@ -1,15 +1,22 @@
 import { useRef, useState, useEffect } from "react";
 import { FaDownload, FaSpinner, FaCheck } from "react-icons/fa";
 import downloadCV from "../../../assets/cv/Miquelven-CV-base.pdf";
+import { useI18n } from "../../i18n";
 
 export default function DownloadButton() {
   const [downloadState, setDownloadState] = useState("idle");
+  const downloadStateRef = useRef("idle");
   const downloadTimeoutRef = useRef(null);
   const downloadStartTime = useRef(null);
+  const { t } = useI18n();
+
+  useEffect(() => {
+    downloadStateRef.current = downloadState;
+  }, [downloadState]);
 
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (!document.hidden && downloadState === "downloading") {
+      if (!document.hidden && downloadStateRef.current === "downloading") {
         const timeElapsed = Date.now() - downloadStartTime.current;
 
         if (timeElapsed > 1000) {
@@ -19,7 +26,7 @@ export default function DownloadButton() {
     };
 
     const handleFocus = () => {
-      if (downloadState === "downloading") {
+      if (downloadStateRef.current === "downloading") {
         const timeElapsed = Date.now() - downloadStartTime.current;
 
         if (timeElapsed > 800) {
@@ -38,7 +45,7 @@ export default function DownloadButton() {
         clearTimeout(downloadTimeoutRef.current);
       }
     };
-  }, [downloadState]);
+  }, []);
 
   const completeDownload = () => {
     if (downloadTimeoutRef.current) {
@@ -52,22 +59,13 @@ export default function DownloadButton() {
     }, 2000);
   };
 
-  const handleDownload = (e) => {
+  const handleDownload = () => {
     setDownloadState("downloading");
     downloadStartTime.current = Date.now();
 
     downloadTimeoutRef.current = setTimeout(() => {
       completeDownload();
     }, 5000);
-
-    setTimeout(() => {
-      if (downloadState === "downloading") {
-        const timeElapsed = Date.now() - downloadStartTime.current;
-        if (timeElapsed > 2000) {
-          completeDownload();
-        }
-      }
-    }, 2000);
   };
 
   const getButtonContent = () => {
@@ -77,7 +75,7 @@ export default function DownloadButton() {
           <>
             <FaSpinner className="icon-responsive animate-spin" />
             <span className="font-semibold tracking-wide text-sm md:text-base">
-              Baixando...
+              {t("download.downloading")}
             </span>
           </>
         );
@@ -86,7 +84,7 @@ export default function DownloadButton() {
           <>
             <FaCheck className="icon-responsive animate-bounce" />
             <span className="font-semibold tracking-wide text-sm md:text-base">
-              Baixado!
+              {t("download.downloaded")}
             </span>
           </>
         );
@@ -95,7 +93,7 @@ export default function DownloadButton() {
           <>
             <FaDownload className="icon-responsive" />
             <span className="font-semibold tracking-wide text-sm md:text-base">
-              Download CV
+              {t("download.button")}
             </span>
           </>
         );
@@ -104,7 +102,7 @@ export default function DownloadButton() {
 
   return (
     <a
-      aria-label="download button"
+      aria-label={t("download.aria")}
       role="link"
       href={downloadCV}
       download

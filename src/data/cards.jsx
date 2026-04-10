@@ -15,8 +15,10 @@ const cards = [
   {
     url: project1,
     title: "MiMovies",
-    description:
-      "MiMovies é uma aplicação web moderna para explorar filmes, com integração à API do TMDB. Permite pesquisar filmes, ver detalhes, trailers e salvar favoritos.",
+    description: {
+      pt: "MiMovies é uma aplicação web moderna para explorar filmes, com integração à API do TMDB. Permite pesquisar filmes, ver detalhes, trailers e salvar favoritos.",
+      en: "MiMovies is a modern web app for exploring movies with TMDB API integration. It lets you search for movies, view details and trailers, and save favorites.",
+    },
     stacks: [<FaReact />, <SiTailwindcss />, <SiTypescript />],
     stackColors: ["#087ea4", "#1dc0cd", "#087ecf"],
     id: simpleFaker.string.uuid(),
@@ -26,8 +28,10 @@ const cards = [
   {
     url: project2,
     title: "Kanbanity",
-    description:
-      "Uma aplicação web de quadro Kanban com visual cartoon, construída para organizar tarefas de forma leve, visual e divertida. Possui drag and drop e persistência local.",
+    description: {
+      pt: "Uma aplicação web de quadro Kanban com visual cartoon, construída para organizar tarefas de forma leve, visual e divertida. Possui drag and drop e persistência local.",
+      en: "A Kanban web app with a cartoon look, built to organize tasks in a light, visual, and fun way. Includes drag-and-drop and local persistence.",
+    },
     stacks: [<FaReact />, <SiTailwindcss />, <SiTypescript />],
     stackColors: ["#087ea4", "#1dc0cd", "#087ecf"],
     id: simpleFaker.string.uuid(),
@@ -37,8 +41,10 @@ const cards = [
   {
     url: project3,
     title: "Github Analytics",
-    description:
-      "Uma plataforma moderna para análise detalhada de perfis e repositórios do GitHub. Exibe métricas, gráficos e insights sobre desenvolvedores.",
+    description: {
+      pt: "Uma plataforma moderna para análise detalhada de perfis e repositórios do GitHub. Exibe métricas, gráficos e insights sobre desenvolvedores.",
+      en: "A modern platform for detailed analysis of GitHub profiles and repositories. Shows metrics, charts, and insights about developers.",
+    },
     stacks: [<SiNextdotjs />, <SiTailwindcss />, <SiTypescript />],
     stackColors: ["#000000", "#1dc0cd", "#087ecf"],
     id: simpleFaker.string.uuid(),
@@ -48,7 +54,10 @@ const cards = [
   {
     url: project4,
     title: "Chronorun",
-    description: "Projeto de games com ranking global e pessoal.",
+    description: {
+      pt: "Projeto de games com ranking global e pessoal.",
+      en: "A game project with global and personal ranking.",
+    },
     stacks: [<FaReact />, <SiTailwindcss />, <SiTypescript />],
     stackColors: ["#087ea4", "#1dc0cd", "#087ecf"],
     id: simpleFaker.string.uuid(),
@@ -58,8 +67,10 @@ const cards = [
   {
     url: project5,
     title: "Vinil Store",
-    description:
-      "Interface de E-commerce para venda de discos de vinil. Projeto conceitual (não funcional) focado na estética minimalista e experiência de navegação.",
+    description: {
+      pt: "Interface de E-commerce para venda de discos de vinil. Projeto conceitual (não funcional) focado na estética minimalista e experiência de navegação.",
+      en: "An e-commerce UI for selling vinyl records. A conceptual (non-functional) project focused on minimalist aesthetics and browsing experience.",
+    },
     stacks: [<FaReact />, <SiTailwindcss />, <SiTypescript />],
     stackColors: ["#087ea4", "#1dc0cd", "#087ecf"],
     id: simpleFaker.string.uuid(),

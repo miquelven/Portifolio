@@ -39,8 +39,8 @@ export default function ScrollProjects() {
           className="mySwiper"
         >
           {cards.map((card) => (
-            <SwiperSlide className="">
-              <Card card={card} key={card.id} />
+            <SwiperSlide key={card.id} className="">
+              <Card card={card} />
             </SwiperSlide>
           ))}
         </Swiper>

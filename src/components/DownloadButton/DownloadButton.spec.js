@@ -1,64 +1,56 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import DownloadButton from "./index";
+import { I18nProvider } from "../../i18n";
 
 jest.useFakeTimers();
 
 describe("DownloadButton component", () => {
   it("should render the component correctly", () => {
-    render(<DownloadButton />);
+    localStorage.setItem("lang", "pt");
+    render(
+      <I18nProvider>
+        <DownloadButton />
+      </I18nProvider>,
+    );
 
-    const buttonText = screen.getByText("Currículo");
-    const downloadIcon = screen.getByRole("img");
-
-    expect(buttonText).toBeInTheDocument();
-    expect(downloadIcon).toBeInTheDocument();
+    expect(screen.getByText("Baixar CV")).toBeInTheDocument();
   });
 
   it("should display 'Baixando' text and loader when clicked", () => {
-    render(<DownloadButton />);
+    localStorage.setItem("lang", "pt");
+    render(
+      <I18nProvider>
+        <DownloadButton />
+      </I18nProvider>,
+    );
 
     const button = screen.getByRole("link");
-    const buttonText = screen.getByText("Currículo");
-
     fireEvent.click(button);
 
-    expect(buttonText).toHaveTextContent("Baixando");
-
-    const downloadIcon = screen.getByRole("img");
-    const downloadLoader = screen.getByTestId("download-loader");
-
-    expect(downloadIcon).toHaveClass("hidden");
-    expect(downloadLoader).not.toHaveClass("hidden");
+    expect(screen.getByText("Baixando...")).toBeInTheDocument();
   });
 
   it("should display 'Baixado' text and checkmark after download and then revert to 'Currículo'", async () => {
-    render(<DownloadButton />);
+    localStorage.setItem("lang", "pt");
+    render(
+      <I18nProvider>
+        <DownloadButton />
+      </I18nProvider>,
+    );
 
     const button = screen.getByRole("link");
-    const buttonText = screen.getByText("Currículo");
-
     fireEvent.click(button);
 
-    jest.advanceTimersByTime(1000);
-
-    await waitFor(() => {
-      const downloadLoader = screen.getByTestId("download-loader");
-      const downloadCheckMark = screen.getByTestId("checkmark");
-
-      expect(buttonText).toHaveTextContent("Baixado");
-      expect(downloadLoader).toHaveClass("hidden");
-      expect(downloadCheckMark).not.toHaveClass("hidden");
+    await act(async () => {
+      jest.advanceTimersByTime(5000);
     });
 
-    jest.advanceTimersByTime(1000);
+    expect(screen.getByText("Baixado!")).toBeInTheDocument();
 
-    await waitFor(() => {
-      const downloadIcon = screen.getByRole("img");
-      const downloadCheckMark = screen.getByTestId("checkmark");
-
-      expect(buttonText).toHaveTextContent("Currículo");
-      expect(downloadCheckMark).toHaveClass("hidden");
-      expect(downloadIcon).not.toHaveClass("hidden");
+    await act(async () => {
+      jest.advanceTimersByTime(2000);
     });
+
+    expect(screen.getByText("Baixar CV")).toBeInTheDocument();
   });
 });

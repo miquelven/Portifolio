@@ -1,16 +1,27 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 
 import ToTopButton from "./index";
+import { I18nProvider } from "../../i18n";
 
 describe("ToTopButton component", () => {
   it("should render component", () => {
-    render(<ToTopButton />);
+    localStorage.setItem("lang", "pt");
+    render(
+      <I18nProvider>
+        <ToTopButton />
+      </I18nProvider>,
+    );
 
     expect(screen.getByTestId("button")).toBeInTheDocument();
   });
 
   it("should disappear and show when change the window scroll", () => {
-    render(<ToTopButton />);
+    localStorage.setItem("lang", "pt");
+    render(
+      <I18nProvider>
+        <ToTopButton />
+      </I18nProvider>,
+    );
 
     const button = screen.getByTestId("button");
 
@@ -28,7 +39,12 @@ describe("ToTopButton component", () => {
 
     window.pageYOffset = 1000;
 
-    render(<ToTopButton />);
+    localStorage.setItem("lang", "pt");
+    render(
+      <I18nProvider>
+        <ToTopButton />
+      </I18nProvider>,
+    );
     const button = screen.getByTestId("button");
 
     fireEvent.scroll(window, { target: { pageYOffset: 1000 } });

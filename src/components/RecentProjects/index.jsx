@@ -4,51 +4,48 @@ import project3 from "../../../assets/images/projects/projeto_3.png";
 import project4 from "../../../assets/images/projects/projeto_4.png";
 import project5 from "../../../assets/images/projects/projeto_5.png";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useI18n } from "../../i18n";
 
 export default function RecentProjects() {
+  const { t } = useI18n();
   const projects = [
     {
       id: 1,
+      key: "mimovies",
       title: "MiMovies",
-      subtitle: "Integração com a API do TMDB",
       image: project1,
-      category: "Web App",
       previewLink: "https://mi-movie-ten.vercel.app/",
       githubLink: "https://github.com/miquelven/MiMovie",
     },
     {
       id: 2,
+      key: "kanbanity",
       title: "Kanbanity",
-      subtitle: "Quadro Kanban com visual cartoon",
       image: project2,
-      category: "Productivity",
       previewLink: "https://kanbanity.vercel.app/",
       githubLink: "https://github.com/miquelven/Kanbanity",
     },
     {
       id: 3,
+      key: "githubAnalytics",
       title: "Github Analytics",
-      subtitle: "Análise de perfis e repositórios",
       image: project3,
-      category: "Analytics",
       previewLink: "https://github-analytics-two.vercel.app/",
       githubLink: "https://github.com/miquelven/github-analytics",
     },
     {
       id: 4,
+      key: "chronorun",
       title: "Chronorun",
-      subtitle: "Projeto de games com ranking global e pessoal",
       image: project4,
-      category: "Game",
       previewLink: "https://www.chronorun.com.br/",
       githubLink: "https://github.com/miquelven/ChronoRun",
     },
     {
       id: 5,
+      key: "vinilStore",
       title: "Vinil Store",
-      subtitle: "Interface de E-commerce (Conceitual)",
       image: project5,
-      category: "Front-end",
       previewLink: "https://lp-ecommerce-mu.vercel.app/",
       githubLink: "https://github.com/miquelven/lp-ecommerce",
     },
@@ -60,9 +57,9 @@ export default function RecentProjects() {
         className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-12 max-sm:mb-4"
         data-aos="fade-down"
       >
-        Projetos{" "}
+        {t("recentProjects.title.prefix")}{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Pessoais
+          {t("recentProjects.title.highlight")}
         </span>
       </h2>
 
@@ -83,7 +80,7 @@ export default function RecentProjects() {
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
               <div className="absolute top-4 right-4">
                 <span className="bg-black/50 backdrop-blur-md text-white text-xs font-medium px-3 py-1 rounded-full border border-white/10">
-                  {project.category}
+                  {t(`recentProjects.projects.${project.key}.category`)}
                 </span>
               </div>
             </div>
@@ -93,7 +90,7 @@ export default function RecentProjects() {
                 {project.title}
               </h3>
               <p className="text-gray-400 text-sm mb-6 flex-1">
-                {project.subtitle}
+                {t(`recentProjects.projects.${project.key}.subtitle`)}
               </p>
 
               <div className="flex gap-3 mt-auto">
@@ -103,7 +100,7 @@ export default function RecentProjects() {
                   rel="noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white text-sm rounded-lg transition-colors duration-200"
                 >
-                  <FaGithub /> GitHub
+                  <FaGithub /> {t("common.actions.github")}
                 </a>
                 <a
                   href={project.previewLink}
@@ -111,7 +108,7 @@ export default function RecentProjects() {
                   rel="noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white text-sm rounded-lg transition-colors duration-200"
                 >
-                  <FaExternalLinkAlt size={12} /> Preview
+                  <FaExternalLinkAlt size={12} /> {t("common.actions.preview")}
                 </a>
               </div>
             </div>

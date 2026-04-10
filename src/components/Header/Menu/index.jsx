@@ -4,12 +4,14 @@ import MenuContent from "./MenuContent";
 import MenuIcon from "./MenuIcon";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { useI18n } from "../../../i18n";
 
 export default function Menu() {
   const colors = ["#667eea", "transparent"];
 
   const [color, setColor] = useState(colors[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useI18n();
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -32,7 +34,7 @@ export default function Menu() {
     <>
       <div className="flex fixed z-50 top-7 gap-5">
         <a
-          aria-label="icone do github"
+          aria-label={t("menu.aria.github")}
           href="https://github.com/miquelven"
           target="_blank"
           rel="noopener noreferrer"
@@ -43,7 +45,7 @@ export default function Menu() {
           />
         </a>
         <a
-          aria-label="icone do linkedin"
+          aria-label={t("menu.aria.linkedin")}
           href="https://www.linkedin.com/in/miquelven-silva-80731a23b/"
           target="_blank"
           rel="noopener noreferrer"

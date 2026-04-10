@@ -2,9 +2,11 @@ import Contact from "../Contact";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import goodbyeImage from "../../../assets/images/goodbye.png";
+import { useI18n } from "../../i18n";
 
 export default function Footer() {
   const [showGoodbye, setShowGoodbye] = useState(false);
+  const { t } = useI18n();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,8 +89,8 @@ export default function Footer() {
                   letterSpacing: "1px",
                 }}
               >
-                Até mais, obrigado
-                <br /> pela visita!
+                {t("footer.goodbyeLine1")}
+                <br /> {t("footer.goodbyeLine2")}
               </span>
 
               {/* Seta do balão apontando para a direita - pixelada */}
@@ -114,7 +116,7 @@ export default function Footer() {
           {/* Imagem de despedida - animação mais suave */}
           <motion.img
             src={goodbyeImage}
-            alt="Goodbye"
+            alt={t("footer.goodbyeAlt")}
             initial={{ scale: 1 }}
             animate={
               showGoodbye

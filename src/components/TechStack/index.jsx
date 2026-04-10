@@ -8,8 +8,10 @@ import {
   SiSass,
   SiTailwindcss,
 } from "react-icons/si";
+import { useI18n } from "../../i18n";
 
 export default function TechStack() {
+  const { t } = useI18n();
   const technologies = [
     { name: "Next", icon: SiNextdotjs, color: "text-white" },
     { name: "React", icon: SiReact, color: "text-blue-400" },
@@ -27,9 +29,9 @@ export default function TechStack() {
         className="text-2xl max-sm:text-center md:text-4xl lg:text-5xl font-bold text-white mb-4"
         data-aos="fade-right"
       >
-        Tecnologias e{" "}
+        {t("techStack.title.prefix")}{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-          Ferramentas
+          {t("techStack.title.highlight")}
         </span>
       </h2>
 

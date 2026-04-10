@@ -2,8 +2,15 @@ import { FaExpandArrowsAlt } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useI18n } from "../../../i18n";
 
 export default function Card({ card }) {
+  const { t, language } = useI18n();
+  const description =
+    card.description && typeof card.description === "object"
+      ? card.description[language] || card.description.pt || ""
+      : card.description;
+
   return (
     <div
       data-testid="scrollProjectsCard"
@@ -21,7 +28,7 @@ export default function Card({ card }) {
             }}
           ></div>
           <Link
-            aria-label="icone para deixar a imagem em tela cheia"
+            aria-label={t("scrollProjectsCard.aria.fullscreen")}
             data-testid="linkImg"
             to={"/" + card.title}
           >
@@ -38,7 +45,7 @@ export default function Card({ card }) {
         </div>
         <div className=" absolute z-20 -bottom-[3.2rem] right-2 w-32 h-10 flex justify-end items-center gap-4 max-[480px]:mt-3">
           <a
-            aria-label="icone para ir para o site do projeto"
+            aria-label={t("scrollProjectsCard.aria.project")}
             data-testid="project"
             href={card.projectLink}
             target="_blank"
@@ -46,7 +53,7 @@ export default function Card({ card }) {
             <FaShareFromSquare className="w-6 h-7 fill-[#080808] opacity-90 transition-opacity duration-200 hover:opacity-80 max-[480px]:w-5 max-[480px]:h-6" />
           </a>
           <a
-            aria-label="icone do github"
+            aria-label={t("scrollProjectsCard.aria.github")}
             data-testid="github"
             href={card.githubLink}
             target="_blank"
@@ -72,7 +79,7 @@ export default function Card({ card }) {
           className=" max-h-40  overflow-y-auto mt-5 pr-6 max-[480px]:pr-0"
         >
           <p className="font-medium leading-7 text-justify text-[#717171] max-[480px]:text-sm max-[480px]:mr-4">
-            {card.description}
+            {description}
           </p>
         </div>
       </div>
