@@ -4,10 +4,22 @@ import { translations } from "./translations";
 const I18nContext = createContext(null);
 
 export function I18nProvider({ children }) {
+  const [isChangingLanguage, setIsChangingLanguage] = useState(false);
   const [language, setLanguage] = useState(() => {
     const stored = localStorage.getItem("lang");
     return stored || "pt";
   });
+
+  const changeLanguage = (newLang) => {
+    if (newLang === language) return;
+    setIsChangingLanguage(true);
+    setTimeout(() => {
+      setLanguage(newLang);
+      setTimeout(() => {
+        setIsChangingLanguage(false);
+      }, 800);
+    }, 500);
+  };
 
   useEffect(() => {
     localStorage.setItem("lang", language);
@@ -44,10 +56,11 @@ export function I18nProvider({ children }) {
   const value = useMemo(
     () => ({
       language,
-      setLanguage,
+      setLanguage: changeLanguage,
+      isChangingLanguage,
       t,
     }),
-    [language, t],
+    [language, t, isChangingLanguage],
   );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;

@@ -5,6 +5,7 @@ import RecentProjects from "../components/RecentProjects";
 import Experience from "../components/Experience";
 import TechStack from "../components/TechStack";
 import Header from "../components/Header";
+import LanguageTransition from "../components/LanguageTransition";
 
 import AOS from "aos";
 import { useEffect, useState, useRef } from "react";
@@ -90,6 +91,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen bg-gray-900 relative overflow-hidden">
+      <LanguageTransition />
       {/* Fundo com estrelas sutis */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Campo de estrelas muito sutis */}
