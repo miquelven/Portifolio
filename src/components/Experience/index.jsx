@@ -4,6 +4,10 @@ export default function Experience() {
   const { t } = useI18n();
   const experiences = [
     {
+      id: 2,
+      ...t("experience.items.heptagono"),
+    },
+    {
       id: 1,
       ...t("experience.items.guicheWeb"),
     },

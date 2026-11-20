@@ -3,24 +3,24 @@ import {
   SiReact,
   SiTypescript,
   SiJavascript,
-  SiNuxtdotjs,
-  SiVuedotjs,
-  SiSass,
   SiTailwindcss,
+  SiVuedotjs,
+  SiMaterialdesign,
 } from "react-icons/si";
+import { FaMobileAlt } from "react-icons/fa";
 import { useI18n } from "../../i18n";
 
 export default function TechStack() {
   const { t } = useI18n();
   const technologies = [
-    { name: "Next", icon: SiNextdotjs, color: "text-white" },
     { name: "React", icon: SiReact, color: "text-blue-400" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
     { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
-    { name: "Nuxt", icon: SiNuxtdotjs, color: "text-green-400" },
-    { name: "Vue", icon: SiVuedotjs, color: "text-green-500" },
-    { name: "Sass", icon: SiSass, color: "text-pink-400" },
-    { name: "Tailwindcss", icon: SiTailwindcss, color: "text-cyan-400" },
+    { name: "React Native", icon: FaMobileAlt, color: "text-blue-500" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
+    { name: "Vue.js", icon: SiVuedotjs, color: "text-green-500" },
+    { name: "Material UI", icon: SiMaterialdesign, color: "text-blue-700" },
   ];
 
   return (

@@ -25,7 +25,6 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
         { id: "tech", selector: "#tech" },
         { id: "projects", selector: "#projects" },
         { id: "experience", selector: "#experience" },
-        { id: "faq", selector: "#faq" },
         { id: "contact", selector: "#contact" },
       ];
 
@@ -73,7 +72,6 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
     { id: "tech", icon: FaCogs, label: t("header.nav.tech") },
     { id: "projects", icon: FaCode, label: t("header.nav.projects") },
     { id: "experience", icon: FaBriefcase, label: t("header.nav.experience") },
-    { id: "faq", icon: FaQuestionCircle, label: t("header.nav.faq") },
     { id: "contact", icon: FaEnvelope, label: t("header.nav.contact") },
   ];
 
@@ -85,7 +83,11 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
           <button
             onClick={sidebarOpen ? onMenuClose : onMenuClick}
             className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
-            aria-label={sidebarOpen ? t("header.aria.closeMenu") : t("header.aria.openMenu")}
+            aria-label={
+              sidebarOpen
+                ? t("header.aria.closeMenu")
+                : t("header.aria.openMenu")
+            }
           >
             {sidebarOpen ? (
               <FaTimes className="nav-icon" />

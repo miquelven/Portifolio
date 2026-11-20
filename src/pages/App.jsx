@@ -1,13 +1,9 @@
-import ScrollProjects from "../components/ScrollProjects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import About from "../components/About";
 import Sidebar from "../components/Sidebar";
 import RecentProjects from "../components/RecentProjects";
 import Experience from "../components/Experience";
 import TechStack from "../components/TechStack";
-import Testimonials from "../components/Testimonials";
-import FAQ from "../components/FAQ";
 import Header from "../components/Header";
 
 import AOS from "aos";
@@ -199,11 +195,6 @@ function App() {
           {/* Experience Section */}
           <section id="experience" className="mb-12 md:mb-20">
             <Experience />
-          </section>
-
-          {/* FAQ Section */}
-          <section id="faq" className="mb-12 md:mb-20">
-            <FAQ />
           </section>
         </div>
 

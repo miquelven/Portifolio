@@ -16,7 +16,6 @@ export const translations = {
         tech: "Tecnologias",
         projects: "Projetos",
         experience: "Experiência",
-        faq: "Perguntas",
         contact: "Contato",
       },
       aria: {
@@ -27,21 +26,21 @@ export const translations = {
     app: {
       visitMessage: "Nova visita ao portfólio em {timestamp}.",
       hero: {
-        greeting1: "Olá",
-        greeting2: "seja bem-vindo!",
+        greeting1: "Olá, sou",
+        greeting2: "Miquelven Silva",
         subtitle:
-          "Sou Desenvolvedor Front-End e aqui é o lugar aonde você pode encontrar projetos que desenvolvi, experiências profissionais e informações sobre minhas habilidades.",
+          "Desenvolvedor Front-end com experiência no desenvolvimento de aplicações web, interfaces e sistemas. Trabalho principalmente com React, Next.js e TypeScript, buscando criar soluções funcionais e boas experiências para o usuário.",
         buttons: {
-          contact: "Entre em contato",
-          work: "Veja meu trabalho",
+          contact: "Contato",
+          work: "Projetos",
         },
       },
     },
     heroCard: {
       greeting: "Olá! Eu sou o",
-      title: "Desenvolvedor Front End",
+      title: "Desenvolvedor Front-end",
       description:
-        "Tenho experiência na criação de aplicações web responsivas, otimização de desempenho e implementação de funcionalidades dinâmicas. Sou proativo, atento aos detalhes e gosto de colaborar em equipe para alcançar objetivos comuns. Dedico-me a aprimorar continuamente minhas habilidades, aprender novas tecnologias e seguir as melhores práticas de desenvolvimento.",
+        "Tenho experiência profissional com desenvolvimento de sistemas, interfaces, aplicações web e mobile, integrações e manutenção de software. Trabalho principalmente com React, Next.js e TypeScript.",
     },
     about: {
       title: {
@@ -85,20 +84,24 @@ export const translations = {
     recentProjects: {
       title: {
         prefix: "Projetos",
-        highlight: "Pessoais",
+        highlight: "Principais",
       },
       projects: {
-        mimovies: {
-          subtitle: "Integração com a API do TMDB",
-          category: "Aplicação Web",
+        launchpad: {
+          subtitle: "Landing page desenvolvida para uma tatuadora",
+          category: "Landing Page",
         },
         kanbanity: {
-          subtitle: "Quadro Kanban com visual cartoon",
+          subtitle: "Aplicação de quadro Kanban com visual cartoon",
           category: "Produtividade",
         },
         githubAnalytics: {
-          subtitle: "Análise de perfis e repositórios",
+          subtitle: "Dashboard para análise de perfis e repositórios",
           category: "Analytics",
+        },
+        mimovies: {
+          subtitle: "Aplicação para explorar filmes com API externa",
+          category: "Aplicação Web",
         },
         chronorun: {
           subtitle: "Projeto de games com ranking global e pessoal",
@@ -117,14 +120,25 @@ export const translations = {
       },
       items: {
         guicheWeb: {
-          title: "Desenvolvedor Front End",
+          title: "Desenvolvedor Front-end",
           company: "Guichê Web",
           period: "Setembro 2024 - Janeiro 2026",
           bullets: [
-            "Responsável pelo redesign completo do sistema interno, focando na melhoria da experiência do usuário (UX) e na otimização de performance.",
-            "Fui responsável pela sustentação, manutenção e evolução contínua de aplicações web críticas.",
-            "Atuação end-to-end em design, sendo responsável por definir fluxos de UX e interfaces (UI) para novas features, garantindo consistência e usabilidade em projetos iniciados do zero.",
-            "Construção do front-end do aplicativo para Máquinas Smart (PDV), utilizando React Native e a biblioteca MUI (Material-UI). Foco em otimização de performance e experiência do usuário (UX) para garantir um aplicativo rápido e responsivo em hardware embarcado.",
+            "Redesign completo do sistema interno, aprimorando interfaces e fluxos de navegação com foco em usabilidade e performance.",
+            "Sustentação, manutenção e evolução contínua de aplicações web críticas.",
+            "Desenvolvimento de soluções de UX/UI para novas funcionalidades e projetos do zero, garantindo consistência e usabilidade.",
+            "Desenvolvimento do front-end de aplicativo para máquinas Smart (PDV) com React Native e Material UI (MUI), focando em performance e hardware embarcado.",
+          ],
+        },
+        heptagono: {
+          title: "Desenvolvedor de Automação",
+          company: "Heptágono Consultoria",
+          period: "Fevereiro 2026 - Maio 2026",
+          bullets: [
+            "Manutenção e evolução de bots de atendimento automatizado para a Hughesnet.",
+            "Desenvolvimento e ajuste de fluxos conversacionais para melhorar a experiência do usuário.",
+            "Implementação e manutenção de integrações com APIs e consultas SQL.",
+            "Análise e correção de problemas em bots, garantindo o funcionamento adequado das automações.",
           ],
         },
       },
@@ -272,7 +286,6 @@ export const translations = {
         tech: "Technologies",
         projects: "Projects",
         experience: "Experience",
-        faq: "Questions",
         contact: "Contact",
       },
       aria: {
@@ -283,21 +296,21 @@ export const translations = {
     app: {
       visitMessage: "New portfolio visit at {timestamp}.",
       hero: {
-        greeting1: "Hello",
-        greeting2: "welcome!",
+        greeting1: "Hello, I'm",
+        greeting2: "Miquelven Silva",
         subtitle:
-          "I'm a Front-End Developer and here you can find the projects I've built, professional experiences and information about my skills.",
+          "Front-end Developer with experience in developing web applications, interfaces, and systems. I work mainly with React, Next.js, and TypeScript, seeking to create functional solutions and good user experiences.",
         buttons: {
-          contact: "Contact me",
-          work: "See my work",
+          contact: "Contact",
+          work: "Projects",
         },
       },
     },
     heroCard: {
       greeting: "Hi! I'm",
-      title: "Front-End Developer",
+      title: "Front-end Developer",
       description:
-        "I have experience building responsive web applications, performance optimization, and implementing dynamic features. I'm proactive, detail-oriented, and I enjoy collaborating with teams to reach shared goals. I'm dedicated to continuously improving my skills, learning new technologies, and following development best practices.",
+        "I have professional experience with systems development, interfaces, web and mobile applications, integrations, and software maintenance. I work mainly with React, Next.js, and TypeScript.",
     },
     about: {
       title: {
@@ -339,28 +352,32 @@ export const translations = {
     },
     recentProjects: {
       title: {
-        prefix: "Personal",
+        prefix: "Main",
         highlight: "Projects",
       },
       projects: {
-        mimovies: {
-          subtitle: "TMDB API integration",
-          category: "Web App",
+        launchpad: {
+          subtitle: "Landing page developed for a tattoo artist",
+          category: "Landing Page",
         },
         kanbanity: {
-          subtitle: "Kanban board with a cartoon look",
+          subtitle: "Kanban board application with a cartoon look",
           category: "Productivity",
         },
         githubAnalytics: {
-          subtitle: "Profile and repository analysis",
+          subtitle: "Dashboard for profile and repository analysis",
           category: "Analytics",
+        },
+        mimovies: {
+          subtitle: "Web app for exploring movies using external API",
+          category: "Web App",
         },
         chronorun: {
           subtitle: "Game project with global and personal ranking",
           category: "Game",
         },
         vinilStore: {
-          subtitle: "E-commerce UI (Concept)",
+          subtitle: "E-commerce Interface (Conceptual)",
           category: "Front-end",
         },
       },
@@ -372,14 +389,25 @@ export const translations = {
       },
       items: {
         guicheWeb: {
-          title: "Front-End Developer",
+          title: "Front-end Developer",
           company: "Guichê Web",
           period: "September 2024 - January 2026",
           bullets: [
-            "Responsible for a full redesign of the internal system, focusing on improving user experience (UX) and performance optimization.",
-            "Owned support, maintenance, and continuous evolution of critical web applications.",
-            "End-to-end design work, defining UX flows and UI for new features, ensuring consistency and usability in projects started from scratch.",
-            "Built the front-end of the Smart Machines (POS) app using React Native and MUI (Material-UI), focusing on performance optimization and user experience (UX) to ensure a fast and responsive app on embedded hardware.",
+            "Complete redesign of the internal system, improving interfaces and navigation flows with a focus on usability and performance.",
+            "Support, maintenance, and continuous evolution of critical web applications.",
+            "Development of UX/UI solutions for new features and from-scratch projects, ensuring consistency and usability.",
+            "Front-end development for Smart machines (POS) app using React Native and Material UI (MUI), focusing on performance and embedded hardware.",
+          ],
+        },
+        heptagono: {
+          title: "Automation Developer",
+          company: "Heptágono Consultoria",
+          period: "February 2026 - May 2026",
+          bullets: [
+            "Maintenance and evolution of automated service bots used by Hughesnet.",
+            "Development and adjustment of conversational flows to improve user experience.",
+            "Implementation and maintenance of API integrations and SQL queries.",
+            "Analysis and correction of problems in bots, ensuring proper functioning of automations.",
           ],
         },
       },

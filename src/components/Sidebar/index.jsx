@@ -54,7 +54,7 @@ export default function Sidebar({ isOpen, onClose }) {
             Miquelven Silva
           </h2>
           <p className="text-gray-300 text-sm font-medium mb-2">
-            {t("sidebar.jobTitle")}
+            Desenvolvedor Front-end
           </p>
         </div>
 
