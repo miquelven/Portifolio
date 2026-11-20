@@ -60,6 +60,8 @@ export default function DownloadButton() {
   };
 
   const handleDownload = () => {
+    window.open(downloadCV, "_blank", "noopener,noreferrer");
+
     setDownloadState("downloading");
     downloadStartTime.current = Date.now();
 
