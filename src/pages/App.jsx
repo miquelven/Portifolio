@@ -189,14 +189,14 @@ function App() {
             <TechStack />
           </section>
 
-          {/* Recent Projects Section */}
-          <section id="projects" className="mb-12 md:mb-20">
-            <RecentProjects />
-          </section>
-
           {/* Experience Section */}
           <section id="experience" className="mb-12 md:mb-20">
             <Experience />
+          </section>
+
+          {/* Recent Projects Section */}
+          <section id="projects" className="mb-12 md:mb-20">
+            <RecentProjects />
           </section>
         </div>
 

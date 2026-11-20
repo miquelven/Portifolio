@@ -23,8 +23,8 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
       const sections = [
         { id: "home", selector: "#home" },
         { id: "tech", selector: "#tech" },
-        { id: "projects", selector: "#projects" },
         { id: "experience", selector: "#experience" },
+        { id: "projects", selector: "#projects" },
         { id: "contact", selector: "#contact" },
       ];
 
@@ -70,8 +70,8 @@ export default function Header({ onMenuClick, sidebarOpen, onMenuClose }) {
   const navItems = [
     { id: "home", icon: FaHome, label: t("header.nav.home") },
     { id: "tech", icon: FaCogs, label: t("header.nav.tech") },
-    { id: "projects", icon: FaCode, label: t("header.nav.projects") },
     { id: "experience", icon: FaBriefcase, label: t("header.nav.experience") },
+    { id: "projects", icon: FaCode, label: t("header.nav.projects") },
     { id: "contact", icon: FaEnvelope, label: t("header.nav.contact") },
   ];
 

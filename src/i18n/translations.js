@@ -204,6 +204,11 @@ export const translations = {
             "Exibindo meus projetos e minha paixão por desenvolvimento",
           alt: "Imagem do link de projetos no menu",
         },
+        experience: {
+          heading: "Experiência",
+          subheading: "Minha trajetória profissional e competências",
+          alt: "Imagem do link de experiência no menu",
+        },
         contacts: {
           heading: "Contatos",
           subheading: "Conecte-se comigo",
@@ -471,6 +476,11 @@ export const translations = {
           heading: "Projects",
           subheading: "Showcasing my projects and passion for development",
           alt: "Menu link image for projects section",
+        },
+        experience: {
+          heading: "Experience",
+          subheading: "My professional journey and skills",
+          alt: "Menu link image for experience section",
         },
         contacts: {
           heading: "Contact",

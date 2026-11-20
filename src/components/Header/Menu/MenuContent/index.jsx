@@ -13,11 +13,20 @@ export default function MenuContent({ onLinkClick }) {
     <div className="mx-auto max-w-5xl">
       <div onClick={() => onLinkClick()}>
         <Link
+          heading={t("menu.content.experience.heading")}
+          subheading={t("menu.content.experience.subheading")}
+          imgSrc={aboutImage}
+          alt={t("menu.content.experience.alt")}
+          href="#experience"
+        />
+      </div>
+      <div onClick={() => onLinkClick()}>
+        <Link
           heading={t("menu.content.projects.heading")}
           subheading={t("menu.content.projects.subheading")}
           imgSrc={projectImage}
           alt={t("menu.content.projects.alt")}
-          href="#project"
+          href="#projects"
         />
       </div>
       <div onClick={() => onLinkClick()}>
